@@ -1,5 +1,5 @@
 CREATE DATABASE `crm` ;
-CREATE TABLE `marketeer`.`users` (
+CREATE TABLE `crm`.`marketeer` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `marketeer_fname` VARCHAR( 45 ) NOT NULL ,
 `marketeer_mname` VARCHAR( 25 ) NOT NULL ,
@@ -7,5 +7,17 @@ CREATE TABLE `marketeer`.`users` (
 `marketeer_birthdate` DATE ,
 `marketeer_contact_number` VARCHAR( 45 ) NOT NULL
 ) 
+
+CREATE TABLE `crm`.`email` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`email` DATE ,
+`email_recipient` VARCHAR( 45 ) NOT NULL ,
+`email_content` VARCHAR( 1000 ) NOT NULL ,
+`email_template` VARCHAR( 45 ) NOT NULL,
+ FOREIGN KEY fk_marketeer(id)
+ REFERENCES marketeer(id)
+) 
+
+
 
 ENGINE = InnoDB;
