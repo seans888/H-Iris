@@ -88,31 +88,36 @@ FOREIGN KEY fk_prospectwvh(id)
 ) 
 
 CREATE TABLE `crm`.`prospect_preference` (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 FOREIGN KEY fk_prospectpreference(id)
- REFERENCES prospect(id)
+ REFERENCES prospect(id),
 FOREIGN KEY fk_preferenceprospect(id)
  REFERENCES preference(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`customer_preference` (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 FOREIGN KEY fk_customerpreference(id)
- REFERENCES customer(id)
+ REFERENCES customer(id),
 FOREIGN KEY fk_preferencecustomer(id)
  REFERENCES preference(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`email_customer` (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 FOREIGN KEY fk_emailcustomer(id)
- REFERENCES email(id)
+ REFERENCES email(id),
 FOREIGN KEY fk_customeremail(id)
  REFERENCES customer(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`prospect_email` (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 FOREIGN KEY fk_prospectemail(id)
- REFERENCES prospect(id)
+ REFERENCES prospect(id),
 FOREIGN KEY fk_emailprospect(id)
  REFERENCES email(id)
-) 
+) ;
+
 
 ENGINE = InnoDB;
