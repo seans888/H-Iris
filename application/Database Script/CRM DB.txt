@@ -6,7 +6,7 @@ CREATE TABLE `crm`.`marketeer` (
 `marketeer_lname` VARCHAR( 45 ) NOT NULL,
 `marketeer_birthdate` DATE ,
 `marketeer_contact_number` VARCHAR( 45 ) NOT NULL
-) 
+) ;
 
 CREATE TABLE `crm`.`email` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -16,7 +16,7 @@ CREATE TABLE `crm`.`email` (
 `email_template` VARCHAR( 45 ) NOT NULL,
  FOREIGN KEY fk_marketeeremail(id)
  REFERENCES marketeer(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`email_activity` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -25,7 +25,7 @@ CREATE TABLE `crm`.`email_activity` (
 `email_activity_time` TIMESTAMP NOT NULL ,
  FOREIGN KEY fk_emailea(id)
  REFERENCES email(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`event` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -35,14 +35,14 @@ CREATE TABLE `crm`.`event` (
 `event_end_date`  DATE NOT NULL ,
  FOREIGN KEY fk_marketeerevent(id)
  REFERENCES marketeer(id)
-) 
+) ;
 
 
 CREATE TABLE `crm`.`preference` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `preference_category` VARCHAR (45) NOT NULL ,
 `preference_description` VARCHAR(45) NOT NULL 
-) 
+) ;
 
 CREATE TABLE `crm`.`prospect` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -51,7 +51,7 @@ CREATE TABLE `crm`.`prospect` (
 `prospect_mname` VARCHAR( 25 ),
 `prospect_lname` VARCHAR( 45 ) NOT NULL,
 `prospect_contact_number` VARCHAR( 45 ) NOT NULL
-) 
+) ;
 
 CREATE TABLE `crm`.`customer` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -60,7 +60,7 @@ CREATE TABLE `crm`.`customer` (
 `customer_mname` VARCHAR( 25 ),
 `customer_lname` VARCHAR( 45 ) NOT NULL,
 `customer_contact_number` VARCHAR( 45 ) NOT NULL
-) 
+) ;
 
 
 CREATE TABLE `crm`.`customer_history` (
@@ -71,7 +71,7 @@ CREATE TABLE `crm`.`customer_history` (
 `ch_goods` VARCHAR( 45 ) NOT NULL,
 FOREIGN KEY fk_customerch(id)
  REFERENCES customer(id)
-) 
+) ;
 
 
 CREATE TABLE `crm`.`webvisit_history` (
@@ -82,37 +82,41 @@ CREATE TABLE `crm`.`webvisit_history` (
 `wvh_url` VARCHAR( 100 ) NOT NULL,
 `wvh_cookie_information` VARCHAR( 45 ) NOT NULL,
 FOREIGN KEY fk_customerwvh(id)
- REFERENCES customer(id)
+ REFERENCES customer(id),
 FOREIGN KEY fk_prospectwvh(id)
  REFERENCES prospect(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`prospect_preference` (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 FOREIGN KEY fk_prospectpreference(id)
- REFERENCES prospect(id)
+ REFERENCES prospect(id),
 FOREIGN KEY fk_preferenceprospect(id)
  REFERENCES preference(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`customer_preference` (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 FOREIGN KEY fk_customerpreference(id)
- REFERENCES customer(id)
+ REFERENCES customer(id),
 FOREIGN KEY fk_preferencecustomer(id)
  REFERENCES preference(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`email_customer` (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 FOREIGN KEY fk_emailcustomer(id)
- REFERENCES email(id)
+ REFERENCES email(id),
 FOREIGN KEY fk_customeremail(id)
  REFERENCES customer(id)
-) 
+) ;
 
 CREATE TABLE `crm`.`prospect_email` (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 FOREIGN KEY fk_prospectemail(id)
- REFERENCES prospect(id)
+ REFERENCES prospect(id),
 FOREIGN KEY fk_emailprospect(id)
  REFERENCES email(id)
-) 
+) ;
 
 ENGINE = InnoDB;
