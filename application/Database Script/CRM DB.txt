@@ -2,7 +2,7 @@ CREATE DATABASE `crm` ;
 CREATE TABLE `crm`.`marketeer` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `marketeer_fname` VARCHAR( 45 ) NOT NULL ,
-`marketeer_mname` VARCHAR( 25 ) NOT NULL ,
+`marketeer_mname` VARCHAR( 25 ),
 `marketeer_lname` VARCHAR( 45 ) NOT NULL,
 `marketeer_birthdate` DATE ,
 `marketeer_contact_number` VARCHAR( 45 ) NOT NULL
@@ -14,10 +14,105 @@ CREATE TABLE `crm`.`email` (
 `email_recipient` VARCHAR( 45 ) NOT NULL ,
 `email_content` VARCHAR( 1000 ) NOT NULL ,
 `email_template` VARCHAR( 45 ) NOT NULL,
- FOREIGN KEY fk_marketeer(id)
+ FOREIGN KEY fk_marketeeremail(id)
+ REFERENCES marketeer(id)
+) 
+
+CREATE TABLE `crm`.`email_activity` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`email_activity_status` VARCHAR( 45 ) NOT NULL ,
+`email_activity_date` DATE NOT NULL ,
+`email_activity_time` TIMESTAMP NOT NULL ,
+ FOREIGN KEY fk_emailea(id)
+ REFERENCES email(id)
+) 
+
+CREATE TABLE `crm`.`event` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`event_date_created` DATE NOT NULL ,
+`event_description` VARCHAR(400) NOT NULL ,
+`event_start_date`  DATE NOT NULL ,
+`event_end_date`  DATE NOT NULL ,
+ FOREIGN KEY fk_marketeerevent(id)
  REFERENCES marketeer(id)
 ) 
 
 
+CREATE TABLE `crm`.`preference` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`preference_category` VARCHAR (45) NOT NULL ,
+`preference_description` VARCHAR(45) NOT NULL 
+) 
+
+CREATE TABLE `crm`.`prospect` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`prospect_email` VARCHAR( 45 ) NOT NULL ,
+`prospect_fname` VARCHAR( 45 ) NOT NULL ,
+`prospect_mname` VARCHAR( 25 ),
+`prospect_lname` VARCHAR( 45 ) NOT NULL,
+`prospect_contact_number` VARCHAR( 45 ) NOT NULL
+) 
+
+CREATE TABLE `crm`.`customer` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`customer_email` VARCHAR( 45 ) NOT NULL ,
+`customer_fname` VARCHAR( 45 ) NOT NULL ,
+`customer_mname` VARCHAR( 25 ),
+`customer_lname` VARCHAR( 45 ) NOT NULL,
+`customer_contact_number` VARCHAR( 45 ) NOT NULL
+) 
+
+
+CREATE TABLE `crm`.`customer_history` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`ch_checkin` DATETIME ,
+`ch_chekout` DATETIME ,
+`ch_numberdays` INT,
+`ch_goods` VARCHAR( 45 ) NOT NULL,
+FOREIGN KEY fk_customerch(id)
+ REFERENCES customer(id)
+) 
+
+
+CREATE TABLE `crm`.`webvisit_history` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`wvh_date` DATE ,
+`wvh_time` DATETIME ,
+`wvh_ip_address` INT,
+`wvh_url` VARCHAR( 100 ) NOT NULL,
+`wvh_cookie_information` VARCHAR( 45 ) NOT NULL,
+FOREIGN KEY fk_customerwvh(id)
+ REFERENCES customer(id)
+FOREIGN KEY fk_prospectwvh(id)
+ REFERENCES prospect(id)
+) 
+
+CREATE TABLE `crm`.`prospect_preference` (
+FOREIGN KEY fk_prospectpreference(id)
+ REFERENCES prospect(id)
+FOREIGN KEY fk_preferenceprospect(id)
+ REFERENCES preference(id)
+) 
+
+CREATE TABLE `crm`.`customer_preference` (
+FOREIGN KEY fk_customerpreference(id)
+ REFERENCES customer(id)
+FOREIGN KEY fk_preferencecustomer(id)
+ REFERENCES preference(id)
+) 
+
+CREATE TABLE `crm`.`email_customer` (
+FOREIGN KEY fk_emailcustomer(id)
+ REFERENCES email(id)
+FOREIGN KEY fk_customeremail(id)
+ REFERENCES customer(id)
+) 
+
+CREATE TABLE `crm`.`prospect_email` (
+FOREIGN KEY fk_prospectemail(id)
+ REFERENCES prospect(id)
+FOREIGN KEY fk_emailprospect(id)
+ REFERENCES email(id)
+) 
 
 ENGINE = InnoDB;
