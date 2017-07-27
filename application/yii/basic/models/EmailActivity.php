@@ -10,9 +10,10 @@ use Yii;
  * @property integer $id
  * @property string $email_activity_status
  * @property string $email_activity_date
- * @property string $email_activity_time
+ * @property string $emai_activity_time
+ * @property integer $email_id
  *
- * @property Email $id0
+ * @property Email $email
  */
 class EmailActivity extends \yii\db\ActiveRecord
 {
@@ -30,10 +31,11 @@ class EmailActivity extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email_activity_status', 'email_activity_date'], 'required'],
-            [['email_activity_date', 'email_activity_time'], 'safe'],
+            [['id', 'email_id'], 'required'],
+            [['id', 'email_id'], 'integer'],
+            [['email_activity_date', 'emai_activity_time'], 'safe'],
             [['email_activity_status'], 'string', 'max' => 45],
-            [['id'], 'exist', 'skipOnError' => true, 'targetClass' => Email::className(), 'targetAttribute' => ['id' => 'id']],
+            [['email_id'], 'exist', 'skipOnError' => true, 'targetClass' => Email::className(), 'targetAttribute' => ['email_id' => 'id']],
         ];
     }
 
@@ -46,15 +48,16 @@ class EmailActivity extends \yii\db\ActiveRecord
             'id' => 'ID',
             'email_activity_status' => 'Email Activity Status',
             'email_activity_date' => 'Email Activity Date',
-            'email_activity_time' => 'Email Activity Time',
+            'emai_activity_time' => 'Emai Activity Time',
+            'email_id' => 'Email ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getId0()
+    public function getEmail()
     {
-        return $this->hasOne(Email::className(), ['id' => 'id']);
+        return $this->hasOne(Email::className(), ['id' => 'email_id']);
     }
 }
