@@ -18,8 +18,8 @@ class CustomerSearch extends Customer
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['customer_email', 'customer_fname', 'customer_mname', 'customer_lname', 'customer_contact_number'], 'safe'],
+            [['id', 'customer_contact_number'], 'integer'],
+            [['customer_fname', 'customer_mname', 'customer_lname', 'customer_email'], 'safe'],
         ];
     }
 
@@ -60,13 +60,13 @@ class CustomerSearch extends Customer
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'customer_contact_number' => $this->customer_contact_number,
         ]);
 
-        $query->andFilterWhere(['like', 'customer_email', $this->customer_email])
-            ->andFilterWhere(['like', 'customer_fname', $this->customer_fname])
+        $query->andFilterWhere(['like', 'customer_fname', $this->customer_fname])
             ->andFilterWhere(['like', 'customer_mname', $this->customer_mname])
             ->andFilterWhere(['like', 'customer_lname', $this->customer_lname])
-            ->andFilterWhere(['like', 'customer_contact_number', $this->customer_contact_number]);
+            ->andFilterWhere(['like', 'customer_email', $this->customer_email]);
 
         return $dataProvider;
     }
