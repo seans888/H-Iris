@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Marketeer;
+use app\models\Email;
 
 /**
- * MarketeerSearch represents the model behind the search form about `app\models\Marketeer`.
+ * EmailSearch represents the model behind the search form about `app\models\Email`.
  */
-class MarketeerSearch extends Marketeer
+class EmailSearch extends Email
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class MarketeerSearch extends Marketeer
     public function rules()
     {
         return [
-            [['id', 'marketeer_contact_number'], 'integer'],
-            [['marketeer_fname', 'marketeer_mname', 'marketeer_lname', 'marketeer_birthdate'], 'safe'],
+            [['id', 'marketeer_id'], 'integer'],
+            [['email_date', 'email_recipient', 'email_content', 'email_template'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class MarketeerSearch extends Marketeer
      */
     public function search($params)
     {
-        $query = Marketeer::find();
+        $query = Email::find();
 
         // add conditions that should always apply here
 
@@ -60,13 +60,13 @@ class MarketeerSearch extends Marketeer
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'marketeer_birthdate' => $this->marketeer_birthdate,
-            'marketeer_contact_number' => $this->marketeer_contact_number,
+            'email_date' => $this->email_date,
+            'marketeer_id' => $this->marketeer_id,
         ]);
 
-        $query->andFilterWhere(['like', 'marketeer_fname', $this->marketeer_fname])
-            ->andFilterWhere(['like', 'marketeer_mname', $this->marketeer_mname])
-            ->andFilterWhere(['like', 'marketeer_lname', $this->marketeer_lname]);
+        $query->andFilterWhere(['like', 'email_recipient', $this->email_recipient])
+            ->andFilterWhere(['like', 'email_content', $this->email_content])
+            ->andFilterWhere(['like', 'email_template', $this->email_template]);
 
         return $dataProvider;
     }
