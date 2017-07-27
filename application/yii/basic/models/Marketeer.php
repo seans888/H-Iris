@@ -12,10 +12,10 @@ use Yii;
  * @property string $marketeer_mname
  * @property string $marketeer_lname
  * @property string $marketeer_birthdate
- * @property string $marketeer_contact_number
+ * @property integer $marketeer_contact_number
  *
- * @property Email $email
- * @property Event $event
+ * @property Email[] $emails
+ * @property Event[] $events
  */
 class Marketeer extends \yii\db\ActiveRecord
 {
@@ -33,10 +33,10 @@ class Marketeer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['marketeer_fname', 'marketeer_mname', 'marketeer_lname', 'marketeer_contact_number'], 'required'],
+            [['id'], 'required'],
+            [['id', 'marketeer_contact_number'], 'integer'],
             [['marketeer_birthdate'], 'safe'],
-            [['marketeer_fname', 'marketeer_lname', 'marketeer_contact_number'], 'string', 'max' => 45],
-            [['marketeer_mname'], 'string', 'max' => 25],
+            [['marketeer_fname', 'marketeer_mname', 'marketeer_lname'], 'string', 'max' => 45],
         ];
     }
 
@@ -58,16 +58,16 @@ class Marketeer extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getEmail()
+    public function getEmails()
     {
-        return $this->hasOne(Email::className(), ['id' => 'id']);
+        return $this->hasMany(Email::className(), ['marketeer_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getEvent()
+    public function getEvents()
     {
-        return $this->hasOne(Event::className(), ['id' => 'id']);
+        return $this->hasMany(Event::className(), ['marketeer_id' => 'id']);
     }
 }
