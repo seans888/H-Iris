@@ -31,9 +31,9 @@ class EmailActivity extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'email_id'], 'required'],
-            [['id', 'email_id'], 'integer'],
             [['email_activity_date', 'emai_activity_time'], 'safe'],
+            [['email_id'], 'required'],
+            [['email_id'], 'integer'],
             [['email_activity_status'], 'string', 'max' => 45],
             [['email_id'], 'exist', 'skipOnError' => true, 'targetClass' => Email::className(), 'targetAttribute' => ['email_id' => 'id']],
         ];

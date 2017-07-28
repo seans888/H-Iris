@@ -12,14 +12,13 @@ use Yii;
  * @property string $prospect_fname
  * @property string $prospect_mname
  * @property string $prospect_lname
- * @property string $prospect_contact_number
+ * @property integer $prospect_contact_number
  *
- * @property ProspectEmail $prospectEmail
- * @property Email[] $ids
- * @property ProspectPreference $prospectPreference
- * @property Preference[] $ids0
- * @property WebvisitHistory $webvisitHistory
- * @property Customer[] $ids1
+ * @property ProspectEmail[] $prospectEmails
+ * @property Email[] $emails
+ * @property ProspectPreference[] $prospectPreferences
+ * @property Preference[] $preferences
+ * @property WebvisitHistory[] $webvisitHistories
  */
 class Prospect extends \yii\db\ActiveRecord
 {
@@ -37,9 +36,8 @@ class Prospect extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['prospect_email', 'prospect_fname', 'prospect_lname', 'prospect_contact_number'], 'required'],
-            [['prospect_email', 'prospect_fname', 'prospect_lname', 'prospect_contact_number'], 'string', 'max' => 45],
-            [['prospect_mname'], 'string', 'max' => 25],
+            [['prospect_contact_number'], 'integer'],
+            [['prospect_email', 'prospect_fname', 'prospect_mname', 'prospect_lname'], 'string', 'max' => 45],
         ];
     }
 
@@ -61,48 +59,40 @@ class Prospect extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProspectEmail()
+    public function getProspectEmails()
     {
-        return $this->hasOne(ProspectEmail::className(), ['id' => 'id']);
+        return $this->hasMany(ProspectEmail::className(), ['prospect_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIds()
+    public function getEmails()
     {
-        return $this->hasMany(Email::className(), ['id' => 'id'])->viaTable('prospect_email', ['id' => 'id']);
+        return $this->hasMany(Email::className(), ['id' => 'email_id'])->viaTable('prospect_email', ['prospect_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProspectPreference()
+    public function getProspectPreferences()
     {
-        return $this->hasOne(ProspectPreference::className(), ['id' => 'id']);
+        return $this->hasMany(ProspectPreference::className(), ['prospect_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIds0()
+    public function getPreferences()
     {
-        return $this->hasMany(Preference::className(), ['id' => 'id'])->viaTable('prospect_preference', ['id' => 'id']);
+        return $this->hasMany(Preference::className(), ['id' => 'preference_id'])->viaTable('prospect_preference', ['prospect_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getWebvisitHistory()
+    public function getWebvisitHistories()
     {
-        return $this->hasOne(WebvisitHistory::className(), ['id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIds1()
-    {
-        return $this->hasMany(Customer::className(), ['id' => 'id'])->viaTable('webvisit_history', ['id' => 'id']);
+        return $this->hasMany(WebvisitHistory::className(), ['Prospect_id' => 'id']);
     }
 }

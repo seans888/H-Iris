@@ -33,9 +33,8 @@ class Marketeer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
-            [['id', 'marketeer_contact_number'], 'integer'],
             [['marketeer_birthdate'], 'safe'],
+            [['marketeer_contact_number'], 'integer'],
             [['marketeer_fname', 'marketeer_mname', 'marketeer_lname'], 'string', 'max' => 45],
         ];
     }

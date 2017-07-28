@@ -37,9 +37,9 @@ class Email extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'marketeer_id'], 'required'],
-            [['id', 'marketeer_id'], 'integer'],
             [['email_date'], 'safe'],
+            [['marketeer_id'], 'required'],
+            [['marketeer_id'], 'integer'],
             [['email_recipient', 'email_template'], 'string', 'max' => 45],
             [['email_content'], 'string', 'max' => 1000],
             [['marketeer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Marketeer::className(), 'targetAttribute' => ['marketeer_id' => 'id']],

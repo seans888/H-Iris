@@ -11,10 +11,10 @@ use Yii;
  * @property string $preference_category
  * @property string $preference_description
  *
- * @property CustomerPreference $customerPreference
- * @property Customer[] $ids
- * @property ProspectPreference $prospectPreference
- * @property Prospect[] $ids0
+ * @property CustomerPreference[] $customerPreferences
+ * @property Customer[] $customers
+ * @property ProspectPreference[] $prospectPreferences
+ * @property Prospect[] $prospects
  */
 class Preference extends \yii\db\ActiveRecord
 {
@@ -32,7 +32,6 @@ class Preference extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['preference_category', 'preference_description'], 'required'],
             [['preference_category', 'preference_description'], 'string', 'max' => 45],
         ];
     }
@@ -52,32 +51,32 @@ class Preference extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCustomerPreference()
+    public function getCustomerPreferences()
     {
-        return $this->hasOne(CustomerPreference::className(), ['id' => 'id']);
+        return $this->hasMany(CustomerPreference::className(), ['preference_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIds()
+    public function getCustomers()
     {
-        return $this->hasMany(Customer::className(), ['id' => 'id'])->viaTable('customer_preference', ['id' => 'id']);
+        return $this->hasMany(Customer::className(), ['id' => 'customer_id'])->viaTable('customer_preference', ['preference_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProspectPreference()
+    public function getProspectPreferences()
     {
-        return $this->hasOne(ProspectPreference::className(), ['id' => 'id']);
+        return $this->hasMany(ProspectPreference::className(), ['preference_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIds0()
+    public function getProspects()
     {
-        return $this->hasMany(Prospect::className(), ['id' => 'id'])->viaTable('prospect_preference', ['id' => 'id']);
+        return $this->hasMany(Prospect::className(), ['id' => 'prospect_id'])->viaTable('prospect_preference', ['preference_id' => 'id']);
     }
 }

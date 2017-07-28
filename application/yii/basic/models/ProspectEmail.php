@@ -7,10 +7,11 @@ use Yii;
 /**
  * This is the model class for table "prospect_email".
  *
- * @property integer $id
+ * @property integer $prospect_id
+ * @property integer $email_id
  *
- * @property Prospect $id0
- * @property Email $id1
+ * @property Prospect $prospect
+ * @property Email $email
  */
 class ProspectEmail extends \yii\db\ActiveRecord
 {
@@ -28,8 +29,10 @@ class ProspectEmail extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'exist', 'skipOnError' => true, 'targetClass' => Prospect::className(), 'targetAttribute' => ['id' => 'id']],
-            [['id'], 'exist', 'skipOnError' => true, 'targetClass' => Email::className(), 'targetAttribute' => ['id' => 'id']],
+            [['prospect_id', 'email_id'], 'required'],
+            [['prospect_id', 'email_id'], 'integer'],
+            [['prospect_id'], 'exist', 'skipOnError' => true, 'targetClass' => Prospect::className(), 'targetAttribute' => ['prospect_id' => 'id']],
+            [['email_id'], 'exist', 'skipOnError' => true, 'targetClass' => Email::className(), 'targetAttribute' => ['email_id' => 'id']],
         ];
     }
 
@@ -39,23 +42,24 @@ class ProspectEmail extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'prospect_id' => 'Prospect ID',
+            'email_id' => 'Email ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getId0()
+    public function getProspect()
     {
-        return $this->hasOne(Prospect::className(), ['id' => 'id']);
+        return $this->hasOne(Prospect::className(), ['id' => 'prospect_id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getId1()
+    public function getEmail()
     {
-        return $this->hasOne(Email::className(), ['id' => 'id']);
+        return $this->hasOne(Email::className(), ['id' => 'email_id']);
     }
 }

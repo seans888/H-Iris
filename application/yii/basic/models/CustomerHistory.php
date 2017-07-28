@@ -9,11 +9,11 @@ use Yii;
  *
  * @property integer $id
  * @property string $ch_checkin
- * @property string $ch_chekout
+ * @property string $ch_checkout
  * @property integer $ch_numberdays
- * @property string $ch_goods
+ * @property integer $customer_id
  *
- * @property Customer $id0
+ * @property Customer $customer
  */
 class CustomerHistory extends \yii\db\ActiveRecord
 {
@@ -31,11 +31,10 @@ class CustomerHistory extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ch_checkin', 'ch_chekout'], 'safe'],
-            [['ch_numberdays'], 'integer'],
-            [['ch_goods'], 'required'],
-            [['ch_goods'], 'string', 'max' => 45],
-            [['id'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['id' => 'id']],
+            [['ch_checkin', 'ch_checkout'], 'safe'],
+            [['ch_numberdays', 'customer_id'], 'integer'],
+            [['customer_id'], 'required'],
+            [['customer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['customer_id' => 'id']],
         ];
     }
 
@@ -47,17 +46,17 @@ class CustomerHistory extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'ch_checkin' => 'Ch Checkin',
-            'ch_chekout' => 'Ch Chekout',
+            'ch_checkout' => 'Ch Checkout',
             'ch_numberdays' => 'Ch Numberdays',
-            'ch_goods' => 'Ch Goods',
+            'customer_id' => 'Customer ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getId0()
+    public function getCustomer()
     {
-        return $this->hasOne(Customer::className(), ['id' => 'id']);
+        return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
     }
 }

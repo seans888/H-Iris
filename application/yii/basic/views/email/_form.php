@@ -29,7 +29,6 @@ use app\models\Marketeer;
 
     <?= $form->field($model, 'email_template')->textInput(['maxlength' => true]) ?>
 
-<?= $form->field($model, 'marketeer_id')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

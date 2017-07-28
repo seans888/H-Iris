@@ -8,19 +8,18 @@ use Yii;
  * This is the model class for table "customer".
  *
  * @property integer $id
- * @property string $customer_email
  * @property string $customer_fname
  * @property string $customer_mname
  * @property string $customer_lname
- * @property string $customer_contact_number
+ * @property string $customer_email
+ * @property integer $customer_contact_number
  *
- * @property CustomerHistory $customerHistory
- * @property CustomerPreference $customerPreference
- * @property Preference[] $ids
- * @property EmailCustomer $emailCustomer
- * @property Email[] $ids0
- * @property WebvisitHistory $webvisitHistory
- * @property Prospect[] $ids1
+ * @property CustomerHistory[] $customerHistories
+ * @property CustomerPreference[] $customerPreferences
+ * @property Preference[] $preferences
+ * @property EmailCustomer[] $emailCustomers
+ * @property Email[] $emails
+ * @property WebvisitHistory[] $webvisitHistories
  */
 class Customer extends \yii\db\ActiveRecord
 {
@@ -38,9 +37,8 @@ class Customer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['customer_email', 'customer_fname', 'customer_lname', 'customer_contact_number'], 'required'],
-            [['customer_email', 'customer_fname', 'customer_lname', 'customer_contact_number'], 'string', 'max' => 45],
-            [['customer_mname'], 'string', 'max' => 25],
+            [['customer_contact_number'], 'integer'],
+            [['customer_fname', 'customer_mname', 'customer_lname', 'customer_email'], 'string', 'max' => 45],
         ];
     }
 
@@ -51,10 +49,10 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_email' => 'Customer Email',
             'customer_fname' => 'Customer Fname',
             'customer_mname' => 'Customer Mname',
             'customer_lname' => 'Customer Lname',
+            'customer_email' => 'Customer Email',
             'customer_contact_number' => 'Customer Contact Number',
         ];
     }
@@ -62,56 +60,48 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCustomerHistory()
+    public function getCustomerHistories()
     {
-        return $this->hasOne(CustomerHistory::className(), ['id' => 'id']);
+        return $this->hasMany(CustomerHistory::className(), ['customer_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCustomerPreference()
+    public function getCustomerPreferences()
     {
-        return $this->hasOne(CustomerPreference::className(), ['id' => 'id']);
+        return $this->hasMany(CustomerPreference::className(), ['customer_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIds()
+    public function getPreferences()
     {
-        return $this->hasMany(Preference::className(), ['id' => 'id'])->viaTable('customer_preference', ['id' => 'id']);
+        return $this->hasMany(Preference::className(), ['id' => 'preference_id'])->viaTable('customer_preference', ['customer_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getEmailCustomer()
+    public function getEmailCustomers()
     {
-        return $this->hasOne(EmailCustomer::className(), ['id' => 'id']);
+        return $this->hasMany(EmailCustomer::className(), ['customer_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIds0()
+    public function getEmails()
     {
-        return $this->hasMany(Email::className(), ['id' => 'id'])->viaTable('email_customer', ['id' => 'id']);
+        return $this->hasMany(Email::className(), ['id' => 'email_id'])->viaTable('email_customer', ['customer_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getWebvisitHistory()
+    public function getWebvisitHistories()
     {
-        return $this->hasOne(WebvisitHistory::className(), ['id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIds1()
-    {
-        return $this->hasMany(Prospect::className(), ['id' => 'id'])->viaTable('webvisit_history', ['id' => 'id']);
+        return $this->hasMany(WebvisitHistory::className(), ['customer_id' => 'id']);
     }
 }
