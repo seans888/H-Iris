@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'marketeer_mname',
             'marketeer_lname',
             'marketeer_birthdate',
-            // 'marketeer_contact_number',
+            'marketeer_contact_number',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
