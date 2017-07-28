@@ -12,8 +12,9 @@ use Yii;
  * @property string $event_description
  * @property string $event_start_date
  * @property string $event_end_date
+ * @property integer $marketeer_id
  *
- * @property Marketeer $id0
+ * @property Marketeer $marketeer
  */
 class Event extends \yii\db\ActiveRecord
 {
@@ -31,10 +32,11 @@ class Event extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['event_date_created', 'event_description', 'event_start_date', 'event_end_date'], 'required'],
+            [['id', 'marketeer_id'], 'required'],
+            [['id', 'marketeer_id'], 'integer'],
             [['event_date_created', 'event_start_date', 'event_end_date'], 'safe'],
             [['event_description'], 'string', 'max' => 400],
-            [['id'], 'exist', 'skipOnError' => true, 'targetClass' => Marketeer::className(), 'targetAttribute' => ['id' => 'id']],
+            [['marketeer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Marketeer::className(), 'targetAttribute' => ['marketeer_id' => 'id']],
         ];
     }
 
@@ -49,14 +51,15 @@ class Event extends \yii\db\ActiveRecord
             'event_description' => 'Event Description',
             'event_start_date' => 'Event Start Date',
             'event_end_date' => 'Event End Date',
+            'marketeer_id' => 'Marketeer ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getId0()
+    public function getMarketeer()
     {
-        return $this->hasOne(Marketeer::className(), ['id' => 'id']);
+        return $this->hasOne(Marketeer::className(), ['id' => 'marketeer_id']);
     }
 }
