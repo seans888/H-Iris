@@ -14,8 +14,9 @@ use app\models\Marketeer;
 
     <?php $form = ActiveForm::begin(); ?>
          <?= $form->field($model, 'marketeer_id')->dropDownList( 
-            ArrayHelper::map(Marketeer::find()->all(),'id','marketeer_fname'),
-            ['prompt'=>'Select Marketeer'] 
+            ArrayHelper::map(Marketeer::find()->all(),'id','full'),
+            ['prompt'=>'Select Marketeer']
+
 
         ) ?> 
 

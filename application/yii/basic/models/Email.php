@@ -65,10 +65,7 @@ class Email extends \yii\db\ActiveRecord
      * @return \yii\db\ActiveQuery
      */
 
-    /**function getFullName()
-    {
-    return $this->marketeer_fname.' '.$this->marketeer_lname;
-    }**/
+    
 
     public function getMarketeer()
     {
