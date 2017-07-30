@@ -13,13 +13,12 @@ use app\models\Marketeer;
 <div class="email-form">
 
     <?php $form = ActiveForm::begin(); ?>
-    <?= $form->field($model, 'marketeer_id')->dropDownList(
+         <?= $form->field($model, 'marketeer_id')->dropDownList( 
             ArrayHelper::map(Marketeer::find()->all(),'id','marketeer_fname'),
-            ['prompt'=>'Select Marketeer']
+            ['prompt'=>'Select Marketeer'] 
 
-        ) ?>
+        ) ?> 
 
-    <?= $form->field($model, 'id')->textInput() ?>
 
     <?= $form->field($model, 'email_date')->textInput() ?>
 
