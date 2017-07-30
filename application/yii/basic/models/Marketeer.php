@@ -12,7 +12,7 @@ use Yii;
  * @property string $marketeer_mname
  * @property string $marketeer_lname
  * @property string $marketeer_birthdate
- * @property integer $marketeer_contact_number
+ * @property string $marketeer_contact_number
  *
  * @property Email[] $emails
  * @property Event[] $events
@@ -22,6 +22,10 @@ class Marketeer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public function getFull()
+    {
+    return $this->marketeer_fname.' '.$this->marketeer_lname;
+    }
     public static function tableName()
     {
         return 'marketeer';
@@ -30,11 +34,6 @@ class Marketeer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-
-    public function getFull()
-    {
-    return $this->marketeer_fname.' '.$this->marketeer_lname;
-    }
     public function rules()
     {
         return [
