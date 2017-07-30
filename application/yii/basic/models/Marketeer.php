@@ -50,9 +50,9 @@ class Marketeer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'marketeer_fname' => 'Marketeer Fname',
-            'marketeer_mname' => 'Marketeer Mname',
-            'marketeer_lname' => 'Marketeer Lname',
+            'marketeer_fname' => 'Marketeer First Name',
+            'marketeer_mname' => 'Marketeer Middle Name',
+            'marketeer_lname' => 'Marketeer Last Name',
             'marketeer_birthdate' => 'Marketeer Birthdate',
             'marketeer_contact_number' => 'Marketeer Contact Number',
         ];

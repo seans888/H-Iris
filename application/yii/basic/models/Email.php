@@ -57,7 +57,7 @@ class Email extends \yii\db\ActiveRecord
             'email_recipient' => 'Email Recipient',
             'email_content' => 'Email Content',
             'email_template' => 'Email Template',
-            'marketeer_id' => 'Marketeer ID',
+            'marketeer_id' => 'Marketeer',
         ];
     }
 
