@@ -4,28 +4,20 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\EmailSearch */
+/* @var $model app\models\CustomerPreferenceSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="email-search">
+<div class="customer-preference-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?= $form->field($model, 'customer_id') ?>
 
-    <?= $form->field($model, 'email_date') ?>
-
-    <?= $form->field($model, 'email_recipient') ?>
-
-    <?= $form->field($model, 'email_content') ?>
-
-    <?= $form->field($model, 'email_template') ?>
-
-    <?php echo $form->field($model, 'marketeer_id') ?>
+    <?= $form->field($model, 'preference_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

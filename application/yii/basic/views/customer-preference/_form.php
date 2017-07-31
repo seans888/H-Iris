@@ -4,21 +4,17 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\EmailActivity */
+/* @var $model app\models\CustomerPreference */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="email-activity-form">
+<div class="customer-preference-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'email_activity_status')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'customer_id')->textInput() ?>
 
-    <?= $form->field($model, 'email_activity_date')->textInput() ?>
-
-    <?= $form->field($model, 'emai_activity_time')->textInput() ?>
-
-    <?= $form->field($model, 'email_id')->textInput() ?>
+    <?= $form->field($model, 'preference_id')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

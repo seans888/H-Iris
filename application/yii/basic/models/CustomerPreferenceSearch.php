@@ -5,23 +5,20 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Marketeer;
+use app\models\CustomerPreference;
 
 /**
- * MarketeerSearch represents the model behind the search form about `app\models\Marketeer`.
+ * CustomerPreferenceSearch represents the model behind the search form about `app\models\CustomerPreference`.
  */
-class MarketeerSearch extends Marketeer
+class CustomerPreferenceSearch extends CustomerPreference
 {
     /**
      * @inheritdoc
      */
-
-    
     public function rules()
     {
         return [
-            [['id', 'marketeer_contact_number'], 'integer'],
-            [['marketeer_fname', 'marketeer_mname', 'marketeer_lname', 'marketeer_birthdate'], 'safe'],
+            [['customer_id', 'preference_id'], 'integer'],
         ];
     }
 
@@ -43,7 +40,7 @@ class MarketeerSearch extends Marketeer
      */
     public function search($params)
     {
-        $query = Marketeer::find();
+        $query = CustomerPreference::find();
 
         // add conditions that should always apply here
 
@@ -61,14 +58,9 @@ class MarketeerSearch extends Marketeer
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'marketeer_birthdate' => $this->marketeer_birthdate,
-            'marketeer_contact_number' => $this->marketeer_contact_number,
+            'customer_id' => $this->customer_id,
+            'preference_id' => $this->preference_id,
         ]);
-
-        $query->andFilterWhere(['like', 'marketeer_fname', $this->marketeer_fname])
-            ->andFilterWhere(['like', 'marketeer_mname', $this->marketeer_mname])
-            ->andFilterWhere(['like', 'marketeer_lname', $this->marketeer_lname]);
 
         return $dataProvider;
     }
