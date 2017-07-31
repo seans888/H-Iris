@@ -33,7 +33,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'email_recipient:email',
             'email_content:email',
             'email_template:email',
-            'marketeer_id',
+            /**'marketeer_id',**/
+             array(
+                    'label' => $model->marketeer->getAttributeLabel('marketeer'),
+                    'value' => $model->marketeer->full),
         ],
     ]) ?>
 
