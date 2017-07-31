@@ -12,8 +12,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id')->textInput() ?>
-
     <?= $form->field($model, 'email_activity_status')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email_activity_date')->textInput() ?>
