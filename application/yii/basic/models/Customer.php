@@ -51,7 +51,7 @@ class Customer extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'customer_fname' => 'Customer First Name',
-            'customer_mname' => 'Customer Middle Name',
+            'customer_mname' => 'Customer MName',
             'customer_lname' => 'Customer Last Name',
             'customer_email' => 'Customer Email',
             'customer_contact_number' => 'Customer Contact Number',
