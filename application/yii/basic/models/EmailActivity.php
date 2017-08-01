@@ -10,7 +10,6 @@ use Yii;
  * @property integer $id
  * @property string $email_activity_status
  * @property string $email_activity_date
- * @property string $emai_activity_time
  * @property integer $email_id
  *
  * @property Email $email
@@ -31,7 +30,7 @@ class EmailActivity extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email_activity_date', 'emai_activity_time'], 'safe'],
+            [['email_activity_date'], 'safe'],
             [['email_id'], 'required'],
             [['email_id'], 'integer'],
             [['email_activity_status'], 'string', 'max' => 45],
@@ -48,7 +47,6 @@ class EmailActivity extends \yii\db\ActiveRecord
             'id' => 'ID',
             'email_activity_status' => 'Email Activity Status',
             'email_activity_date' => 'Email Activity Date',
-            'emai_activity_time' => 'Emai Activity Time',
             'email_id' => 'Email ID',
         ];
     }

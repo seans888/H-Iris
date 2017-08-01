@@ -21,8 +21,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email_activity_date') ?>
 
-    <?= $form->field($model, 'emai_activity_time') ?>
-
     <?= $form->field($model, 'email_id') ?>
 
     <div class="form-group">

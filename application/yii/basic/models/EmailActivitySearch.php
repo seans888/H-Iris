@@ -19,7 +19,7 @@ class EmailActivitySearch extends EmailActivity
     {
         return [
             [['id', 'email_id'], 'integer'],
-            [['email_activity_status', 'email_activity_date', 'emai_activity_time'], 'safe'],
+            [['email_activity_status', 'email_activity_date'], 'safe'],
         ];
     }
 
@@ -61,7 +61,6 @@ class EmailActivitySearch extends EmailActivity
         $query->andFilterWhere([
             'id' => $this->id,
             'email_activity_date' => $this->email_activity_date,
-            'emai_activity_time' => $this->emai_activity_time,
             'email_id' => $this->email_id,
         ]);
 
