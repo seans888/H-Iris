@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'email_recipient:email',
             'email_content:email',
             'email_template:email',
-            'marketeer.full',
+            'marketeer.fullName',
             
             /**'marketeer_id',**/
      /** [

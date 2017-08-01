@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /**'marketeer_id',**/
              array(
                     'label' => $model->marketeer->getAttributeLabel('marketeer'),
-                    'value' => $model->marketeer->full),
+                    'value' => $model->marketeer->fullName),
         ],
     ]) ?>
 

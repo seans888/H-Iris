@@ -22,7 +22,7 @@ class Marketeer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function getFull()
+    public function getFullName()
     {
     return $this->marketeer_fname.' '.$this->marketeer_lname;
     }
