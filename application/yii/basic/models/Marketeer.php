@@ -26,6 +26,7 @@ class Marketeer extends \yii\db\ActiveRecord
     {
     return $this->marketeer_fname.' '.$this->marketeer_lname;
     }
+
     public static function tableName()
     {
         return 'marketeer';
