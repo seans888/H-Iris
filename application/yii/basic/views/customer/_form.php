@@ -13,6 +13,10 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <?= $form->field($model, 'id')->() ?>
+>>>>>>> ff30e48954fe7a9786652e11e5841f73d20cad50
 
 =======
 >>>>>>> 57b125f4fb2a1bc3a82b331e3db02c1d01a1bd75
