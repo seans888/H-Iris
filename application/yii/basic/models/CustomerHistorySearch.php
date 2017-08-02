@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\EmailActivity;
+use app\models\CustomerHistory;
 
 /**
- * EmailActivitySearch represents the model behind the search form about `app\models\EmailActivity`.
+ * CustomerHistorySearch represents the model behind the search form about `app\models\CustomerHistory`.
  */
-class EmailActivitySearch extends EmailActivity
+class CustomerHistorySearch extends CustomerHistory
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class EmailActivitySearch extends EmailActivity
     public function rules()
     {
         return [
-            [['id', 'email_id'], 'integer'],
-            [['email_activity_status', 'email_activity_date'], 'safe'],
+            [['id', 'ch_numberdays', 'customer_id'], 'integer'],
+            [['ch_checkin', 'ch_checkout'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class EmailActivitySearch extends EmailActivity
      */
     public function search($params)
     {
-        $query = EmailActivity::find();
+        $query = CustomerHistory::find();
 
         // add conditions that should always apply here
 
@@ -60,11 +60,11 @@ class EmailActivitySearch extends EmailActivity
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'email_activity_date' => $this->email_activity_date,
-            'email_id' => $this->email_id,
+            'ch_checkin' => $this->ch_checkin,
+            'ch_checkout' => $this->ch_checkout,
+            'ch_numberdays' => $this->ch_numberdays,
+            'customer_id' => $this->customer_id,
         ]);
-
-        $query->andFilterWhere(['like', 'email_activity_status', $this->email_activity_status]);
 
         return $dataProvider;
     }

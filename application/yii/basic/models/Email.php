@@ -26,6 +26,11 @@ class Email extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+      public function getInformation()
+    {
+    return $this->email_date.' '.$this->email_recipient.' '.$this->email_content;
+    }
     public static function tableName()
     {
         return 'email';
@@ -73,6 +78,10 @@ class Email extends \yii\db\ActiveRecord
         return $this->hasOne(Marketeer::className(), ['id' => 'marketeer_id']);
     }
 
+  public function getFullMarketeer()
+    {
+    return $this->marketeer_fname.' '.$this->marketeer_lname;
+    }
     /**
      * @return \yii\db\ActiveQuery
      */
