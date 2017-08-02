@@ -2,6 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use app\models\Customer;
+use app\models\Email;
+use app\models\EmailCustomer;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\EmailCustomer */
@@ -11,18 +15,19 @@ use yii\widgets\ActiveForm;
 <div class="email-customer-form">
 
     <?php $form = ActiveForm::begin(); ?>
-	
-	
+
+    
        <?= $form->field($model, 'customer_id')->dropDownList(
     ArrayHelper::map(Customer::find()->all(),'id','full'),
-    ['prompt'=>'Select Customer'] ?>
+    ['prompt'=>'Select Customer'] )?>
 
 
-       <?= $form->field($model, 'email_id')->dropDownList(
+    
+          <?= $form->field($model, 'email_id')->dropDownList(
     ArrayHelper::map(Email::find()->all(),'id','content'),
-    ['prompt'=>'Select Email']  ?>
+    ['prompt'=>'Select Email'] ) ?>
+    	
 
-	
 
     <?= $form->field($model, 'email_id')->textInput() ?>
 
