@@ -48,7 +48,7 @@ class CustomerHistory extends \yii\db\ActiveRecord
             'ch_checkin' => 'Check-in Date',
             'ch_checkout' => 'Check-out Date',
             'ch_numberdays' => 'Number of Days',
-            'customer_id' => 'Customer ID',
+            'customer_id' => 'Customer',
         ];
     }
 

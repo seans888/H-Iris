@@ -26,12 +26,6 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-
-     public function getName()
-    {
-    return $this->customer_fname.' '.$this->customer_lname;
-    }
-
     public static function tableName()
     {
         return 'customer';
@@ -43,8 +37,7 @@ class Customer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
-            [['id', 'customer_contact_number'], 'integer'],
+            [['customer_contact_number'], 'integer'],
             [['customer_fname', 'customer_mname', 'customer_lname', 'customer_email'], 'string', 'max' => 45],
         ];
     }

@@ -47,7 +47,7 @@ class EmailActivity extends \yii\db\ActiveRecord
             'id' => 'ID',
             'email_activity_status' => 'Email Activity Status',
             'email_activity_date' => 'Email Activity Date',
-            'email_id' => 'Email ID',
+            'email_id' => 'Email',
         ];
     }
 
