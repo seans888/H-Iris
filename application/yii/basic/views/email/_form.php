@@ -14,14 +14,14 @@ use app\models\Marketeer;
 
     <?php $form = ActiveForm::begin(); ?>
          <?= $form->field($model, 'marketeer_id')->dropDownList( 
-            ArrayHelper::map(Marketeer::find()->all(),'id','full'),
+            ArrayHelper::map(Marketeer::find()->all(),'id','fullName'),
             ['prompt'=>'Select Marketeer']
 
 
         ) ?> 
 
 
-    <?= $form->field($model, 'email_date')->textInput() ?>
+
 
     <?= $form->field($model, 'email_recipient')->textInput(['maxlength' => true]) ?>
 

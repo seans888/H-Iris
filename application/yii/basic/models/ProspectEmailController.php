@@ -1,18 +1,18 @@
 <?php
 
-namespace app\controllers;
+namespace app\models;
 
 use Yii;
-use app\models\Email;
-use app\models\EmailSearch;
+use app\models\ProspectEmail;
+use app\models\ProspectEmailSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * EmailController implements the CRUD actions for Email model.
+ * ProspectEmailController implements the CRUD actions for ProspectEmail model.
  */
-class EmailController extends Controller
+class ProspectEmailController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class EmailController extends Controller
     }
 
     /**
-     * Lists all Email models.
+     * Lists all ProspectEmail models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new EmailSearch();
+        $searchModel = new ProspectEmailSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,30 +45,29 @@ class EmailController extends Controller
     }
 
     /**
-     * Displays a single Email model.
-     * @param integer $id
+     * Displays a single ProspectEmail model.
+     * @param integer $prospect_id
+     * @param integer $email_id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($prospect_id, $email_id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($prospect_id, $email_id),
         ]);
     }
 
     /**
-     * Creates a new Email model.
+     * Creates a new ProspectEmail model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Email();
+        $model = new ProspectEmail();
 
-        if ($model->load(Yii::$app->request->post())) {
-            $model->email_date = date('Y-m-d');
-            $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'prospect_id' => $model->prospect_id, 'email_id' => $model->email_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -77,17 +76,18 @@ class EmailController extends Controller
     }
 
     /**
-     * Updates an existing Email model.
+     * Updates an existing ProspectEmail model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param integer $prospect_id
+     * @param integer $email_id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($prospect_id, $email_id)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($prospect_id, $email_id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'prospect_id' => $model->prospect_id, 'email_id' => $model->email_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -96,28 +96,30 @@ class EmailController extends Controller
     }
 
     /**
-     * Deletes an existing Email model.
+     * Deletes an existing ProspectEmail model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param integer $prospect_id
+     * @param integer $email_id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($prospect_id, $email_id)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($prospect_id, $email_id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Email model based on its primary key value.
+     * Finds the ProspectEmail model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Email the loaded model
+     * @param integer $prospect_id
+     * @param integer $email_id
+     * @return ProspectEmail the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($prospect_id, $email_id)
     {
-        if (($model = Email::findOne($id)) !== null) {
+        if (($model = ProspectEmail::findOne(['prospect_id' => $prospect_id, 'email_id' => $email_id])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

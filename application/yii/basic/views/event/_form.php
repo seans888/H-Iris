@@ -12,16 +12,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-         <?= $form->field($model, 'marketeer_id')->dropDownList(
-    ArrayHelper::map(Marketeer::find()->all(),'id','full'),
-    ['prompt'=>'Select Marketeer']
-
-
-    )?>
-
-
-    <?= $form->field($model, 'id')->textInput() ?>
-
     <?= $form->field($model, 'event_date_created')->textInput() ?>
 
     <?= $form->field($model, 'event_description')->textInput(['maxlength' => true]) ?>

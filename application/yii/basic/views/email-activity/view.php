@@ -31,8 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'email_activity_status:email',
             'email_activity_date:email',
-            'emai_activity_time',
-            'email_id:email',
+             array(
+                    'label' => $model->email->getAttributeLabel('email'),
+                    'value' => $model->email->information),
         ],
     ]) ?>
 

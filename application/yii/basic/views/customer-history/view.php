@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Email */
+/* @var $model app\models\CustomerHistory */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Emails', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Customer Histories', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="email-view">
+<div class="customer-history-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,14 +29,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'email_date:email',
-            'email_recipient:email',
-            'email_content:email',
-            'email_template:email',
-            /**'marketeer_id',**/
+            'ch_checkin',
+            'ch_checkout',
+            'ch_numberdays',
              array(
-                    'label' => $model->marketeer->getAttributeLabel('marketeer'),
-                    'value' => $model->marketeer->fullName),
+                    'label' => $model->customer->getAttributeLabel('customer'),
+                    'value' => $model->customer->name),
         ],
     ]) ?>
 
