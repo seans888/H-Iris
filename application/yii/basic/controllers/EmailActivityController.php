@@ -65,7 +65,9 @@ class EmailActivityController extends Controller
     {
         $model = new EmailActivity();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->email_activity_date = date('Y-m-d h:m:s');
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

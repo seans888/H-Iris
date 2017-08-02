@@ -11,6 +11,18 @@ use yii\widgets\ActiveForm;
 <div class="email-customer-form">
 
     <?php $form = ActiveForm::begin(); ?>
+	
+	
+       <?= $form->field($model, 'customer_id')->dropDownList(
+    ArrayHelper::map(Customer::find()->all(),'id','full'),
+    ['prompt'=>'Select Customer'] ?>
+
+
+       <?= $form->field($model, 'email_id')->dropDownList(
+    ArrayHelper::map(Email::find()->all(),'id','content'),
+    ['prompt'=>'Select Email']  ?>
+
+	
 
     <?= $form->field($model, 'email_id')->textInput() ?>
 
