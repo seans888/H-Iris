@@ -32,9 +32,9 @@ class Event extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'marketeer_id'], 'required'],
-            [['id', 'marketeer_id'], 'integer'],
             [['event_date_created', 'event_start_date', 'event_end_date'], 'safe'],
+            [['marketeer_id'], 'required'],
+            [['marketeer_id'], 'integer'],
             [['event_description'], 'string', 'max' => 400],
             [['marketeer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Marketeer::className(), 'targetAttribute' => ['marketeer_id' => 'id']],
         ];
