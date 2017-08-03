@@ -25,6 +25,12 @@ class Prospect extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+    public function getFullName()
+    {
+    return $this->prospect_fname.' '.$this->prospect_lname;
+    }
+
     public static function tableName()
     {
         return 'prospect';
