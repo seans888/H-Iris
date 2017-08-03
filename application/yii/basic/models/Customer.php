@@ -30,6 +30,7 @@ class Customer extends \yii\db\ActiveRecord
     {
      return $this->customer_fname.' '.$this->customer_lname;
     }
+    
     public static function tableName()
     {
         return 'customer';
