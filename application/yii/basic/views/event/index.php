@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'event_description',
             'event_start_date',
             'event_end_date',
-            // 'marketeer_id',
+            'marketeer_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
