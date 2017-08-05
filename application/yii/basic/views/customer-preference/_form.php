@@ -18,7 +18,7 @@ use app\models\Preference;
 
   <?php $form = ActiveForm::begin(); ?>
          <?= $form->field($model, 'customer_id')->dropDownList( 
-            ArrayHelper::map(Customer::find()->all(),'id','fullName'),
+            ArrayHelper::map(Customer::find()->all(),'id','name'),
             ['prompt'=>'Select Customer']
 
 
