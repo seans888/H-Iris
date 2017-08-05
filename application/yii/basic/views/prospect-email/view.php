@@ -34,8 +34,9 @@ $this->params['breadcrumbs'][] = $this->title;
             array( 'label'=>$model->email->getAttributeLabel('email'),
                 'value'=>$model->email->information),
 
-            'prospect_id',
-            'email_id:email',
+            'prospect.fullName',
+            'email.information',
+            
         ],
     ]) ?>
 
