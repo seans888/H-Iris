@@ -28,8 +28,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'email_id:email',
-            'customer_id',
+            
+             array(
+                    'label' => $model->email->getAttributeLabel('email'),
+                    'value' => $model->email->information),
+             array(
+                    'label' => $model->customer->getAttributeLabel('customer'),
+                    'value' => $model->customer->name),
+           
         ],
     ]) ?>
 

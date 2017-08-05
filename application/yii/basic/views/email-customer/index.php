@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\models\Email;
+use app\models\Customer;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EmailCustomerSearch */
@@ -24,8 +26,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'email_id:email',
-            'customer_id',
+            'email.information',
+            'customer.name',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
