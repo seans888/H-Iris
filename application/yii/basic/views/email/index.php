@@ -31,8 +31,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'email_recipient:email',
             'email_content:email',
             'email_template:email',
-            'marketeer.fullName',
-            
+            [ 
+            'attribute' => 'marketeer_id',
+            'value'=>'marketeer.fullName'
+            ],
+
+
+          /**  'marketeer.fullName',
+           array(
+            'name'=>'marketeerSearch',
+            'value'=>'$data->marketeer->fullName;',
+            ),**/
+
             /**array(
             'name'=>'marketeer_search',
             'value'=>'$data->marketeer->fullName'

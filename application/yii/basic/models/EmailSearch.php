@@ -15,10 +15,13 @@ class EmailSearch extends Email
     /**
      * @inheritdoc
      */
+
+    public $marketeer_id;
+
     public function rules()
     {
         return [
-            [['id', 'marketeer_id'], 'integer'],
+            [['id', 'marketeer_id','marketeer.fullName'], 'safe'],
             [['email_date', 'email_recipient', 'email_content', 'email_template'], 'safe'],
         ];
     }
@@ -42,7 +45,11 @@ class EmailSearch extends Email
     public function search($params)
     {
         $query = Email::find();
+        $query->joinWith('marketeer','marketeer.fullName');
+        $query->andFilterWhere(['like', 'marketeer.fullName', $this->marketeer_id]);
 
+        
+        
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
