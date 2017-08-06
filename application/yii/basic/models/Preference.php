@@ -21,12 +21,8 @@ class Preference extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-<<<<<<< HEAD
-public function getInformation()
-=======
 
-      public function getInformation()
->>>>>>> 141ebc8666a9f8e04304c85e35d048ed5cbca640
+    public function getInformation()
     {
     return $this->preference_category.' '.$this->preference_description;
     }
