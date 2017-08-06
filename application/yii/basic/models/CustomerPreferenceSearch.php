@@ -18,7 +18,7 @@ class CustomerPreferenceSearch extends CustomerPreference
     public function rules()
     {
         return [
-            [['customer_id', 'preference_id'], 'integer'],
+            [['id', 'customer_id', 'preference_id'], 'integer'],
         ];
     }
 
@@ -58,6 +58,7 @@ class CustomerPreferenceSearch extends CustomerPreference
 
         // grid filtering conditions
         $query->andFilterWhere([
+            'id' => $this->id,
             'customer_id' => $this->customer_id,
             'preference_id' => $this->preference_id,
         ]);
