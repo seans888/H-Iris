@@ -15,6 +15,7 @@ use app\models\Preference;
 
     <?php $form = ActiveForm::begin(); ?>
 
+<<<<<<< HEAD
     <?= $form->field($model, 'customer_id')->dropDownList( 
             ArrayHelper::map(Customer::find()->all(),'id','name'),
             ['prompt'=>'Select Customer'])
@@ -24,6 +25,24 @@ use app\models\Preference;
             ArrayHelper::map(Preference::find()->all(),'id','information'),
             ['prompt'=>'Select Preference'])
            ?> 
+=======
+
+  <?php $form = ActiveForm::begin(); ?>
+         <?= $form->field($model, 'customer_id')->dropDownList( 
+            ArrayHelper::map(Customer::find()->all(),'id','name'),
+            ['prompt'=>'Select Customer']
+
+
+        ) ?> 
+
+  <?php $form = ActiveForm::begin(); ?>
+         <?= $form->field($model, 'preference_id')->dropDownList( 
+            ArrayHelper::map(Preference::find()->all(),'id','information'),
+            ['prompt'=>'Select Preference']
+
+
+        ) ?> 
+>>>>>>> 141ebc8666a9f8e04304c85e35d048ed5cbca640
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
