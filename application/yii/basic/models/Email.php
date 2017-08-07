@@ -27,7 +27,6 @@ class Email extends \yii\db\ActiveRecord
      * @inheritdoc
      */
 
-     
       public function getInformation()
     {
     return $this->email_date.' '.$this->email_recipient.' '.$this->email_content;

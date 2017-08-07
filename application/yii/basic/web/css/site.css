@@ -16,7 +16,7 @@ body {
 
 .footer {
     height: 60px;
-    background-color: #141465;
+    background-color: #f5f5f5;
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .not-set {
-    color: #ffffff;
+    color: #c55;
     font-style: italic;
 }
 
@@ -79,7 +79,7 @@ a.desc:after {
 .hint-block {
     display: block;
     margin-top: 5px;
-    color: #ffffff;
+    color: #999;
 }
 
 .error-summary {

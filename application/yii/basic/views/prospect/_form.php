@@ -11,8 +11,7 @@ use yii\widgets\ActiveForm;
 <div class="prospect-form">
 
     <?php $form = ActiveForm::begin(); ?>
-    
-    
+
     <?= $form->field($model, 'prospect_email')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'prospect_fname')->textInput(['maxlength' => true]) ?>

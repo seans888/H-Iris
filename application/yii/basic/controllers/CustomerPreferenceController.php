@@ -46,13 +46,14 @@ class CustomerPreferenceController extends Controller
 
     /**
      * Displays a single CustomerPreference model.
-     * @param integer $id
+     * @param integer $customer_id
+     * @param integer $preference_id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($customer_id, $preference_id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($customer_id, $preference_id),
         ]);
     }
 
@@ -66,7 +67,7 @@ class CustomerPreferenceController extends Controller
         $model = new CustomerPreference();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'customer_id' => $model->customer_id, 'preference_id' => $model->preference_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -77,15 +78,16 @@ class CustomerPreferenceController extends Controller
     /**
      * Updates an existing CustomerPreference model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param integer $customer_id
+     * @param integer $preference_id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($customer_id, $preference_id)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($customer_id, $preference_id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'customer_id' => $model->customer_id, 'preference_id' => $model->preference_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -96,12 +98,13 @@ class CustomerPreferenceController extends Controller
     /**
      * Deletes an existing CustomerPreference model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param integer $customer_id
+     * @param integer $preference_id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($customer_id, $preference_id)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($customer_id, $preference_id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -109,13 +112,14 @@ class CustomerPreferenceController extends Controller
     /**
      * Finds the CustomerPreference model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     * @param integer $customer_id
+     * @param integer $preference_id
      * @return CustomerPreference the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($customer_id, $preference_id)
     {
-        if (($model = CustomerPreference::findOne($id)) !== null) {
+        if (($model = CustomerPreference::findOne(['customer_id' => $customer_id, 'preference_id' => $preference_id])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

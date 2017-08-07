@@ -20,7 +20,7 @@ use app\models\Marketeer;
 
         ) ?> 
 
-        
+
 
 
     <?= $form->field($model, 'email_recipient')->textInput(['maxlength' => true]) ?>

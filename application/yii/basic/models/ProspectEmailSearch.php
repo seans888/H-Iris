@@ -18,7 +18,7 @@ class ProspectEmailSearch extends ProspectEmail
     public function rules()
     {
         return [
-            [['id', 'prospect_id', 'email_id'], 'integer'],
+            [['prospect_id', 'email_id'], 'integer'],
         ];
     }
 
@@ -58,7 +58,6 @@ class ProspectEmailSearch extends ProspectEmail
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
             'prospect_id' => $this->prospect_id,
             'email_id' => $this->email_id,
         ]);

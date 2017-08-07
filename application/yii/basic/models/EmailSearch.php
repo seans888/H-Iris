@@ -6,7 +6,6 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Email;
-use yii\models\Marketeer;
 
 /**
  * EmailSearch represents the model behind the search form about `app\models\Email`.
