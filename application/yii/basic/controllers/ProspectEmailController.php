@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\CustomerPreference;
-use app\models\CustomerPreferenceSearch;
+use app\models\ProspectEmail;
+use app\models\ProspectEmailSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CustomerPreferenceController implements the CRUD actions for CustomerPreference model.
+ * ProspectEmailController implements the CRUD actions for ProspectEmail model.
  */
-class CustomerPreferenceController extends Controller
+class ProspectEmailController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class CustomerPreferenceController extends Controller
     }
 
     /**
-     * Lists all CustomerPreference models.
+     * Lists all ProspectEmail models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new CustomerPreferenceSearch();
+        $searchModel = new ProspectEmailSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class CustomerPreferenceController extends Controller
     }
 
     /**
-     * Displays a single CustomerPreference model.
+     * Displays a single ProspectEmail model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class CustomerPreferenceController extends Controller
     }
 
     /**
-     * Creates a new CustomerPreference model.
+     * Creates a new ProspectEmail model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new CustomerPreference();
+        $model = new ProspectEmail();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -75,7 +75,7 @@ class CustomerPreferenceController extends Controller
     }
 
     /**
-     * Updates an existing CustomerPreference model.
+     * Updates an existing ProspectEmail model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class CustomerPreferenceController extends Controller
     }
 
     /**
-     * Deletes an existing CustomerPreference model.
+     * Deletes an existing ProspectEmail model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class CustomerPreferenceController extends Controller
     }
 
     /**
-     * Finds the CustomerPreference model based on its primary key value.
+     * Finds the ProspectEmail model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return CustomerPreference the loaded model
+     * @return ProspectEmail the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = CustomerPreference::findOne($id)) !== null) {
+        if (($model = ProspectEmail::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
