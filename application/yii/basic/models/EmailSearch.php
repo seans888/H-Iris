@@ -16,14 +16,11 @@ class EmailSearch extends Email
     /**
      * @inheritdoc
      */
-
-    public $marketeer_id;
-
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['email_date','marketeer_id', 'email_recipient', 'email_content', 'email_template'], 'safe'],
+            [['id', 'marketeer_id'], 'integer'],
+            [['email_date', 'email_recipient', 'email_content', 'email_template'], 'safe'],
         ];
     }
 
@@ -46,10 +43,7 @@ class EmailSearch extends Email
     public function search($params)
     {
         $query = Email::find();
-        /** $query->andFilterWhere(['like', 'marketeer.fullName', $this->marketeer_id]);**/
 
-        
-        
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
@@ -64,19 +58,16 @@ class EmailSearch extends Email
             return $dataProvider;
         }
 
-        $query->joinWith('marketeer');
-
-
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'email_date' => $this->email_date,
+            'marketeer_id' => $this->marketeer_id,
         ]);
 
         $query->andFilterWhere(['like', 'email_recipient', $this->email_recipient])
             ->andFilterWhere(['like', 'email_content', $this->email_content])
-            ->andFilterWhere(['like', 'email_template', $this->email_template])
-            -> andFilterWhere(['like','marketeer_fname', $this->marketeer_id]);
+            ->andFilterWhere(['like', 'email_template', $this->email_template]);
 
         return $dataProvider;
     }

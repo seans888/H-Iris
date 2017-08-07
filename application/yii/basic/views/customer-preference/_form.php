@@ -13,14 +13,10 @@ use app\models\Preference;
 
 <div class="customer-preference-form">
 
-    <?php $form = ActiveForm::begin(); ?>
-
-
   <?php $form = ActiveForm::begin(); ?>
          <?= $form->field($model, 'customer_id')->dropDownList( 
             ArrayHelper::map(Customer::find()->all(),'id','name'),
             ['prompt'=>'Select Customer']
-
 
         ) ?> 
 
@@ -28,7 +24,6 @@ use app\models\Preference;
          <?= $form->field($model, 'preference_id')->dropDownList( 
             ArrayHelper::map(Preference::find()->all(),'id','information'),
             ['prompt'=>'Select Preference']
-
 
         ) ?> 
 
