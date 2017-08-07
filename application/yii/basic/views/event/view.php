@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'event_description',
             'event_start_date',
             'event_end_date',
-            'marketeer.fullname',
+            'marketeer_id',
         ],
     ]) ?>
 
