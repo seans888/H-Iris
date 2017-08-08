@@ -8,17 +8,15 @@ $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-<<<<<<< HEAD
-	<img src="uploads/sm.jpg" style="width:300px;height:300px;"> <br>
-=======
+
 	<img src="uploads/sm.jpg" style="width:300px;height:300px;"> <br> 
->>>>>>> faae0a1bcf8988b40ee8b811b6eee620ea8168c6
+
     <h1><?= Html::encode($this->title) ?></h1>
 
     
 
     <p>
-<<<<<<< HEAD
+
     	<br>
         SM Hotels and Conventions Corporation (SMHCC) was established to address the vast potential of tourism in the country. 
     	</br>
@@ -61,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
     	privately run exhibition and conventions business in the Philippines.
     </p>
   
-=======
+
 		<br> 
         SM Hotels and Conventions Corporation (SMHCC) was established to address the vast potential of tourism in the country.  
 		</br> 
@@ -99,5 +97,5 @@ $this->params['breadcrumbs'][] = $this->title;
 		<br> 
 		privately run exhibition and conventions business in the Philippines. 
 	</p> 
->>>>>>> faae0a1bcf8988b40ee8b811b6eee620ea8168c6
+
 </div>
