@@ -16,9 +16,7 @@ use app\models\Marketeer;
 
  
 
- <?= $form->field($model, 'marketeer_id')->dropDownList(
-    ArrayHelper::map(Marketeer::find()->all(),'id','full'),
-    ['prompt'=>'Select Marketeer'] )?>
+
                                         
     <?= $form->field($model, 'event_date_created')->textInput() ?>
 
@@ -28,7 +26,9 @@ use app\models\Marketeer;
 
     <?= $form->field($model, 'event_end_date')->textInput() ?>
 
-  
+   <?= $form->field($model, 'marketeer_id')->dropDownList(
+    ArrayHelper::map(Marketeer::find()->all(),'id','fullName'),
+    ['prompt'=>'Select Marketeer'] )?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

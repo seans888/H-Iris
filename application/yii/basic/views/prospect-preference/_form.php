@@ -17,7 +17,7 @@ use app\models\Preference;
    
     
          <?= $form->field($model, 'prospect_id')->dropDownList( 
-            ArrayHelper::map(Prospect::find()->all(),'id','fullName'),
+            ArrayHelper::map(Prospect::find()->all(),'id','name'),
             ['prompt'=>'Select Prospect']
 
 
@@ -26,7 +26,7 @@ use app\models\Preference;
    
      
          <?= $form->field($model, 'preference_id')->dropDownList( 
-            ArrayHelper::map(Preference::find()->all(),'id','Information'),
+            ArrayHelper::map(Preference::find()->all(),'id','information'),
             ['prompt'=>'Select Preference']
 
 

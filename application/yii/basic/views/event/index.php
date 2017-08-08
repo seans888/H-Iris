@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
            
 
             ['attribute'=>'marketeer_id', 
-            'value'=>'marketeer.FullName'],
+            'value'=>'marketeer.fullName'],
 
             ['class' => 'yii\grid\ActionColumn']
         ],
