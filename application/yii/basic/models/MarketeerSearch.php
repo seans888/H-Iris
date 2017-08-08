@@ -15,8 +15,6 @@ class MarketeerSearch extends Marketeer
     /**
      * @inheritdoc
      */
-
-    
     public function rules()
     {
         return [

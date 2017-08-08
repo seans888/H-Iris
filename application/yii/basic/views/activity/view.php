@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\EmailActivity */
+/* @var $model app\models\Activity */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Email Activities', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Activities', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="email-activity-view">
+<div class="activity-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,11 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'email_activity_status:email',
-            'email_activity_date:email',
-             array(
-                    'label' => $model->email->getAttributeLabel('email'),
-                    'value' => $model->email->information),
+            'activity_status',
+            'activity_description',
         ],
     ]) ?>
 

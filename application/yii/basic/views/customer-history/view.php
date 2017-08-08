@@ -32,9 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'ch_checkin',
             'ch_checkout',
             'ch_numberdays',
-             array(
-                    'label' => $model->customer->getAttributeLabel('customer'),
-                    'value' => $model->customer->name),
+            'customer.name',
         ],
     ]) ?>
 

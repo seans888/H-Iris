@@ -18,8 +18,8 @@ class CustomerHistorySearch extends CustomerHistory
     public function rules()
     {
         return [
-            [['id', 'ch_numberdays', 'customer_id'], 'integer'],
-            [['ch_checkin', 'ch_checkout'], 'safe'],
+            [['id', 'ch_numberdays'], 'integer'],
+            [['ch_checkin', 'ch_checkout', 'customer_id'], 'safe'],
         ];
     }
 
@@ -56,16 +56,16 @@ class CustomerHistorySearch extends CustomerHistory
             // $query->where('0=1');
             return $dataProvider;
         }
-
+        $query->joinWith('customer');
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'ch_checkin' => $this->ch_checkin,
             'ch_checkout' => $this->ch_checkout,
             'ch_numberdays' => $this->ch_numberdays,
-            'customer_id' => $this->customer_id,
+            
         ]);
-
+        $query->andFilterWhere(['like', 'customer_fname', $this->customer_id]);
         return $dataProvider;
     }
 }
