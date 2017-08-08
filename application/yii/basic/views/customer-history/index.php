@@ -28,7 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'ch_checkin',
             'ch_checkout',
             'ch_numberdays',
-            'customer.name',
+            [  
+            'attribute' => 'customer_id', 
+            'value'=>'customer.name' 
+             ], 
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
