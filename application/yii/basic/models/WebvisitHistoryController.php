@@ -49,10 +49,10 @@ class WebvisitHistoryController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($customer_id, $Prospect_id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($customer_id, $Prospect_id),
         ]);
     }
 
