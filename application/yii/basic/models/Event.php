@@ -14,6 +14,7 @@ use Yii;
  * @property string $event_end_date
  * @property integer $marketeer_id
  *
+ * @property EmailEvent[] $emailEvents
  * @property Marketeer $marketeer
  */
 class Event extends \yii\db\ActiveRecord
@@ -21,6 +22,12 @@ class Event extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+public function getFullName()
+   {
+   return $this->marketeer_fname.' '.$this->marketeer_lname;
+    }
+
     public static function tableName()
     {
         return 'event';
@@ -32,9 +39,9 @@ class Event extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'marketeer_id'], 'required'],
-            [['id', 'marketeer_id'], 'integer'],
             [['event_date_created', 'event_start_date', 'event_end_date'], 'safe'],
+            [['marketeer_id'], 'required'],
+            [['marketeer_id'], 'integer'],
             [['event_description'], 'string', 'max' => 400],
             [['marketeer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Marketeer::className(), 'targetAttribute' => ['marketeer_id' => 'id']],
         ];
@@ -53,6 +60,21 @@ class Event extends \yii\db\ActiveRecord
             'event_end_date' => 'Event End Date',
             'marketeer_id' => 'Marketeer ID',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+
+    public function getId0()
+    {
+        return $this->hasOne(Marketeer::className(), ['id' => 'id']);
+    }
+
+
+    public function getEmailEvents()
+    {
+        return $this->hasMany(EmailEvent::className(), ['event_id' => 'id']);
     }
 
     /**

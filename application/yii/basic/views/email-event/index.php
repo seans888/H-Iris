@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\EventSearch */
+/* @var $searchModel app\models\EmailEventSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Events';
+$this->title = 'Email Events';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="event-index">
+<div class="email-event-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Event', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Email Event', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,11 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'event_date_created',
-            'event_description',
-            'event_start_date',
-            'event_end_date',
-            // 'marketeer_id',
+            'event_id',
+            'email.information',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
