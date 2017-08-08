@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\models\Customer;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\WebvisitHistorySearcha */
@@ -29,9 +31,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'wvh_time',
             'wvh_ip_address',
             'wvh_url:url',
-            // 'wvh_cookie_information',
-            // 'customer_id',
-            // 'Prospect_id',
+           
+            
+            ['attribute'=>'customer_id',
+            'value'=>'customer.name'],
+
+             ['attribute'=>'Prospect_id',
+            'value'=>'prospect.name'],
+         //'wvh_cookie_information',
+           
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

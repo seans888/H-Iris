@@ -21,11 +21,11 @@ class Preference extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-
-        public function getFullInformation()
+      public function getInformation()
     {
-    return $this->preference_description.' '.$this->preference_category;
+     return $this->preference_category.' '.$this->preference_description;
     }
+
     public static function tableName()
     {
         return 'preference';

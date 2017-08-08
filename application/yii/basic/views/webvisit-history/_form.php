@@ -26,7 +26,7 @@ use app\models\Prospect;
 
    
          <?= $form->field($model, 'customer_id')->dropDownList( 
-            ArrayHelper::map(Customer::find()->all(),'id','fullName'),
+            ArrayHelper::map(Customer::find()->all(),'id','Name'),
             ['prompt'=>'Select Customer']
 
 
@@ -35,7 +35,7 @@ use app\models\Prospect;
 
 
          <?= $form->field($model, 'Prospect_id')->dropDownList( 
-            ArrayHelper::map(Prospect::find()->all(),'id','fullName'),
+            ArrayHelper::map(Prospect::find()->all(),'id','Name'),
             ['prompt'=>'Select Prospect']
 
 

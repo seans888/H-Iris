@@ -26,11 +26,13 @@ use app\models\Preference;
    
      
          <?= $form->field($model, 'preference_id')->dropDownList( 
-            ArrayHelper::map(Preference::find()->all(),'id','FullInformation'),
+            ArrayHelper::map(Preference::find()->all(),'id','Information'),
             ['prompt'=>'Select Preference']
 
 
         ) ?> 
+
+        
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

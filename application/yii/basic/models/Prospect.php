@@ -25,12 +25,10 @@ class Prospect extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-
-    public function getFullName()
+     public function getName()
     {
     return $this->prospect_fname.' '.$this->prospect_lname;
     }
-
     public static function tableName()
     {
         return 'prospect';
@@ -55,9 +53,9 @@ class Prospect extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'prospect_email' => 'Prospect Email',
-            'prospect_fname' => 'Prospect Fname',
-            'prospect_mname' => 'Prospect Mname',
-            'prospect_lname' => 'Prospect Lname',
+            'prospect_fname' => 'Prospect First Name',
+            'prospect_mname' => 'Prospect Middle Name',
+            'prospect_lname' => 'Prospect Last Name',
             'prospect_contact_number' => 'Prospect Contact Number',
         ];
     }
