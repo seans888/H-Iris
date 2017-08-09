@@ -18,7 +18,7 @@ class WebvisitHistorySearch extends WebvisitHistory
     public function rules()
     {
         return [
-            [['id', 'wvh_ip_address''customer_id', 'Prospect_id'], 'integer'],
+            [['id', 'wvh_ip_address','customer_id', 'Prospect_id'], 'integer'],
             [['wvh_date', 'wvh_time', 'wvh_url', 'wvh_cookie_information', ], 'safe'],
         ];
     }

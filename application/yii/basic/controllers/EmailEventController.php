@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\WebvisitHistory;
-use app\models\WebvisitHistorySearch;
+use app\models\EmailEvent;
+use app\models\EmailEventSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * WebvisitHistoryController implements the CRUD actions for WebvisitHistory model.
+ * EmailEventController implements the CRUD actions for EmailEvent model.
  */
-class WebvisitHistoryController extends Controller
+class EmailEventController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Lists all WebvisitHistory models.
+     * Lists all EmailEvent models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new WebvisitHistorySearch();
+        $searchModel = new EmailEventSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Displays a single WebvisitHistory model.
+     * Displays a single EmailEvent model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Creates a new WebvisitHistory model.
+     * Creates a new EmailEvent model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new WebvisitHistory();
+        $model = new EmailEvent();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -75,7 +75,7 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Updates an existing WebvisitHistory model.
+     * Updates an existing EmailEvent model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Deletes an existing WebvisitHistory model.
+     * Deletes an existing EmailEvent model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Finds the WebvisitHistory model based on its primary key value.
+     * Finds the EmailEvent model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return WebvisitHistory the loaded model
+     * @return EmailEvent the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = WebvisitHistory::findOne($id)) !== null) {
+        if (($model = EmailEvent::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

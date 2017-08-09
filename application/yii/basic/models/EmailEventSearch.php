@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Event;
+use app\models\EmailEvent;
 
 /**
- * EventSearch represents the model behind the search form about `app\models\Event`.
+ * EmailEventSearch represents the model behind the search form about `app\models\EmailEvent`.
  */
-class EventSearch extends Event
+class EmailEventSearch extends EmailEvent
 {
     /**
      * @inheritdoc
@@ -18,8 +18,7 @@ class EventSearch extends Event
     public function rules()
     {
         return [
-            [['id', ], 'integer'],
-            [['event_date_created', 'event_description', 'event_start_date', 'event_end_date', 'marketeer.FullName'], 'safe'],
+            [['id', 'event_id', 'email_id'], 'integer'],
         ];
     }
 
@@ -41,7 +40,7 @@ class EventSearch extends Event
      */
     public function search($params)
     {
-        $query = Event::find();
+        $query = EmailEvent::find();
 
         // add conditions that should always apply here
 
@@ -57,18 +56,12 @@ class EventSearch extends Event
             return $dataProvider;
         }
 
-        $query->joinWith('marketeer');
-
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'event_date_created' => $this->event_date_created,
-            'event_start_date' => $this->event_start_date,
-            'event_end_date' => $this->event_end_date,
-            'event_description' => $this->event_description,
+            'event_id' => $this->event_id,
+            'email_id' => $this->email_id,
         ]);
-
-            $query->andFilterWhere(['like','marketeer_fname', $this->marketeer_id]);
 
         return $dataProvider;
     }
