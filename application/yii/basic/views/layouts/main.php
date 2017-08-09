@@ -39,12 +39,12 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             [
-            'label' => 'Dropdown',
+            'label' => 'Forms',
             'items' => [
-                 ['label' => 'Level 1 - Dropdown A', 'url' => '/email/index'],
+                 ['label' => 'Email', 'url' => ['/email/index']],
                  '<li class="divider"></li>',
-                 '<li class="dropdown-header">Dropdown Header</li>',
-                 ['label' => 'Level 1 - Dropdown B', 'url' => '/marketeer/index'],
+                 //'<li class="dropdown-header">Dropdown Header</li>',
+                 ['label' => 'Marketeer', 'url' => ['/marketeer/index']],
             ],
         ],
             ['label' => 'About', 'url' => ['/site/about']],
