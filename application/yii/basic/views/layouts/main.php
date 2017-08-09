@@ -38,6 +38,9 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'About', 'url' => ['/site/about']],
+            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Email', 'url' => ['/email/index']],
             [
             'label' => 'Forms',
             'items' => [
@@ -45,11 +48,10 @@ AppAsset::register($this);
                  '<li class="divider"></li>',
                  //'<li class="dropdown-header">Dropdown Header</li>',
                  ['label' => 'Marketeer', 'url' => ['/marketeer/index']],
+                  '<li class="divider"></li>',
+                 ['label' => 'Activity', 'url' => ['/activity/index']]
             ],
         ],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'Email', 'url' => ['/email/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
