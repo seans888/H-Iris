@@ -42,7 +42,7 @@ class Email extends \yii\db\ActiveRecord
             [['email_date'], 'safe'],
             [['email_activity_id'], 'required'],
             [['email_activity_id'], 'integer'],
-            [['email_recipient', 'email_template'], 'string', 'max' => 45],
+            [['email_recipient', 'email_template','email_status'], 'string', 'max' => 45],
             [['email_content'], 'string', 'max' => 1000],
             [['email_activity_id'], 'exist', 'skipOnError' => true, 'targetClass' => Activity::className(), 'targetAttribute' => ['email_activity_id' => 'id']],
         ];
@@ -55,10 +55,11 @@ class Email extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'email_date' => 'Email Date',
-            'email_recipient' => 'Email Recipient',
-            'email_content' => 'Email Content',
-            'email_template' => 'Email Template',
+            'email_date' => 'Date Sent',
+            'email_recipient' => 'Recipient',
+            'email_content' => 'Content',
+            'email_template' => 'Template',
+            'email_status' => 'Status',
             'email_activity_id' => 'Email Activity',
         ];
     }

@@ -24,6 +24,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'email_content') ?>
 
     <?= $form->field($model, 'email_template') ?>
+    <?= $form->field($model, 'email_status') ?>
 
     <?php // echo $form->field($model, 'email_activity_id') ?>
 
