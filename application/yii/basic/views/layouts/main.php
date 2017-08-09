@@ -26,7 +26,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
+  <?php
     NavBar::begin([
         'brandLabel' => 'SM Hotels and Convention Corporation',
         'brandUrl' => Yii::$app->homeUrl,
@@ -38,6 +38,15 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
+            [
+            'label' => 'Dropdown',
+            'items' => [
+                 ['label' => 'Level 1 - Dropdown A', 'url' => '/email/index'],
+                 '<li class="divider"></li>',
+                 '<li class="dropdown-header">Dropdown Header</li>',
+                 ['label' => 'Level 1 - Dropdown B', 'url' => '/marketeer/index'],
+            ],
+        ],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Email', 'url' => ['/email/index']],
@@ -56,7 +65,7 @@ AppAsset::register($this);
         ],
     ]);
     NavBar::end();
-    ?>
+    ?> 
 
     <div class="container">
         <?= Breadcrumbs::widget([
