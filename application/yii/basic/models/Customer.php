@@ -16,7 +16,6 @@ use Yii;
  *
  * @property CustomerHistory[] $customerHistories
  * @property CustomerPreference[] $customerPreferences
- * @property Preference[] $preferences
  * @property EmailCustomer[] $emailCustomers
  * @property Email[] $emails
  * @property WebvisitHistory[] $webvisitHistories
@@ -26,9 +25,9 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-     public function getName()
+    public function getName()
     {
-     return $this->customer_fname.' '.$this->customer_lname;
+    	 return $this->customer_fname.' '.$this->customer_lname;
     }
     public static function tableName()
     {
@@ -75,14 +74,6 @@ class Customer extends \yii\db\ActiveRecord
     public function getCustomerPreferences()
     {
         return $this->hasMany(CustomerPreference::className(), ['customer_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getPreferences()
-    {
-        return $this->hasMany(Preference::className(), ['id' => 'preference_id'])->viaTable('customer_preference', ['customer_id' => 'id']);
     }
 
     /**

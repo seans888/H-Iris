@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\CustomerPreference;
+//use app\models\CustomerPreferenceSearch;
 
 /**
  * CustomerPreferenceSearch represents the model behind the search form about `app\models\CustomerPreference`.
@@ -18,7 +19,8 @@ class CustomerPreferenceSearch extends CustomerPreference
     public function rules()
     {
         return [
-            [['customer_id', 'preference_id'], 'integer'],
+            [['id'],'integer'], 
+            [['customer.name', 'preference.information', 'customer_id', 'preference_id'], 'safe'],
         ];
     }
 
@@ -55,12 +57,16 @@ class CustomerPreferenceSearch extends CustomerPreference
             // $query->where('0=1');
             return $dataProvider;
         }
+        $query->joinWith('customer')
+        	->joinWith('preference');
 
         // grid filtering conditions
-        $query->andFilterWhere([
-            'customer_id' => $this->customer_id,
-            'preference_id' => $this->preference_id,
-        ]);
+        $query->andFilterWhere(['id' => $this->id,]);
+
+        $query->andFilterWhere(['like','customer_fname', $this->customer_id])
+         ->orFilterWhere(['like','customer_lname', $this->customer_id])
+         ->andFilterWhere(['like','preference_description', $this->preference_id])
+        ->orFilterWhere(['like','preference_category', $this->preference_id]);
 
         return $dataProvider;
     }
