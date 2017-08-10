@@ -45,8 +45,8 @@ class Activity extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'activity_status' => 'Activity Status',
-            'activity_description' => 'Activity Description',
+            'activity_status' => 'Status',
+            'activity_description' => 'Description',
         ];
     }
 

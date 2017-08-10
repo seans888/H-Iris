@@ -20,7 +20,7 @@ class EmailSearch extends Email
     {
         return [
             [['id'], 'integer'],
-            [['email_date', 'email_activity_id', 'email_recipient', 'email_content', 'email_template'], 'safe'],
+            [['email_date', 'email_activity_id', 'email_recipient', 'email_content', 'email_template','email_status'], 'safe'],
         ];
     }
 
@@ -68,6 +68,7 @@ class EmailSearch extends Email
         $query->andFilterWhere(['like', 'email_recipient', $this->email_recipient])
             ->andFilterWhere(['like', 'email_content', $this->email_content])
             ->andFilterWhere(['like', 'email_template', $this->email_template])
+            ->andFilterWhere(['like', 'email_status', $this->email_status])
             ->andFilterWhere(['like', 'activity_status', $this->email_activity_id]);
         return $dataProvider;
     }

@@ -49,8 +49,8 @@ class Preference extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'preference_category' => 'Preference Category',
-            'preference_description' => 'Preference Description',
+            'preference_category' => 'Category',
+            'preference_description' => 'Description',
         ];
     }
 

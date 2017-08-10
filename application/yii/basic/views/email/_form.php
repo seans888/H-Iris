@@ -20,6 +20,7 @@ use app\models\Activity;
     <?= $form->field($model, 'email_content')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email_template')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'email_status')->textInput(['maxlength' => true]) ?>
 
 
   
