@@ -23,8 +23,9 @@ use app\models\Email;
 
            <?= $form->field($model, 'email_id')->dropDownList( 
             ArrayHelper::map(Email::find()->all(),'id','information'),
-            ['prompt'=>'Select email_id'])
+            ['prompt'=>'Select Email_id'])
            ?> 
+           
 
    
 

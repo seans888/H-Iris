@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 
+
 /**
  * This is the model class for table "prospect_email".
  *
@@ -44,8 +45,8 @@ class ProspectEmail extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'prospect_id' => 'Prospect ID',
-            'email_id' => 'Email ID',
+            'prospect_id' => 'Prospect Name',
+            'email_id' => 'Email Information',
         ];
     }
 

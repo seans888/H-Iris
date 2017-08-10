@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\CustomerPreference */
 
-$this->title = 'Update Customer Preference: ' . $model->customer_id;
+$this->title = 'Update Customer Preference: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Customer Preferences', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->customer_id, 'url' => ['view', 'customer_id' => $model->customer_id, 'preference_id' => $model->preference_id]];
+$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="customer-preference-update">

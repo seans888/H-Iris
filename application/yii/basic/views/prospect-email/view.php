@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\ProspectEmail */
@@ -29,14 +30,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            array( 'label'=>$model->prospect->getAttributeLabel('prospect'),
+           array( 'label'=>$model->prospect->getAttributeLabel('prospect'),
                 'value'=>$model->prospect->fullName),
             array( 'label'=>$model->email->getAttributeLabel('email'),
                 'value'=>$model->email->information),
 
             'prospect.fullName',
-            'email.information',
             
+
+            'email.information',
+         
         ],
     ]) ?>
 

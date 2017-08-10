@@ -18,7 +18,7 @@ class ProspectPreferenceSearch extends ProspectPreference
     public function rules()
     {
         return [
-            [['prospect_id', 'preference_id'], 'integer'],
+            [['prospect_id', 'preference_id'], 'integer'], ['prospect.fullName', 'email.informaion'], 'safe'],
         ];
     }
 
@@ -60,6 +60,8 @@ class ProspectPreferenceSearch extends ProspectPreference
         $query->andFilterWhere([
             'prospect_id' => $this->prospect_id,
             'preference_id' => $this->preference_id,
+            'prospect.fullName' => $this->prospect_id,
+            'email.informaion' => $this->email_id,
         ]);
 
         return $dataProvider;
