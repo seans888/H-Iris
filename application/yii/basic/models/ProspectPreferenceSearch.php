@@ -7,6 +7,7 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\ProspectPreference;
 
+
 /**
  * ProspectPreferenceSearch represents the model behind the search form about `app\models\ProspectPreference`.
  */
@@ -18,7 +19,8 @@ class ProspectPreferenceSearch extends ProspectPreference
     public function rules()
     {
         return [
-            [['prospect_id', 'preference_id'], 'integer'],
+            [['id'], 'integer'],
+            [['prospect.name', 'preference.information', 'prospect_id', 'preference_id'], 'safe'],
         ];
     }
 
@@ -55,13 +57,23 @@ class ProspectPreferenceSearch extends ProspectPreference
             // $query->where('0=1');
             return $dataProvider;
         }
+        $query->joinWith('prospect')
+        ->joinWith('preference');
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'prospect_id' => $this->prospect_id,
-            'preference_id' => $this->preference_id,
-        ]);
+            'id' => $this->id,]);
+            //'prospect_id' => $this->prospect_id,
+            //'preference_id' => $this->preference_id,
 
+        $query->andFilterWhere(['like', 'prospect_fname', $this ->prospect_id]) 
+              ->orFilterWhere(['like', 'prospect_lname', $this ->prospect_id])
+
+        ->andFilterWhere(['like', 'preference_description', $this ->preference_id]) 
+        ->orFilterWhere(['like', 'preference_category', $this ->preference_id]);
+
+
+      
         return $dataProvider;
     }
 }

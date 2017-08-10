@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\WebvisitHistory;
-use app\models\WebvisitHistorySearcha;
+use app\models\WebvisitHistorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,7 +35,7 @@ class WebvisitHistoryController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new WebvisitHistorySearcha();
+        $searchModel = new WebvisitHistorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
