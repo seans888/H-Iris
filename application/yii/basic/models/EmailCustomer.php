@@ -42,8 +42,8 @@ class EmailCustomer extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'email_id' => 'Email ID',
-            'customer_id' => 'Customer ID',
+            'email_id' => 'Email',
+            'customer_id' => 'Customer',
         ];
     }
 

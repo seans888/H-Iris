@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\EmailActivity */
+/* @var $model app\models\Activity */
 
-$this->title = 'Create Email Activity';
-$this->params['breadcrumbs'][] = ['label' => 'Email Activities', 'url' => ['index']];
+$this->title = 'Create Activity';
+$this->params['breadcrumbs'][] = ['label' => 'Activities', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="email-activity-create">
+<div class="activity-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

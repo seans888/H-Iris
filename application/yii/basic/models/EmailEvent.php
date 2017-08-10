@@ -5,23 +5,23 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "email_activity".
+ * This is the model class for table "email_event".
  *
  * @property integer $id
- * @property string $email_activity_status
- * @property string $email_activity_date
+ * @property integer $event_id
  * @property integer $email_id
  *
  * @property Email $email
+ * @property Event $event
  */
-class EmailActivity extends \yii\db\ActiveRecord
+class EmailEvent extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'email_activity';
+        return 'email_event';
     }
 
     /**
@@ -30,11 +30,10 @@ class EmailActivity extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email_activity_date'], 'safe'],
-            [['email_id'], 'required'],
-            [['email_id'], 'integer'],
-            [['email_activity_status'], 'string', 'max' => 45],
+            [['event_id', 'email_id'], 'required'],
+            [['event_id', 'email_id'], 'integer'],
             [['email_id'], 'exist', 'skipOnError' => true, 'targetClass' => Email::className(), 'targetAttribute' => ['email_id' => 'id']],
+            [['event_id'], 'exist', 'skipOnError' => true, 'targetClass' => Event::className(), 'targetAttribute' => ['event_id' => 'id']],
         ];
     }
 
@@ -45,9 +44,8 @@ class EmailActivity extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'email_activity_status' => 'Email Activity Status',
-            'email_activity_date' => 'Email Activity Date',
-            'email_id' => 'Email',
+            'event_id' => 'Event ID',
+            'email_id' => 'Email ID',
         ];
     }
 
@@ -57,5 +55,13 @@ class EmailActivity extends \yii\db\ActiveRecord
     public function getEmail()
     {
         return $this->hasOne(Email::className(), ['id' => 'email_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEvent()
+    {
+        return $this->hasOne(Event::className(), ['id' => 'event_id']);
     }
 }

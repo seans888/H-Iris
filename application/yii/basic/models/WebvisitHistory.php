@@ -52,13 +52,13 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'wvh_date' => 'Wvh Date',
-            'wvh_time' => 'Wvh Time',
-            'wvh_ip_address' => 'Wvh Ip Address',
-            'wvh_url' => 'Wvh Url',
-            'wvh_cookie_information' => 'Wvh Cookie Information',
-            'customer_id' => 'Customer ID',
-            'Prospect_id' => 'Prospect ID',
+            'wvh_date' => 'Web Visit History Date',
+            'wvh_time' => 'Web Visit History Time',
+            'wvh_ip_address' => 'Web Visit History Ip Address',
+            'wvh_url' => 'Web Visit History Url',
+            'wvh_cookie_information' => 'Web Visit History Cookie Information',
+            'customer_id' => 'Customer Name',
+            'Prospect_id' => 'Prospect Name',
         ];
     }
 

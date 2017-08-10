@@ -18,8 +18,8 @@ class WebvisitHistorySearch extends WebvisitHistory
     public function rules()
     {
         return [
-            [['id', 'wvh_ip_address', 'customer_id', 'Prospect_id'], 'integer'],
-            [['wvh_date', 'wvh_time', 'wvh_url', 'wvh_cookie_information'], 'safe'],
+            [['id', 'wvh_ip_address','customer_id', 'Prospect_id'], 'integer'],
+            [['wvh_date', 'wvh_time', 'wvh_url', 'wvh_cookie_information', ], 'safe'],
         ];
     }
 
@@ -56,19 +56,19 @@ class WebvisitHistorySearch extends WebvisitHistory
             // $query->where('0=1');
             return $dataProvider;
         }
-
+  
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'wvh_date' => $this->wvh_date,
             'wvh_time' => $this->wvh_time,
             'wvh_ip_address' => $this->wvh_ip_address,
-            'customer_id' => $this->customer_id,
-            'Prospect_id' => $this->Prospect_id,
         ]);
 
         $query->andFilterWhere(['like', 'wvh_url', $this->wvh_url])
-            ->andFilterWhere(['like', 'wvh_cookie_information', $this->wvh_cookie_information]);
+            ->andFilterWhere(['like', 'wvh_cookie_information', $this->wvh_cookie_information])
+            ->andFilterWhere(['like','customer_fname', $this->customer_id])
+            ->andFilterWhere(['like', 'prospect_fname', $this->Prospect_id]);
 
         return $dataProvider;
     }

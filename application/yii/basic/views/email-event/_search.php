@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\EmailActivitySearch */
+/* @var $model app\models\EmailEventSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="email-activity-search">
+<div class="email-event-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -17,9 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'email_activity_status') ?>
-
-    <?= $form->field($model, 'email_activity_date') ?>
+    <?= $form->field($model, 'event_id') ?>
 
     <?= $form->field($model, 'email_id') ?>
 

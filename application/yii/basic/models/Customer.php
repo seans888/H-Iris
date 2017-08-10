@@ -12,10 +12,11 @@ use Yii;
  * @property string $customer_mname
  * @property string $customer_lname
  * @property string $customer_email
- * @property string $customer_contact_number
+ * @property integer $customer_contact_number
  *
  * @property CustomerHistory[] $customerHistories
  * @property CustomerPreference[] $customerPreferences
+ * @property Preference[] $preferences
  * @property EmailCustomer[] $emailCustomers
  * @property Email[] $emails
  * @property WebvisitHistory[] $webvisitHistories
@@ -25,10 +26,12 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function getName()
+
+      public function getName()
     {
-    	 return $this->customer_fname.' '.$this->customer_lname;
+    return $this->customer_fname.' '.$this->customer_lname;
     }
+
     public static function tableName()
     {
         return 'customer';
@@ -52,11 +55,11 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_fname' => 'Customer First Name',
-            'customer_mname' => 'Customer Middle Name',
-            'customer_lname' => 'Customer Last Name',
-            'customer_email' => 'Customer Email',
-            'customer_contact_number' => 'Customer Contact Number',
+            'customer_fname' => 'First Name',
+            'customer_mname' => 'Middle Name',
+            'customer_lname' => 'Last Name',
+            'customer_email' => 'Email Address',
+            'customer_contact_number' => 'Contact Number',
         ];
     }
 
@@ -74,6 +77,14 @@ class Customer extends \yii\db\ActiveRecord
     public function getCustomerPreferences()
     {
         return $this->hasMany(CustomerPreference::className(), ['customer_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPreferences()
+    {
+        return $this->hasMany(Preference::className(), ['id' => 'preference_id'])->viaTable('customer_preference', ['customer_id' => 'id']);
     }
 
     /**
