@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\models\Prospect;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ProspectEmailSearch */
@@ -13,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="prospect-email-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('Create Prospect Email', ['create'], ['class' => 'btn btn-success']) ?>
@@ -24,10 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'prospect.fullName',
-            'email.information',
-
+          'id',
+           [
+            'attribute'=>'prospect_id',
+            'value'=>'prospect.fullName'],
+            ['attribute'=>'email_id',
+            'value'=>'email.information'],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

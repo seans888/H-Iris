@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\CustomerSearch */
+/* @var $searchModel app\models\EmailEventSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Customers';
+$this->title = 'Email Events';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="customer-index">
+<div class="email-event-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Email Event', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -24,12 +24,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'customer_fname',
-            'customer_mname',
-            'customer_lname',
-            'customer_email:email',
-            // 'customer_contact_number',
+            //'id',
+
+               ['attribute' => 'event_id',
+           'value'=>'event.information',
+            ],
+
+            ['attribute' => 'email_id',
+           'value'=>'email.information',
+            ],
+
+            
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

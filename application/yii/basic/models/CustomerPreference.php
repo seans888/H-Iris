@@ -19,6 +19,17 @@ class CustomerPreference extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	/**public function getName()
+    {
+    	 return $this->customer_fname.' '.$this->customer_lname;
+    }
+
+  	public function getInformation()
+    {
+     return $this->preference_category.' '.$this->preference_description;
+    }**/
+
+
     public static function tableName()
     {
         return 'customer_preference';
@@ -44,8 +55,8 @@ class CustomerPreference extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_id' => 'Customer ID',
-            'preference_id' => 'Preference ID',
+            'customer_id' => 'Customer Name',
+            'preference_id' => 'Preference Information',
         ];
     }
 

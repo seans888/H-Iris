@@ -5,23 +5,21 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\ProspectEmail;
-use app\models\ProspectEmailSearch;
+use app\models\EmailEvent;
 
 /**
- * ProspectEmailSearch represents the model behind the search form about `app\models\ProspectEmail`.
+ * EmailEventSearch represents the model behind the search form about `app\models\EmailEvent`.
  */
-class ProspectEmailSearch extends ProspectEmail
+class EmailEventSearch extends EmailEvent
 {
     /**
      * @inheritdoc
      */
-    //public $prospect_id;
     public function rules()
     {
         return [
             [['id'], 'integer'],
-            [['email.information', 'prospect.fullName',  'prospect_id', 'email_id'], 'safe'],
+             [['event_id', 'email_id'], 'safe'],
         ];
     }
 
@@ -43,8 +41,7 @@ class ProspectEmailSearch extends ProspectEmail
      */
     public function search($params)
     {
-        $query = ProspectEmail::find();
-       
+        $query = EmailEvent::find();
 
         // add conditions that should always apply here
 
@@ -59,27 +56,28 @@ class ProspectEmailSearch extends ProspectEmail
             // $query->where('0=1');
             return $dataProvider;
         }
-         $query->joinWith('prospect')
-            ->joinWith('email');
 
-
-
-         //->joinWith('email_id');
+                   $query->joinWith('email');
+              $query->joinWith('event');
 
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-          
-           // 'prospect_id' => $this->prospect_id,
-           // 'email.information' => $this->email_id,
-
-            
-             
+            'id' => $this->id
         ]);
-        //$query->andFilterWhere(['like' , 'prospect_fname'.])
-        $query->andFilterWhere(['like', 'prospect_fname',$this->prospect_id])
-            ->andFilterWhere(['like', 'email_id', $this->email_id]);
+
+
+         $query->andFilterWhere(['like','email_date', $this->email_id])
+         ->orFilterWhere(['like','email_recipient', $this->email_id])
+         ->orFilterWhere(['like','email_content', $this->email_id])
+         ->andFilterWhere(['like','event_start_date', $this->event_id])
+         ->orFilterWhere(['like','event_end_date', $this->event_id])
+         ->orFilterWhere(['like','event_description', $this->event_id]);
+
+
+    
+
+
         return $dataProvider;
     }
 }

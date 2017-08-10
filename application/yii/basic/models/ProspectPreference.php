@@ -49,6 +49,11 @@ class ProspectPreference extends \yii\db\ActiveRecord
         ];
     }
 
+     public function getfullName()
+    {
+        return $this->hasOne(Prospect::className(), ['id' => 'prospect.fullName']);
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */

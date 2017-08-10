@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\ProspectEmail;
-use app\models\ProspectEmailSearch;
+use app\models\EmailEvent;
+use app\models\EmailEventSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ProspectEmailController implements the CRUD actions for ProspectEmail model.
+ * EmailEventController implements the CRUD actions for EmailEvent model.
  */
-class ProspectEmailController extends Controller
+class EmailEventController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class ProspectEmailController extends Controller
     }
 
     /**
-     * Lists all ProspectEmail models.
+     * Lists all EmailEvent models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ProspectEmailSearch();
+        $searchModel = new EmailEventSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -43,11 +43,9 @@ class ProspectEmailController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-    
-   
 
     /**
-     * Displays a single ProspectEmail model.
+     * Displays a single EmailEvent model.
      * @param integer $id
      * @return mixed
      */
@@ -59,13 +57,13 @@ class ProspectEmailController extends Controller
     }
 
     /**
-     * Creates a new ProspectEmail model.
+     * Creates a new EmailEvent model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new ProspectEmail();
+        $model = new EmailEvent();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -77,7 +75,7 @@ class ProspectEmailController extends Controller
     }
 
     /**
-     * Updates an existing ProspectEmail model.
+     * Updates an existing EmailEvent model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +94,7 @@ class ProspectEmailController extends Controller
     }
 
     /**
-     * Deletes an existing ProspectEmail model.
+     * Deletes an existing EmailEvent model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -109,15 +107,15 @@ class ProspectEmailController extends Controller
     }
 
     /**
-     * Finds the ProspectEmail model based on its primary key value.
+     * Finds the EmailEvent model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return ProspectEmail the loaded model
+     * @return EmailEvent the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = ProspectEmail::findOne($id)) !== null) {
+        if (($model = EmailEvent::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

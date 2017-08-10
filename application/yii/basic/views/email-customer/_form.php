@@ -1,10 +1,13 @@
 <?php
 
 use yii\helpers\Html;
-use yii\helpers\ArrayHelper; 
-use yii\widgets\ActiveForm; 
-use app\models\Email;
+use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 use app\models\Customer;
+use app\models\Email;
+use app\models\email_customer;
+
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\EmailCustomer */
@@ -15,15 +18,15 @@ use app\models\Customer;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'email_id')->dropDownList(  
-    ArrayHelper::map(Email::find()->all(),'id','information'), 
-    ['prompt'=>'Select Email'] 
-    ) ?>  
+    <?= $form->field($model, 'email_id')->dropDownList(
+ArrayHelper::map(Email::find()->all(), 'id', 'information'),
+['prompt'=>'Select Email']
+      ) ?>
 
-   <?= $form->field($model, 'customer_id')->dropDownList(  
-    ArrayHelper::map(Customer::find()->all(),'id','name'), 
-    ['prompt'=>'Select Customer'] 
-    ) ?>  
+  <?= $form->field($model, 'customer_id')->dropDownList(
+ArrayHelper::map(Customer::find()->all(), 'id', 'name'),
+['prompt'=>'Select Customer']
+      ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
