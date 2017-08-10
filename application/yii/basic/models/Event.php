@@ -14,6 +14,7 @@ use Yii;
  * @property string $event_end_date
  * @property integer $marketeer_id
  *
+ * @property EmailEvent[] $emailEvents
  * @property Marketeer $marketeer
  */
 class Event extends \yii\db\ActiveRecord
@@ -21,6 +22,12 @@ class Event extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+public function getFullName()
+   {
+   return $this->marketeer_fname.' '.$this->marketeer_lname;
+    }
+
     public static function tableName()
     {
         return 'event';
@@ -53,6 +60,21 @@ class Event extends \yii\db\ActiveRecord
             'event_end_date' => 'Event End Date',
             'marketeer_id' => 'Marketeer ID',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+
+    public function getId0()
+    {
+        return $this->hasOne(Marketeer::className(), ['id' => 'id']);
+    }
+
+
+    public function getEmailEvents()
+    {
+        return $this->hasMany(EmailEvent::className(), ['event_id' => 'id']);
     }
 
     /**

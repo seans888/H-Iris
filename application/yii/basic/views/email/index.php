@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use yii\models\Marketeer;
+use app\models\Activity;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EmailSearch */
@@ -20,25 +20,21 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Email', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
-       
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            
+
             'id',
             'email_date:email',
             'email_recipient:email',
             'email_content:email',
             'email_template:email',
-            'marketeer.fullName',
-            
-            /**'marketeer_id',**/
-     /** [
-        'attribute' => 'marketeer_id',
-        'format' => 'full name',
-        'value' => implode('<br/>', array_map(function($model){ return $model->fname . ' : ' . $model->lname;}, $model->Marketeer))
-],**/
+            'email_status:email',
+             [  
+            'attribute' => 'email_activity_id', 
+            'value'=>'activity.status' 
+             ], 
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

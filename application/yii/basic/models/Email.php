@@ -12,29 +12,25 @@ use Yii;
  * @property string $email_recipient
  * @property string $email_content
  * @property string $email_template
- * @property integer $marketeer_id
+ * @property integer $email_activity_id
  *
- * @property Marketeer $marketeer
- * @property EmailActivity[] $emailActivities
+ * @property Activity $emailActivity
  * @property EmailCustomer[] $emailCustomers
- * @property Customer[] $customers
+ * @property EmailEvent[] $emailEvents
  * @property ProspectEmail[] $prospectEmails
- * @property Prospect[] $prospects
  */
 class Email extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
-
-     
-      public function getInformation()
-    {
-    return $this->email_date.' '.$this->email_recipient.' '.$this->email_content;
-    }
     public static function tableName()
     {
         return 'email';
+    }
+    public function getInformation()
+    {
+        return $this->email_date.' '.$this->email_recipient.' '.$this->email_content;
     }
 
     /**
@@ -44,11 +40,11 @@ class Email extends \yii\db\ActiveRecord
     {
         return [
             [['email_date'], 'safe'],
-            [['marketeer_id'], 'required'],
-            [['marketeer_id'], 'integer'],
-            [['email_recipient', 'email_template'], 'string', 'max' => 45],
+            [['email_activity_id'], 'required'],
+            [['email_activity_id'], 'integer'],
+            [['email_recipient', 'email_template','email_status'], 'string', 'max' => 45],
             [['email_content'], 'string', 'max' => 1000],
-            [['marketeer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Marketeer::className(), 'targetAttribute' => ['marketeer_id' => 'id']],
+            [['email_activity_id'], 'exist', 'skipOnError' => true, 'targetClass' => Activity::className(), 'targetAttribute' => ['email_activity_id' => 'id']],
         ];
     }
 
@@ -59,36 +55,21 @@ class Email extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'email_date' => 'Email Date',
-            'email_recipient' => 'Email Recipient',
-            'email_content' => 'Email Content',
-            'email_template' => 'Email Template',
-            'marketeer_id' => 'Marketeer',
+            'email_date' => 'Date Sent',
+            'email_recipient' => 'Recipient',
+            'email_content' => 'Content',
+            'email_template' => 'Template',
+            'email_status' => 'Status',
+            'email_activity_id' => 'Email Activity',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-
-    
-
-    public function getMarketeer()
+    public function getActivity()
     {
-         
-        return $this->hasOne(Marketeer::className(), ['id' => 'marketeer_id']);
-    }
-
-  public function getFullMarketeer()
-    {
-    return $this->marketeer_fname.' '.$this->marketeer_lname;
-    }
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getEmailActivities()
-    {
-        return $this->hasMany(EmailActivity::className(), ['email_id' => 'id']);
+        return $this->hasOne(Activity::className(), ['id' => 'email_activity_id']);
     }
 
     /**
@@ -102,9 +83,9 @@ class Email extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCustomers()
+    public function getEmailEvents()
     {
-        return $this->hasMany(Customer::className(), ['id' => 'customer_id'])->viaTable('email_customer', ['email_id' => 'id']);
+        return $this->hasMany(EmailEvent::className(), ['email_id' => 'id']);
     }
 
     /**
@@ -113,13 +94,5 @@ class Email extends \yii\db\ActiveRecord
     public function getProspectEmails()
     {
         return $this->hasMany(ProspectEmail::className(), ['email_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProspects()
-    {
-        return $this->hasMany(Prospect::className(), ['id' => 'prospect_id'])->viaTable('prospect_email', ['email_id' => 'id']);
     }
 }

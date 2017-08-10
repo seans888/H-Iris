@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\EmailActivity;
-use app\models\EmailActivitySearch;
+use app\models\EmailEvent;
+use app\models\EmailEventSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * EmailActivityController implements the CRUD actions for EmailActivity model.
+ * EmailEventController implements the CRUD actions for EmailEvent model.
  */
-class EmailActivityController extends Controller
+class EmailEventController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class EmailActivityController extends Controller
     }
 
     /**
-     * Lists all EmailActivity models.
+     * Lists all EmailEvent models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new EmailActivitySearch();
+        $searchModel = new EmailEventSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class EmailActivityController extends Controller
     }
 
     /**
-     * Displays a single EmailActivity model.
+     * Displays a single EmailEvent model.
      * @param integer $id
      * @return mixed
      */
@@ -57,17 +57,15 @@ class EmailActivityController extends Controller
     }
 
     /**
-     * Creates a new EmailActivity model.
+     * Creates a new EmailEvent model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new EmailActivity();
+        $model = new EmailEvent();
 
-        if ($model->load(Yii::$app->request->post())) {
-            $model->email_activity_date = date('Y-m-d h:m:s');
-            $model->save();
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -77,7 +75,7 @@ class EmailActivityController extends Controller
     }
 
     /**
-     * Updates an existing EmailActivity model.
+     * Updates an existing EmailEvent model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +94,7 @@ class EmailActivityController extends Controller
     }
 
     /**
-     * Deletes an existing EmailActivity model.
+     * Deletes an existing EmailEvent model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -109,15 +107,15 @@ class EmailActivityController extends Controller
     }
 
     /**
-     * Finds the EmailActivity model based on its primary key value.
+     * Finds the EmailEvent model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return EmailActivity the loaded model
+     * @return EmailEvent the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = EmailActivity::findOne($id)) !== null) {
+        if (($model = EmailEvent::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

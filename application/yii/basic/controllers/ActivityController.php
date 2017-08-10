@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Email;
-use app\models\EmailSearch;
+use app\models\Activity;
+use app\models\ActivitySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * EmailController implements the CRUD actions for Email model.
+ * ActivityController implements the CRUD actions for Activity model.
  */
-class EmailController extends Controller
+class ActivityController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class EmailController extends Controller
     }
 
     /**
-     * Lists all Email models.
+     * Lists all Activity models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new EmailSearch();
+        $searchModel = new ActivitySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class EmailController extends Controller
     }
 
     /**
-     * Displays a single Email model.
+     * Displays a single Activity model.
      * @param integer $id
      * @return mixed
      */
@@ -57,17 +57,15 @@ class EmailController extends Controller
     }
 
     /**
-     * Creates a new Email model.
+     * Creates a new Activity model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Email();
+        $model = new Activity();
 
-        if ($model->load(Yii::$app->request->post())) {
-            $model->email_date = date('Y-m-d h:m:s'); 
-            $model->save(); 
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -77,7 +75,7 @@ class EmailController extends Controller
     }
 
     /**
-     * Updates an existing Email model.
+     * Updates an existing Activity model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +94,7 @@ class EmailController extends Controller
     }
 
     /**
-     * Deletes an existing Email model.
+     * Deletes an existing Activity model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -109,15 +107,15 @@ class EmailController extends Controller
     }
 
     /**
-     * Finds the Email model based on its primary key value.
+     * Finds the Activity model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Email the loaded model
+     * @return Activity the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Email::findOne($id)) !== null) {
+        if (($model = Activity::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

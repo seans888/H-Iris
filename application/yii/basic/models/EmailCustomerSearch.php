@@ -18,7 +18,8 @@ class EmailCustomerSearch extends EmailCustomer
     public function rules()
     {
         return [
-            [['email_id', 'customer_id'], 'integer'],
+            [['id'], 'integer'],
+            [['email_id', 'customer_id'], 'safe'],
         ];
     }
 
@@ -56,11 +57,15 @@ class EmailCustomerSearch extends EmailCustomer
             return $dataProvider;
         }
 
+        $query->joinWith('email');
+        $query->joinWith('customer');  
         // grid filtering conditions
         $query->andFilterWhere([
-            'email_id' => $this->email_id,
-            'customer_id' => $this->customer_id,
+            'id' => $this->id,
         ]);
+
+        $query->andFilterWhere(['like', 'email_content', $this->email_id])
+            ->andFilterWhere(['like', 'customer_fname', $this->email_id]);
 
         return $dataProvider;
     }

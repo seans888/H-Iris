@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\EmailActivity;
+use app\models\EmailEvent;
 
 /**
- * EmailActivitySearch represents the model behind the search form about `app\models\EmailActivity`.
+ * EmailEventSearch represents the model behind the search form about `app\models\EmailEvent`.
  */
-class EmailActivitySearch extends EmailActivity
+class EmailEventSearch extends EmailEvent
 {
     /**
      * @inheritdoc
@@ -18,8 +18,7 @@ class EmailActivitySearch extends EmailActivity
     public function rules()
     {
         return [
-            [['id', 'email_id'], 'integer'],
-            [['email_activity_status', 'email_activity_date'], 'safe'],
+            [['id', 'event_id', 'email_id'], 'integer'],
         ];
     }
 
@@ -41,7 +40,7 @@ class EmailActivitySearch extends EmailActivity
      */
     public function search($params)
     {
-        $query = EmailActivity::find();
+        $query = EmailEvent::find();
 
         // add conditions that should always apply here
 
@@ -60,11 +59,9 @@ class EmailActivitySearch extends EmailActivity
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'email_activity_date' => $this->email_activity_date,
+            'event_id' => $this->event_id,
             'email_id' => $this->email_id,
         ]);
-
-        $query->andFilterWhere(['like', 'email_activity_status', $this->email_activity_status]);
 
         return $dataProvider;
     }

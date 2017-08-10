@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\CustomerSearch */
+/* @var $searchModel app\models\ActivitySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Customers';
+$this->title = 'Activities';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="customer-index">
+<div class="activity-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Activity', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,11 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'customer_fname',
-            'customer_mname',
-            'customer_lname',
-            'customer_email:email',
-            // 'customer_contact_number',
+            'activity_status',
+            'activity_description',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

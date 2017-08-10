@@ -14,7 +14,6 @@ use Yii;
  * @property string $marketeer_birthdate
  * @property string $marketeer_contact_number
  *
- * @property Email[] $emails
  * @property Event[] $events
  */
 class Marketeer extends \yii\db\ActiveRecord
@@ -22,11 +21,6 @@ class Marketeer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function getFullName()
-    {
-    return $this->marketeer_fname.' '.$this->marketeer_lname;
-    }
-
     public static function tableName()
     {
         return 'marketeer';
@@ -35,6 +29,11 @@ class Marketeer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+      public function getFullName()
+    {
+    return $this->marketeer_fname.' '.$this->marketeer_lname;
+    }
+
     public function rules()
     {
         return [
@@ -51,20 +50,12 @@ class Marketeer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'marketeer_fname' => 'Marketeer First Name',
-            'marketeer_mname' => 'Marketeer Middle Name',
-            'marketeer_lname' => 'Marketeer Last Name',
-            'marketeer_birthdate' => 'Marketeer Birthdate',
-            'marketeer_contact_number' => 'Marketeer Contact Number',
+            'marketeer_fname' => 'First Name',
+            'marketeer_mname' => 'Middle Name',
+            'marketeer_lname' => 'Last Name',
+            'marketeer_birthdate' => 'Birthdate',
+            'marketeer_contact_number' => 'Contact Number',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getEmails()
-    {
-        return $this->hasMany(Email::className(), ['marketeer_id' => 'id']);
     }
 
     /**
