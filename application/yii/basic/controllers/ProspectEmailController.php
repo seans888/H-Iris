@@ -43,6 +43,8 @@ class ProspectEmailController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    
+   
 
     /**
      * Displays a single ProspectEmail model.
