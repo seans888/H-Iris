@@ -16,7 +16,7 @@ use app\models\Email;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <    <?= $form->field($model, 'event_id')->dropDownList(
+     <?= $form->field($model, 'event_id')->dropDownList(
     ArrayHelper::map(Event::find()->all(),'id','Information'),
     ['prompt'=>'Select Event'])?>
 
