@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\WebvisitHistorySearcha */
+/* @var $model app\models\WebvisitHistorySearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -27,9 +27,9 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'wvh_cookie_information') ?>
 
-    <?= $form->field($model, 'customer_id') ?>
+    <?php // echo $form->field($model, 'customer_id') ?>
 
-    <?= $form->field($model, 'Prospect_id') ?>
+    <?php // echo $form->field($model, 'prospect_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

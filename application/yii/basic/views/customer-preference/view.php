@@ -30,11 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             
-            array('label'=>$model->customer->getAttributeLabel('customer'),
+           /** array('label'=>$model->customer->getAttributeLabel('customer'),
          		'value'=>$model->customer->name),
 
             array('label'=>$model->preference->getAttributeLabel('preference'),
-         		'value'=>$model->preference->information),
+         		'value'=>$model->preference->information), **/
 
             'customer.name',
             'preference.information',

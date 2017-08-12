@@ -18,8 +18,8 @@ class EventSearch extends Event
     public function rules()
     {
         return [
-            [['id', ], 'integer'],
-            [['event_date_created', 'event_description', 'event_start_date', 'event_end_date', 'marketeer.FullName'], 'safe'],
+            [['id'], 'integer'],
+            [['event_date_created', 'event_description', 'event_start_date', 'event_end_date', 'marketeer_id'], 'safe'],
         ];
     }
 
@@ -62,14 +62,15 @@ class EventSearch extends Event
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'event_date_created' => $this->event_date_created,
-            'event_start_date' => $this->event_start_date,
-            'event_end_date' => $this->event_end_date,
-            'event_description' => $this->event_description,
+         
         ]);
 
-            $query->andFilterWhere(['like','marketeer_fname', $this->marketeer_id]);
-
+        $query->andFilterWhere(['like', 'event_description', $this->event_description])
+          ->andFilterWhere(['like',  'event_date_created', $this->event_date_created])
+          ->andFilterWhere(['like',  'event_start_date', $this->event_start_date])
+          ->andFilterWhere(['like',  'event_end_date' , $this->event_end_date])
+          ->andFilterWhere(['like',  'marketeer_fname', $this->marketeer_id])
+          ->orFilterWhere(['like',  'marketeer_lname', $this->marketeer_id]);
         return $dataProvider;
     }
 }

@@ -18,7 +18,8 @@ class EmailEventSearch extends EmailEvent
     public function rules()
     {
         return [
-            [['id', 'event_id', 'email_id'], 'integer'],
+            [['id'], 'integer'],
+             [['event_id', 'email_id'], 'safe'],
         ];
     }
 
@@ -56,12 +57,26 @@ class EmailEventSearch extends EmailEvent
             return $dataProvider;
         }
 
+                   $query->joinWith('email');
+              $query->joinWith('event');
+
+
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'event_id' => $this->event_id,
-            'email_id' => $this->email_id,
+            'id' => $this->id
         ]);
+
+
+         $query->andFilterWhere(['like','email_date', $this->email_id])
+         ->orFilterWhere(['like','email_recipient', $this->email_id])
+         ->orFilterWhere(['like','email_content', $this->email_id])
+         ->andFilterWhere(['like','event_start_date', $this->event_id])
+         ->orFilterWhere(['like','event_end_date', $this->event_id])
+         ->orFilterWhere(['like','event_description', $this->event_id]);
+
+
+    
+
 
         return $dataProvider;
     }

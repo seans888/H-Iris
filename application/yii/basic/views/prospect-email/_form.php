@@ -17,13 +17,13 @@ use app\models\Email;
 
      <?php $form = ActiveForm::begin(); ?>
          <?= $form->field($model, 'prospect_id')->dropDownList( 
-            ArrayHelper::map(Prospect::find()->all(),'id','fullName'),
+            ArrayHelper::map(Prospect::find()->all(),'id','name'),
             ['prompt'=>'Select Prospect'])
            ?> 
 
            <?= $form->field($model, 'email_id')->dropDownList( 
             ArrayHelper::map(Email::find()->all(),'id','information'),
-            ['prompt'=>'Select Email_id'])
+            ['prompt'=>'Select Email'])
            ?> 
            
 

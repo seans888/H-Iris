@@ -2,11 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use app\models\Customer;
-
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\WebvisitHistorySearcha */
+/* @var $searchModel app\models\WebvisitHistorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Webvisit Histories';
@@ -26,21 +24,22 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'wvh_date',
-            'wvh_time',
-            'wvh_ip_address',
-            'wvh_url:url',
-           
+            //'id',
+            //'wvh_date',
+            //'wvh_time',
+            //'wvh_ip_address',
+            //'wvh_url:url',
+            // 'wvh_cookie_information',
+            //'customer_id',
+           // 'prospect_id',
             
-            ['attribute'=>'customer_id',
-            'value'=>'customer.name'],
-
-             ['attribute'=>'Prospect_id',
-            'value'=>'prospect.name'],
-         //'wvh_cookie_information',
-           
-
+            ['attribute'=>'wvh_date', 'value'=> 'wvh_date'],
+            ['attribute'=>'wvh_time', 'value'=> 'wvh_time'],
+            ['attribute'=>'wvh_ip_address', 'value'=> 'wvh_ip_address'],
+            ['attribute'=>'wvh_url', 'value'=> 'wvh_url'],
+            ['attribute'=>'customer_id', 'value'=> 'customer.name'],
+            ['attribute'=>'prospect_id', 'value'=> 'prospect.name'],
+            
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

@@ -7,6 +7,7 @@ use Yii;
 /**
  * This is the model class for table "prospect_preference".
  *
+ * @property integer $id
  * @property integer $prospect_id
  * @property integer $preference_id
  *
@@ -42,8 +43,9 @@ class ProspectPreference extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'prospect_id' => 'Prospect ID',
-            'preference_id' => 'Preference ID',
+            'id' => 'ID',
+            'prospect_id' => 'Prospect',
+            'preference_id' => 'Preference',
         ];
     }
 

@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
          // 'id',
            [
             'attribute'=>'prospect_id',
-            'value'=>'prospect.fullName'],
+            'value'=>'prospect.name'],
             ['attribute'=>'email_id',
             'value'=>'email.information'],
 

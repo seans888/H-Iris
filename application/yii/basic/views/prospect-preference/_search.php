@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\grid\GridView;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\ProspectPreferenceSearch */
 /* @var $form yii\widgets\ActiveForm */
@@ -14,6 +14,8 @@ use yii\grid\GridView;
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
+
+    <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'prospect_id') ?>
 
