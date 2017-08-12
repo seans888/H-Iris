@@ -50,12 +50,12 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'wvh_date' => 'Wvh Date',
-            'wvh_time' => 'Wvh Time',
-            'wvh_ip_address' => 'Wvh Ip Address',
-            'wvh_url' => 'Wvh Url',
-            'wvh_cookie_information' => 'Wvh Cookie Information',
-            'recipient_id' => 'Recipient ID',
+            'wvh_date' => 'Date',
+            'wvh_time' => 'Time',
+            'wvh_ip_address' => 'Ip Address',
+            'wvh_url' => 'Url',
+            'wvh_cookie_information' => 'Cookie Information',
+            'recipient_id' => 'Visitor',
         ];
     }
 
