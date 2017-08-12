@@ -24,8 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'prospect.name',
-            'preference.information',
+        
+           //'prospect.name',
+           // 'preference.information',
+
+           ['attribute'=>'prospect_id', 'value'=> 'prospect.name'],
+           ['attribute'=>'preference_id', 'value'=> 'preference.information'],
+            
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -65,7 +65,7 @@ class EmailCustomerSearch extends EmailCustomer
         ]);
 
         $query->andFilterWhere(['like', 'email_content', $this->email_id])
-            ->andFilterWhere(['like', 'customer_fname', $this->email_id]);
+            ->andFilterWhere(['like','customer_fname', $this->customer_id]);
 
         return $dataProvider;
     }
