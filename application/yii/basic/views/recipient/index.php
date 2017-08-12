@@ -29,9 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'recipient_email:email',
             'recipient_fname',
             'recipient_mname',
-            // 'recipient_lname',
-            // 'recipient_contact_number',
-            // 'customer_id',
+            'recipient_lname',
+            'recipient_contact_number',
+           
+            'customer_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

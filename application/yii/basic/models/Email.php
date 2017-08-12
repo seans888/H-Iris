@@ -66,7 +66,7 @@ class Email extends \yii\db\ActiveRecord
      */
      public function getInformation()
     {
-        return 'Date: '.$this->email_date.' Recipient: '.$this->email_recipient.' Content: '.$this->email_content;
+        return 'Date: '.$this->email_date.' Status: '.$this->email_status;
     }
     public function getActivities()
     {

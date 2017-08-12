@@ -44,8 +44,8 @@ class EmailEvent extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'event_id' => 'Event ID',
-            'email_id' => 'Email ID',
+            'event_id' => 'Event Information',
+            'email_id' => 'Email Information',
         ];
     }
 

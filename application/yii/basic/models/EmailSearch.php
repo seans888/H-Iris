@@ -69,7 +69,7 @@ class EmailSearch extends Email
 
         $query->andFilterWhere(['like', 'email_status', $this->email_status])
             ->andFilterWhere(['like', 'template_type', $this->template_id])
-            ->andFilterWhere(['like', 'recipient_fname', $this->recipient_id]);;
+            ->andFilterWhere(['like', 'recipient_fname', $this->recipient_id]);
         return $dataProvider;
     }
 }

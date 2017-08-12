@@ -18,8 +18,8 @@ class RecipientSearch extends Recipient
     public function rules()
     {
         return [
-            [['id', 'recipient_contact_number', 'customer_id'], 'integer'],
-            [['recipient_type', 'recipient_email', 'recipient_fname', 'recipient_mname', 'recipient_lname'], 'safe'],
+            [['id', 'recipient_contact_number'], 'integer'],
+            [['recipient_type', 'recipient_email', 'recipient_fname', 'recipient_mname', 'recipient_lname', 'customer_id'], 'safe'],
         ];
     }
 
@@ -56,7 +56,7 @@ class RecipientSearch extends Recipient
             // $query->where('0=1');
             return $dataProvider;
         }
-
+        $query->joinWith('customer');
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
@@ -68,7 +68,7 @@ class RecipientSearch extends Recipient
             ->andFilterWhere(['like', 'recipient_email', $this->recipient_email])
             ->andFilterWhere(['like', 'recipient_fname', $this->recipient_fname])
             ->andFilterWhere(['like', 'recipient_mname', $this->recipient_mname])
-            ->andFilterWhere(['like', 'recipient_lname', $this->recipient_lname]);
+            ->andFilterWhere(['like', 'recipient_lname', $this->recipient_lname])
 
         return $dataProvider;
     }

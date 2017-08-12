@@ -55,12 +55,12 @@ class Recipient extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'recipient_type' => 'Recipient Type',
-            'recipient_email' => 'Recipient Email',
-            'recipient_fname' => 'Recipient Fname',
-            'recipient_mname' => 'Recipient Mname',
-            'recipient_lname' => 'Recipient Lname',
-            'recipient_contact_number' => 'Recipient Contact Number',
+            'recipient_type' => 'Type',
+            'recipient_email' => 'Email',
+            'recipient_fname' => 'First Name',
+            'recipient_mname' => 'Middle Name',
+            'recipient_lname' => 'Last Name',
+            'recipient_contact_number' => 'Contact Number',
             'customer_id' => 'Customer ID',
         ];
     }

@@ -45,8 +45,8 @@ class Activity extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'activity_status' => 'Activity Status',
-            'activity_description' => 'Activity Description',
-            'email_id' => 'Email ID',
+            'activity_description' => 'Description',
+            'email_id' => 'Email Information',
         ];
     }
 
