@@ -26,6 +26,10 @@ class Recipient extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+     public function getName()
+    {
+     return $this->recipient_fname.' '.$this->recipient_lname;
+    }
     public static function tableName()
     {
         return 'recipient';

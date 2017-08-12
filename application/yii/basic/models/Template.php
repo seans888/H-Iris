@@ -18,6 +18,10 @@ class Template extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public function getInformation()
+    {
+        return 'Type: '.$this->template_type.' Description: '.$this->template_description;
+    }
     public static function tableName()
     {
         return 'template';

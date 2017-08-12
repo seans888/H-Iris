@@ -39,7 +39,7 @@ class Email extends \yii\db\ActiveRecord
             [['email_date'], 'safe'],
             [['template_id', 'recipient_id'], 'required'],
             [['template_id', 'recipient_id'], 'integer'],
-            [['email_recipient', 'email_template', 'email_status'], 'string', 'max' => 45],
+            [['email_status'], 'string', 'max' => 45],
             [['recipient_id'], 'exist', 'skipOnError' => true, 'targetClass' => Recipient::className(), 'targetAttribute' => ['recipient_id' => 'id']],
             [['template_id'], 'exist', 'skipOnError' => true, 'targetClass' => Template::className(), 'targetAttribute' => ['template_id' => 'id']],
         ];
@@ -52,18 +52,22 @@ class Email extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'email_date' => 'Email Date',
-            'email_recipient' => 'Email Recipient',
-            'email_template' => 'Email Template',
-            'email_status' => 'Email Status',
-            'template_id' => 'Template ID',
-            'recipient_id' => 'Recipient ID',
+            'email_date' => 'Date',
+            'email_recipient' => 'Recipient',
+            'email_template' => 'Template',
+            'email_status' => 'Status',
+            'template_id' => 'Template',
+            'recipient_id' => 'Recipient',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
+     public function getInformation()
+    {
+        return 'Date: '.$this->email_date.' Recipient: '.$this->email_recipient.' Content: '.$this->email_content;
+    }
     public function getActivities()
     {
         return $this->hasMany(Activity::className(), ['email_id' => 'id']);
