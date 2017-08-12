@@ -14,8 +14,7 @@ use app\models\Marketeer;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'event_date_created')->textInput() ?>
-
+   
     <?= $form->field($model, 'event_description')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'event_start_date')->textInput() ?>
