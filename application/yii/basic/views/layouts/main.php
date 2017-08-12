@@ -49,7 +49,13 @@ AppAsset::register($this);
                  //'<li class="dropdown-header">Dropdown Header</li>',
                  ['label' => 'Marketeer', 'url' => ['/marketeer/index']],
                   '<li class="divider"></li>',
-                 ['label' => 'Activity', 'url' => ['/activity/index']]
+                 ['label' => 'Activity', 'url' => ['/activity/index']],
+                 '<li class="divider"></li>',
+                 ['label' => 'Customer', 'url' => ['/customer/index']],
+                 '<li class="divider"></li>',
+                 ['label' => 'Customer History', 'url' => ['/customer-history/index']]
+
+                 
             ],
         ],
             Yii::$app->user->isGuest ? (
@@ -81,7 +87,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; SM Hotels and Convention Corporation <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+       
     </div>
 </footer>
 

@@ -65,7 +65,9 @@ class CustomerHistorySearch extends CustomerHistory
             'ch_numberdays' => $this->ch_numberdays,
             
         ]);
-        $query->andFilterWhere(['like', 'customer_fname', $this->customer_id]);
+        $query->andFilterWhere(['like', 'customer_fname', $this->customer_id])
+        ->orFilterWhere(['like', 'customer_lname', $this->customer_id]);
+
         return $dataProvider;
     }
 }
