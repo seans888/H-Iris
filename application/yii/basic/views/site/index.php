@@ -7,9 +7,9 @@ $this->title = 'SM Hotels and Convention Corporation';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>SM Hotels and Convention Corporation</h1>
+        <h2>SM Hotels and Convention Corporation</h2>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">IRIS (Intelligent Requisition of Integrated Systems)</p>
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
@@ -28,7 +28,7 @@ $this->title = 'SM Hotels and Convention Corporation';
                         in Clark in Pampanga; and the 347-guest room deluxe 5-star hotel, Conrad Manila, located in the Mall of 
                         Asia Complex.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://localhost/yii/web/index.php?r=site%2Fabout">About Us &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Heading</h2>

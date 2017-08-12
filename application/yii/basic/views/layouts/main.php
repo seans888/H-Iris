@@ -49,7 +49,19 @@ AppAsset::register($this);
                  //'<li class="dropdown-header">Dropdown Header</li>',
                  ['label' => 'Marketeer', 'url' => ['/marketeer/index']],
                   '<li class="divider"></li>',
-                 ['label' => 'Activity', 'url' => ['/activity/index']]
+                 ['label' => 'Activity', 'url' => ['/activity/index']],
+                   '<li class="divider"></li>',
+                   ['label' => 'Event', 'url' => ['/event/index']],
+                 '<li class="divider"></li>',
+                 //'<li class="dropdown-header">Dropdown Header</li>',
+                 ['label' => 'Customer', 'url' => ['/Customer/index']],
+                  '<li class="divider"></li>',
+                    ['label' => 'Email-Customer', 'url' => ['/Email-Customer/index']],
+                 '<li class="divider"></li>',
+                 //'<li class="dropdown-header">Dropdown Header</li>',
+                 ['label' => 'Email-Event', 'url' => ['/Email-Event/index']],
+                  '<li class="divider"></li>',
+
             ],
         ],
             Yii::$app->user->isGuest ? (

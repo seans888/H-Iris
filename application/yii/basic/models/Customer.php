@@ -26,20 +26,14 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-<<<<<<< HEAD
+
 
       public function getName()
-    {
-    return $this->customer_fname.' '.$this->customer_lname;
-    }
-
-=======
-     public function getName()
     {
      return $this->customer_fname.' '.$this->customer_lname;
     }
     
->>>>>>> c2ab541a78ae3a410f3fc8dad1d27bdcf18b5016
+
     public static function tableName()
     {
         return 'customer';
