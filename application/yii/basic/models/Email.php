@@ -30,7 +30,7 @@ class Email extends \yii\db\ActiveRecord
     }
     public function getInformation()
     {
-        return $this->email_date.' '.$this->email_recipient.' '.$this->email_content;
+        return 'Date: '.$this->email_date.' Recipient: '.$this->email_recipient.' Content: '.$this->email_content;
     }
 
     /**
