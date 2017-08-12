@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use yii\models\Prospect;
+//use app\models\Prospect;
+ //use app\models\Email;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ProspectEmailSearch */
@@ -25,12 +26,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-          'id',
+         // 'id',
            [
             'attribute'=>'prospect_id',
             'value'=>'prospect.name'],
             ['attribute'=>'email_id',
             'value'=>'email.information'],
+
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
