@@ -68,7 +68,7 @@ class RecipientSearch extends Recipient
             ->andFilterWhere(['like', 'recipient_email', $this->recipient_email])
             ->andFilterWhere(['like', 'recipient_fname', $this->recipient_fname])
             ->andFilterWhere(['like', 'recipient_mname', $this->recipient_mname])
-            ->andFilterWhere(['like', 'recipient_lname', $this->recipient_lname])
+            ->andFilterWhere(['like', 'recipient_lname', $this->recipient_lname]);
 
         return $dataProvider;
     }

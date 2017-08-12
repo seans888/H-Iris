@@ -24,7 +24,7 @@ use app\models\Recipient;
     <?= $form->field($model, 'wvh_cookie_information')->textInput(['maxlength' => true]) ?>
 
   <?= $form->field($model, 'recipient_id')->dropDownList(  
-    ArrayHelper::map(Recipient::find()->all(),'id'), 
+    ArrayHelper::map(Recipient::find()->all(),'id','name'), 
     ['prompt'=>'Select Recipient'] 
     ) ?> 
     <div class="form-group">
