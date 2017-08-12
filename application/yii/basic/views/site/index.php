@@ -9,8 +9,8 @@ $this->title = 'SM Hotels and Convention Corporation';
 
 <div class="site-index">
 
-  <div class="pico">
-        <h1>SM Hotels and Convention Corporation</h1>
+  <div class="main">
+        <p>SM Hotels and Convention Corporation</p>
    
     </div>
 
@@ -73,6 +73,7 @@ function showSlides() {
 
 
             <div class="paneSection">
+            <div class="about">
                 <h1 style="text-align:center;">About Us</h1>
 
                         <p style="text-indent:50px, text-align: justify; ">SM Hotels and Conventions Corporation (SMHCC) was established to address the vast potential of tourism 
@@ -87,7 +88,7 @@ function showSlides() {
        
           
         </div>
-
+ </div>
 
  <div class="paneSection">
                 <h1 style="text-align:center;">Rooms </h1>
@@ -124,7 +125,8 @@ function showSlides() {
 
  <div class="paneSection">
 <div class="row">
-
+</br>
+</br>
    <h1 style="text-align:center;">Dining</h1>
                 <div class= "col-sm-5"> <span class="pull-right">
              <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/dining.jpg" style="width:500px;height:500px;"></a>
@@ -158,7 +160,8 @@ function showSlides() {
  <div class="paneSection">
 
     <div class="row">
-
+</br>
+</br>
    <h1 style="text-align:center;">Spa</h1>
                 <div class= "col-sm-5"> <span class="pull-right">
              <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/spa.jpg" style="width:500px;height:500px;"></a>
