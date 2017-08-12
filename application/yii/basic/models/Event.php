@@ -23,7 +23,7 @@ class Event extends \yii\db\ActiveRecord
      * @inheritdoc
      */
 
-public function getFullName()
+public function getfullName()
    {
    return $this->marketeer_fname.' '.$this->marketeer_lname;
     }
@@ -31,6 +31,11 @@ public function getFullName()
     public static function tableName()
     {
         return 'event';
+    }
+
+    public function getInformation()
+    {
+        return 'Description: '. $this->event_description.'  Start Date: '.$this->event_start_date.'  End Date:'.$this->event_end_date;
     }
 
     /**

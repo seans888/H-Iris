@@ -30,8 +30,8 @@ class EmailEvent extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['event_id', 'email_id'], 'required'],
-            [['event_id', 'email_id'], 'integer'],
+          //  [['event_id', 'email_id'], 'required'],
+           [['event_id', 'email_id'], 'safe'],
             [['email_id'], 'exist', 'skipOnError' => true, 'targetClass' => Email::className(), 'targetAttribute' => ['email_id' => 'id']],
             [['event_id'], 'exist', 'skipOnError' => true, 'targetClass' => Event::className(), 'targetAttribute' => ['event_id' => 'id']],
         ];

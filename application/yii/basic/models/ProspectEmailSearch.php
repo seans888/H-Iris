@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\ProspectEmail;
+use app\models\ProspectEmailSearch;
 
 /**
  * ProspectEmailSearch represents the model behind the search form about `app\models\ProspectEmail`.
@@ -15,10 +16,12 @@ class ProspectEmailSearch extends ProspectEmail
     /**
      * @inheritdoc
      */
+    //public $prospect_id;
     public function rules()
     {
         return [
-            [['id', 'prospect_id', 'email_id'], 'integer'],
+            [['id'], 'integer'],
+            [['email.information', 'prospect.fullName',  'prospect_id', 'email_id'], 'safe'],
         ];
     }
 
@@ -41,6 +44,7 @@ class ProspectEmailSearch extends ProspectEmail
     public function search($params)
     {
         $query = ProspectEmail::find();
+       
 
         // add conditions that should always apply here
 
@@ -55,14 +59,27 @@ class ProspectEmailSearch extends ProspectEmail
             // $query->where('0=1');
             return $dataProvider;
         }
+         $query->joinWith('prospect')
+            ->joinWith('email');
+
+
+
+         //->joinWith('email_id');
+
 
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'prospect_id' => $this->prospect_id,
-            'email_id' => $this->email_id,
-        ]);
+          
+           // 'prospect_id' => $this->prospect_id,
+           // 'email.information' => $this->email_id,
 
+            
+             
+        ]);
+        //$query->andFilterWhere(['like' , 'prospect_fname'.])
+        $query->andFilterWhere(['like', 'prospect_fname',$this->prospect_id])
+            ->andFilterWhere(['like', 'email_id', $this->email_id]);
         return $dataProvider;
     }
 }

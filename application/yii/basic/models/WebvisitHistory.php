@@ -10,11 +10,11 @@ use Yii;
  * @property integer $id
  * @property string $wvh_date
  * @property string $wvh_time
- * @property integer $wvh_ip_address
+ * @property string $wvh_ip_address
  * @property string $wvh_url
  * @property string $wvh_cookie_information
  * @property integer $customer_id
- * @property integer $Prospect_id
+ * @property integer $prospect_id
  *
  * @property Prospect $prospect
  * @property Customer $customer
@@ -36,11 +36,12 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     {
         return [
             [['wvh_date', 'wvh_time'], 'safe'],
-            [['wvh_ip_address', 'customer_id', 'Prospect_id'], 'integer'],
-            [['customer_id', 'Prospect_id'], 'required'],
+            [['customer_id', 'prospect_id'], 'required'],
+            [['customer_id', 'prospect_id'], 'integer'],
+            [['wvh_ip_address'], 'string', 'max' => 20],
             [['wvh_url'], 'string', 'max' => 100],
             [['wvh_cookie_information'], 'string', 'max' => 45],
-            [['Prospect_id'], 'exist', 'skipOnError' => true, 'targetClass' => Prospect::className(), 'targetAttribute' => ['Prospect_id' => 'id']],
+            [['prospect_id'], 'exist', 'skipOnError' => true, 'targetClass' => Prospect::className(), 'targetAttribute' => ['prospect_id' => 'id']],
             [['customer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['customer_id' => 'id']],
         ];
     }
@@ -58,7 +59,7 @@ class WebvisitHistory extends \yii\db\ActiveRecord
             'wvh_url' => 'Web Visit History Url',
             'wvh_cookie_information' => 'Web Visit History Cookie Information',
             'customer_id' => 'Customer Name',
-            'Prospect_id' => 'Prospect Name',
+            'prospect_id' => 'Prospect Name',
         ];
     }
 
@@ -67,7 +68,7 @@ class WebvisitHistory extends \yii\db\ActiveRecord
      */
     public function getProspect()
     {
-        return $this->hasOne(Prospect::className(), ['id' => 'Prospect_id']);
+        return $this->hasOne(Prospect::className(), ['id' => 'prospect_id']);
     }
 
     /**

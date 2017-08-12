@@ -12,7 +12,7 @@ use Yii;
  * @property string $customer_mname
  * @property string $customer_lname
  * @property string $customer_email
- * @property string $customer_contact_number
+ * @property integer $customer_contact_number
  *
  * @property CustomerHistory[] $customerHistories
  * @property CustomerPreference[] $customerPreferences
@@ -26,20 +26,12 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-<<<<<<< HEAD
 
       public function getName()
     {
     return $this->customer_fname.' '.$this->customer_lname;
     }
 
-=======
-     public function getName()
-    {
-     return $this->customer_fname.' '.$this->customer_lname;
-    }
-    
->>>>>>> c2ab541a78ae3a410f3fc8dad1d27bdcf18b5016
     public static function tableName()
     {
         return 'customer';
@@ -63,11 +55,11 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_fname' => 'First Name',
-            'customer_mname' => 'Middle Name',
-            'customer_lname' => 'Last Name',
-            'customer_email' => 'Email Address',
-            'customer_contact_number' => 'Contact Number',
+            'customer_fname' => 'Customer First Name',
+            'customer_mname' => 'Customer Middle Name',
+            'customer_lname' => 'Customer Last Name',
+            'customer_email' => 'Customer Email',
+            'customer_contact_number' => 'Customer Contact Number',
         ];
     }
 
