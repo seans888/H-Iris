@@ -30,12 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-           array( 'label'=>$model->prospect->getAttributeLabel('prospect'),
-                'value'=>$model->prospect->fullName),
+         /**  array( 'label'=>$model->prospect->getAttributeLabel('prospect'),
+                'value'=>$model->prospect->name),
             array( 'label'=>$model->email->getAttributeLabel('email'),
-                'value'=>$model->email->information),
+                'value'=>$model->email->information), **/
 
-            'prospect.fullName',
+            'prospect.name',
             
 
             'email.information',
