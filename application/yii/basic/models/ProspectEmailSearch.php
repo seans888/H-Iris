@@ -79,7 +79,11 @@ class ProspectEmailSearch extends ProspectEmail
         ]);
         //$query->andFilterWhere(['like' , 'prospect_fname'.])
         $query->andFilterWhere(['like', 'prospect_fname',$this->prospect_id])
-            ->andFilterWhere(['like', 'email_id', $this->email_id]);
+         ->orFilterWhere(['like', 'prospect_lname', $this->prospect_id])
+            ->andFilterWhere(['like', 'email_date', $this->email_id])
+            ->orFilterWhere(['like', 'email_recipient', $this->email_id])
+            ->orFilterWhere(['like', 'email_content', $this->email_id]);
+            
         return $dataProvider;
     }
 }
