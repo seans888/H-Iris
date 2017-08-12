@@ -41,6 +41,8 @@ AppAsset::register($this);
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Email', 'url' => ['/email/index']],
+            
+            // Yii::$app->user->isAdmin ? (
             [
             'label' => 'Forms',
             'items' => [
@@ -58,6 +60,7 @@ AppAsset::register($this);
                  
             ],
         ],
+        //)
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
