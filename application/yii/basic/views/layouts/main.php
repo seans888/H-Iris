@@ -28,7 +28,7 @@ AppAsset::register($this);
 <div class="wrap">
   <?php
     NavBar::begin([
-        'brandLabel' => 'SM Hotels and Convention Corporation',
+        'brandLabel' =>'SM Hotels and Convention Corporation',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',

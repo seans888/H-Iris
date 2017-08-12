@@ -12,14 +12,15 @@ body {
 
 .wrap > .container {
     padding: 70px 15px 20px;
-background-color:# 0C8BD8;
+background-color:# 2690CE;
 }
 
 .footer {
     height: 60px;
-    background-color: #0C8BD8;;
+    background-color: #2690CE;
     border-top: 1px solid #ddd;
     padding-top: 20px;
+padding-bottom: 0px;
 }
 
 .jumbotron {
@@ -96,6 +97,7 @@ a.desc:after {
 .nav li > form > button.logout {
     padding: 15px;
     border: none;
+
 }
 
 @media(max-width:767px) {
@@ -164,13 +166,40 @@ a.desc:after {
 }
 
 
-.pico
+.main
 {
-color: blue;
+color: #0E89D5;
 text-align: center;
+font-size: 50px
 }
 
 .col-sm-5
 {
 font-size: 20px
 }
+
+.col-sm-6
+{
+font-size: 20px
+}
+
+
+.about
+{
+font-size: 20px
+}
+
+.text{
+font-size: 20px
+}
+
+h1
+{
+
+color: #2690CE;
+}
+
+.my-navbar {
+    background-color:#0E89D5;
+}
+
