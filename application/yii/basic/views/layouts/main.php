@@ -35,10 +35,19 @@ AppAsset::register($this);
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-lest'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
+            ['label' => 'About Us', 'url' => ['/site/about']],
+             ['label' => 'Room', 'url' => ['/site/about']],
+              ['label' => 'Dining', 'url' => ['/site/about']],
+ ['label' => 'Spa', 'url' => ['/site/about']],
+ ['label' => 'Offers & activities', 'url' => ['/site/about']],
+ ['label' => 'Events', 'url' => ['/site/about']],
+  ['label' => 'Location', 'url' => ['/site/about']],
+   ['label' => 'Gallery', 'url' => ['/site/about']],
+
+
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Email', 'url' => ['/email/index']],
             
