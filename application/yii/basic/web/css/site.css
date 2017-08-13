@@ -8,7 +8,8 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
-    background-color:# 2690CE;
+    background-color:#ffffff;
+
 }
 
 .wrap > .container {
@@ -303,8 +304,20 @@ color: #2690CE;
 
 .navbar {
     color:#000000;
-    background-color:#58cdfc;
+    background-color:#adebff;
  
 }
 
-.
+.nav{
+color:#000000;
+
+
+}
+
+.dropdown-header{
+font-size: 17px;
+font-weight:bold;
+color:black;
+
+
+}

@@ -92,7 +92,7 @@ function showSlides() {
  <div class="paneSection">
                 <h1 style="text-align:center;">Rooms </h1>
 <div class="row">
-                <div class= "col-sm-6">
+                <div class= "col-md-6">
              <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/rm1.jpg" style="width:500px;height:320px;"></a>
                 
              <h2 style="text-align:center;"> LAGOON VIEW </h2> 
@@ -101,10 +101,10 @@ function showSlides() {
 
              </div>
 
-               <div class= "col-sm-1">   </div>
+               <div class= "col-md-1">   </div>
 
     
-             <div class= "col-sm-6">
+             <div class= "col-md-6">
 
                <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/rm2.jpg" style="width:500px;height:320px;"></a>
 
@@ -131,7 +131,7 @@ function showSlides() {
              <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/dining.jpg" style="width:500px;height:500px;"></a>
 </div>
 
-<div class= "col-sm-5">
+<div class= "col-md-5">
 </br>
 </br>
             <p> Complete the leisure lifestyle at Pico Sands Hotel with the variety of casual dining spots featuring Spanish and Filipino dishes.</p>
@@ -166,7 +166,7 @@ function showSlides() {
              <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/spa.jpg" style="width:500px;height:500px;"></a>
 </div>
 
-<div class= "col-sm-5">
+<div class= "col-md-5">
 </br>
 </br>
             <p style="text-align:justify;"> Heal your body, calm your mind and soothe your spirit with our treatments in this Batangas beach resort, using organic and indigenous local products.</p>

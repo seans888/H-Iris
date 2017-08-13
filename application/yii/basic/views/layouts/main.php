@@ -35,11 +35,48 @@ AppAsset::register($this);
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-lest'],
+        'options' => ['class' => 'navbar-nav navbar-left'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About Us', 'url' => ['/site/about']],
-             ['label' => 'Room', 'url' => ['/site/about']],
+
+
+             ['label' => 'Room',
+
+              'items' => [
+                 ['label' => 'Overview' , 'url' => ['/email/index']],
+
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Lagoon View</li>',
+                
+                 ['label' => 'Superior Room', 'url' => ['/activity/index']],
+                 
+                 ['label' => 'Deluxe Room', 'url' => ['/customer/index']],
+             
+                 ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
+
+                 ['label' => 'Corner Deluxe Rooms', 'url' => ['/customer/index']],
+             
+                 ['label' => 'Penthouse Loft Rooms', 'url' => ['/customer-history/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Mountain View</li>',
+
+                   ['label' => 'Standard Room', 'url' => ['/customer/index']],
+                
+                 ['label' => 'Superior Room', 'url' => ['/activity/index']],
+             
+                 ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
+
+                 
+                 
+            ],
+
+             ],
+
+
+
+
               ['label' => 'Dining', 'url' => ['/site/about']],
  ['label' => 'Spa', 'url' => ['/site/about']],
  ['label' => 'Offers & activities', 'url' => ['/site/about']],
