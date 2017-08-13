@@ -13,11 +13,9 @@ use Yii;
  * @property string $wvh_ip_address
  * @property string $wvh_url
  * @property string $wvh_cookie_information
- * @property integer $customer_id
- * @property integer $prospect_id
+ * @property integer $recipient_id
  *
- * @property Prospect $prospect
- * @property Customer $customer
+ * @property Recipient $recipient
  */
 class WebvisitHistory extends \yii\db\ActiveRecord
 {
@@ -36,13 +34,12 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     {
         return [
             [['wvh_date', 'wvh_time'], 'safe'],
-            [['customer_id', 'prospect_id'], 'required'],
-            [['customer_id', 'prospect_id'], 'integer'],
+            [['recipient_id'], 'required'],
+            [['recipient_id'], 'integer'],
             [['wvh_ip_address'], 'string', 'max' => 20],
             [['wvh_url'], 'string', 'max' => 100],
             [['wvh_cookie_information'], 'string', 'max' => 45],
-            [['prospect_id'], 'exist', 'skipOnError' => true, 'targetClass' => Prospect::className(), 'targetAttribute' => ['prospect_id' => 'id']],
-            [['customer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['customer_id' => 'id']],
+            [['recipient_id'], 'exist', 'skipOnError' => true, 'targetClass' => Recipient::className(), 'targetAttribute' => ['recipient_id' => 'id']],
         ];
     }
 
@@ -53,29 +50,20 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'wvh_date' => 'Web Visit History Date',
-            'wvh_time' => 'Web Visit History Time',
-            'wvh_ip_address' => 'Web Visit History Ip Address',
-            'wvh_url' => 'Web Visit History Url',
-            'wvh_cookie_information' => 'Web Visit History Cookie Information',
-            'customer_id' => 'Customer Name',
-            'prospect_id' => 'Prospect Name',
+            'wvh_date' => 'Date',
+            'wvh_time' => 'Time',
+            'wvh_ip_address' => 'Ip Address',
+            'wvh_url' => 'Url',
+            'wvh_cookie_information' => 'Cookie Information',
+            'recipient_id' => 'Visitor',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProspect()
+    public function getRecipient()
     {
-        return $this->hasOne(Prospect::className(), ['id' => 'prospect_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCustomer()
-    {
-        return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
+        return $this->hasOne(Recipient::className(), ['id' => 'recipient_id']);
     }
 }

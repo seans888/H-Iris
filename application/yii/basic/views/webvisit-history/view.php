@@ -34,8 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'wvh_ip_address',
             'wvh_url:url',
             'wvh_cookie_information',
-            'customer_id',
-            'prospect_id',
+            'recipient.name',
         ],
     ]) ?>
 

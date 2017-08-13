@@ -19,7 +19,7 @@ class ActivitySearch extends Activity
     {
         return [
             [['id'], 'integer'],
-            [['activity_status', 'activity_description'], 'safe'],
+            [['activity_status', 'activity_description', 'email_id'], 'safe'],
         ];
     }
 
@@ -56,14 +56,16 @@ class ActivitySearch extends Activity
             // $query->where('0=1');
             return $dataProvider;
         }
-
+        $query->joinWith('email');
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            //'email_id' => $this->email_id,
         ]);
 
         $query->andFilterWhere(['like', 'activity_status', $this->activity_status])
-            ->andFilterWhere(['like', 'activity_description', $this->activity_description]);
+            ->andFilterWhere(['like', 'activity_description', $this->activity_description])
+            ->andFilterWhere(['like', 'email_status', $this->email_id]);
 
         return $dataProvider;
     }

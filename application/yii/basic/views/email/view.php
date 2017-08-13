@@ -30,12 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'email_date:email',
-            'email_recipient:email',
-            'email_content:email',
-            'email_template:email',
             'email_status:email',
-            'activity.status',
-            ],
+            'template.information',
+            'recipient.name',
+        ],
     ]) ?>
 
 </div>

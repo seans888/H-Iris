@@ -27,9 +27,7 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'wvh_cookie_information') ?>
 
-    <?php // echo $form->field($model, 'customer_id') ?>
-
-    <?php // echo $form->field($model, 'prospect_id') ?>
+    <?php // echo $form->field($model, 'recipient_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

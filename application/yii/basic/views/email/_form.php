@@ -3,7 +3,8 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper; 
 use yii\widgets\ActiveForm; 
-use app\models\Activity; 
+use app\models\Template; 
+use app\models\Recipient; 
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Email */
@@ -11,22 +12,20 @@ use app\models\Activity;
 ?>
 
 <div class="email-form">
+
     <?php $form = ActiveForm::begin(); ?>
-    
 
 
-    <?= $form->field($model, 'email_recipient')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'email_content')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'email_template')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'email_status')->textInput(['maxlength' => true]) ?>
 
-
-  
-    <?= $form->field($model, 'email_activity_id')->dropDownList(  
-    ArrayHelper::map(Activity::find()->all(),'id','activity_status'), 
-    ['prompt'=>'Select Activity'] 
+     <?= $form->field($model, 'template_id')->dropDownList(  
+    ArrayHelper::map(Template::find()->all(),'id','information'), 
+    ['prompt'=>'Select Template'] 
+    ) ?>  
+     <?= $form->field($model, 'recipient_id')->dropDownList(  
+    ArrayHelper::map(Recipient::find()->all(),'id','name'), 
+    ['prompt'=>'Select Recipient'] 
     ) ?>  
 
     <div class="form-group">
