@@ -17,11 +17,15 @@ body {
 }
 
 .footer {
-    height: 60px;
+   height: 60px;
+   width: 100%;
     background-color: #2690CE;
     border-top: 1px solid #ddd;
     padding-top: 20px;
-padding-bottom: 0px;
+padding-bottom: 1rem;
+position: absolute;
+
+
 }
 
 .jumbotron {
@@ -297,11 +301,9 @@ color: #2690CE;
 
 
 .navbar {
-    color:#0E89D5;
-    background-color: #0E89D5;
+    color:#000000;
+    background-color:#58cdfc;
  
 }
 
-.my-navbar {
-    background-color: #0E89D5;
-}
+.
