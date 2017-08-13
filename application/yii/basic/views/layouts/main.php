@@ -41,39 +41,50 @@ AppAsset::register($this);
             ['label' => 'About Us', 'url' => ['/site/about']],
 
 
-             ['label' => 'Room',
-
+              ['label' => 'Room',
               'items' => [
                  ['label' => 'Overview' , 'url' => ['/email/index']],
 
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Lagoon View</li>',
                 
-                 ['label' => 'Superior Room', 'url' => ['/activity/index']],
-                 
+                 ['label' => 'Superior Room', 'url' => ['/site/superior']],
                  ['label' => 'Deluxe Room', 'url' => ['/customer/index']],
-             
                  ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
-
                  ['label' => 'Corner Deluxe Rooms', 'url' => ['/customer/index']],
-             
                  ['label' => 'Penthouse Loft Rooms', 'url' => ['/customer-history/index']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Mountain View</li>',
 
-                   ['label' => 'Standard Room', 'url' => ['/customer/index']],
-                
+                 ['label' => 'Standard Room', 'url' => ['/customer/index']],
                  ['label' => 'Superior Room', 'url' => ['/activity/index']],
-             
                  ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
+            ],],
 
-                 
-                 
-            ],
+   ['label' => 'Dining', 
+               'items' => [
+                 ['label' => 'Pico Restaurant and Bar' , 'url' => ['/site/randb']],
+                
+                 ['label' => 'Reef Bar', 'url' => ['/activity/index']],
+                 ['label' => 'B&B', 'url' => ['/customer/index']],
+                 ['label' => 'Lagoa', 'url' => ['/customer-history/index']],
+                 ], ],
+         
 
-             ],
 
+ ['label' => 'Spa', 
+ 'items' => [
+                 ['label' => 'Overview' , 'url' => ['/email/index']],
+                 ['label' => 'Booking Guidelines', 'url' => ['/activity/index']],
+                 ], ],
+         
+ ['label' => 'Offers & activities',
+'items' => [
+                 ['label' => 'Room Offers' , 'url' => ['/email/index']],
+                 ['label' => 'Club Activities', 'url' => ['/activity/index']],
+                  ['label' => 'Promotions', 'url' => ['/activity/index']],
+                 ], ],
 
 
 
