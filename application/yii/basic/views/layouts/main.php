@@ -40,54 +40,91 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About Us', 'url' => ['/site/about']],
 
-   ['label' => 'Room',
+
+             ['label' => 'Room',
+
               'items' => [
                  ['label' => 'Overview' , 'url' => ['/email/index']],
 
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Lagoon View</li>',
                 
-                 ['label' => 'Superior Room', 'url' => ['/site/superior']],
+                 ['label' => 'Superior Room', 'url' => ['/activity/index']],
+                 
                  ['label' => 'Deluxe Room', 'url' => ['/customer/index']],
+             
                  ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
+
                  ['label' => 'Corner Deluxe Rooms', 'url' => ['/customer/index']],
+             
                  ['label' => 'Penthouse Loft Rooms', 'url' => ['/customer-history/index']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Mountain View</li>',
 
-                 ['label' => 'Standard Room', 'url' => ['/customer/index']],
-                 ['label' => 'Superior Room', 'url' => ['/activity/index']],
-                 ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
-            ],],
-
-   ['label' => 'Dining', 
-               'items' => [
-                 ['label' => 'Pico Restaurant and Bar' , 'url' => ['/site/randb']],
+                   ['label' => 'Standard Room', 'url' => ['/customer/index']],
                 
-                 ['label' => 'Reef Bar', 'url' => ['/activity/index']],
-                 ['label' => 'B&B', 'url' => ['/customer/index']],
-                 ['label' => 'Lagoa', 'url' => ['/customer-history/index']],
-                 ], ],
-         
+                 ['label' => 'Superior Room', 'url' => ['/activity/index']],
+             
+                 ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
+
+                 
+                 
+            ],
+
+             ],
 
 
- ['label' => 'Spa', 
- 'items' => [
+
+
+              ['label' => 'Dining', 'url' => ['/site/about']],
+ ['label' => 'Spa', 'url' => ['/site/about']],
+ ['label' => 'Offers & activities', 'url' => ['/site/about']],
+ ['label' => 'Events', 
+  'items' => [
                  ['label' => 'Overview' , 'url' => ['/email/index']],
-                 ['label' => 'Booking Guidelines', 'url' => ['/activity/index']],
-                 ], ],
-         
- ['label' => 'Offers & activities',
-'items' => [
-                 ['label' => 'Room Offers' , 'url' => ['/email/index']],
-                 ['label' => 'Club Activities', 'url' => ['/activity/index']],
-                  ['label' => 'Promotions', 'url' => ['/activity/index']],
-                 ], ],
 
- ['label' => 'Events', 'url' => ['/site/about']],
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Weddings</li>',
+                
+                 ['label' => 'Pre-Wedding Activities', 'url' => ['/activity/index']],
+                 
+                 ['label' => 'Wedding Packages', 'url' => ['/customer/index']],
+             
+                 ['label' => 'Ceremony Venues', 'url' => ['/customer-history/index']],
+
+                 ['label' => 'Reception Venues', 'url' => ['/customer/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Corporate Meetings</li>',
+
+                   ['label' => 'Team building Activities', 'url' => ['/customer/index']],
+                
+],
+],
+
   ['label' => 'Location', 'url' => ['/site/about']],
-   ['label' => 'Gallery', 'url' => ['/site/about']],
+   ['label' => 'Gallery', 
+   'items' => [
+                
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Photos</li>',
+                
+                 ['label' => 'Rooms', 'url' => ['/activity/index']],
+                 
+                 ['label' => 'Dining', 'url' => ['/customer/index']],
+             
+                 ['label' => 'Leisure', 'url' => ['/customer-history/index']],
+
+                 ['label' => 'Events', 'url' => ['/customer/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Videos</li>',
+
+                 
+                
+],
+],
 
 
             ['label' => 'Contact', 'url' => ['/site/contact']],
