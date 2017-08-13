@@ -30,7 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'event_start_date',
             'event_end_date',
             // 'employee_id',
-
+            [  
+            'attribute' => 'employee_id', 
+            'value'=>'employee.nameAndPosition' 
+             ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

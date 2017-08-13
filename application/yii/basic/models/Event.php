@@ -52,7 +52,7 @@ class Event extends \yii\db\ActiveRecord
             'event_description' => 'Event Description',
             'event_start_date' => 'Event Start Date',
             'event_end_date' => 'Event End Date',
-            'employee_id' => 'Employee ID',
+            'employee_id' => 'Employee',
         ];
     }
 

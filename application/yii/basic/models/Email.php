@@ -53,8 +53,8 @@ class Email extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'email_date' => 'Date',
-            'email_recipient' => 'Recipient',
-            'email_template' => 'Template',
+           // 'email_recipient' => 'Recipient',
+           // 'email_template' => 'Template',
             'email_status' => 'Status',
             'template_id' => 'Template',
             'recipient_id' => 'Recipient',
@@ -66,7 +66,7 @@ class Email extends \yii\db\ActiveRecord
      */
      public function getInformation()
     {
-        return 'Date: '.$this->email_date.' Status: '.$this->email_status;
+        return 'Date Sent: '.$this->email_date.' Status: '.$this->email_status;
     }
     public function getActivities()
     {

@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Html;
 use yii\helpers\ArrayHelper; 
 use yii\widgets\ActiveForm; 
 use app\models\Customer;
@@ -26,7 +26,7 @@ use app\models\Customer;
     <?= $form->field($model, 'recipient_contact_number')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'customer_id')->dropDownList(  
-    ArrayHelper::map(Customer::find()->all(),'id'), 
+    ArrayHelper::map(Customer::find()->all(),'id', 'information'), 
     ['prompt'=>'Select Customer'] 
     ) ?>  
 

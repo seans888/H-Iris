@@ -67,7 +67,7 @@ class EmailEventSearch extends EmailEvent
         ]);
 
         $query->andFilterWhere(['like', 'event_description', $this->event_id])
-        ->andFilterWhere(['like', 'email_status', $this->email_id]);
+            ->andFilterWhere(['like', 'email_status', $this->email_id]);
 
         return $dataProvider;
     }

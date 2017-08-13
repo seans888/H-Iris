@@ -19,7 +19,10 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-  
+   public function getInformation()
+    {
+        return 'Check-In Date: '.$this->customer_checkin.' Check-out Date: '.$this->customer_checkout;
+    }
     public static function tableName()
     {
         return 'customer';
@@ -42,9 +45,9 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_checkin' => 'Customer Checkin',
-            'customer_checkout' => 'Customer Checkout',
-            'customer_numberdays' => 'Customer Numberdays',
+            'customer_checkin' => 'Check-In Date',
+            'customer_checkout' => 'Check-Out Date',
+            'customer_numberdays' => 'Number of Days',
         ];
     }
 

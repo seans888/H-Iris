@@ -24,7 +24,7 @@ use app\models\Recipient;
     ['prompt'=>'Select Template'] 
     ) ?>  
      <?= $form->field($model, 'recipient_id')->dropDownList(  
-    ArrayHelper::map(Recipient::find()->all(),'id','name'), 
+    ArrayHelper::map(Recipient::find()->all(),'id','emailAddress'), 
     ['prompt'=>'Select Recipient'] 
     ) ?>  
 
