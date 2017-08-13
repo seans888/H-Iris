@@ -80,9 +80,51 @@ AppAsset::register($this);
               ['label' => 'Dining', 'url' => ['/site/about']],
  ['label' => 'Spa', 'url' => ['/site/about']],
  ['label' => 'Offers & activities', 'url' => ['/site/about']],
- ['label' => 'Events', 'url' => ['/site/about']],
+ ['label' => 'Events', 
+  'items' => [
+                 ['label' => 'Overview' , 'url' => ['/email/index']],
+
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Weddings</li>',
+                
+                 ['label' => 'Pre-Wedding Activities', 'url' => ['/activity/index']],
+                 
+                 ['label' => 'Wedding Packages', 'url' => ['/customer/index']],
+             
+                 ['label' => 'Ceremony Venues', 'url' => ['/customer-history/index']],
+
+                 ['label' => 'Reception Venues', 'url' => ['/customer/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Corporate Meetings</li>',
+
+                   ['label' => 'Team building Activities', 'url' => ['/customer/index']],
+                
+],
+],
+
   ['label' => 'Location', 'url' => ['/site/about']],
-   ['label' => 'Gallery', 'url' => ['/site/about']],
+   ['label' => 'Gallery', 
+   'items' => [
+                
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Photos</li>',
+                
+                 ['label' => 'Rooms', 'url' => ['/activity/index']],
+                 
+                 ['label' => 'Dining', 'url' => ['/customer/index']],
+             
+                 ['label' => 'Leisure', 'url' => ['/customer-history/index']],
+
+                 ['label' => 'Events', 'url' => ['/customer/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Videos</li>',
+
+                 
+                
+],
+],
 
 
             ['label' => 'Contact', 'url' => ['/site/contact']],
