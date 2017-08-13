@@ -8,11 +8,12 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+    background-color:# 2690CE;
 }
 
 .wrap > .container {
     padding: 70px 15px 20px;
-background-color:# 2690CE;
+
 }
 
 .footer {
@@ -170,27 +171,27 @@ a.desc:after {
 {
 color: #0E89D5;
 text-align: center;
-font-size: 50px
+font-size: 50px;
 }
 
 .col-sm-5
 {
-font-size: 20px
+font-size: 20px;
 }
 
 .col-sm-6
 {
-font-size: 20px
+font-size: 20px;
 }
 
 
 .about
 {
-font-size: 20px
+font-size: 20px;
 }
 
 .text{
-font-size: 20px
+font-size: 20px;
 }
 
 h1
@@ -199,7 +200,17 @@ h1
 color: #2690CE;
 }
 
-.my-navbar {
-    background-color:#0E89D5;
+
+.navbar {
+    color:#0E89D5;
+    background-color: #0E89D5;
+ 
 }
 
+.navbar-brand
+{
+color:'white';
+font-size: 20px;
+
+
+}
