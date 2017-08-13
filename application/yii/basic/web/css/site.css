@@ -10,6 +10,7 @@ body {
     padding: 0 0 60px;
     background-color:#ffffff;
 
+
 }
 
 .wrap > .container {
@@ -97,7 +98,7 @@ a.asc:after, a.desc:after {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  background-color: rgba(0,51,204);
+  background-color: rgba(0, 51, 204);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -313,7 +314,14 @@ color:#000000;
 
 
 }
+.nav.navbar-nav li a {
+   color: #000000;
+ }
 
+/*a.navbar-brand {
+   color: #000000;
+}
+*/
 .dropdown-header{
 font-size: 17px;
 font-weight:bold;

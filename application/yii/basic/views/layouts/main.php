@@ -82,18 +82,18 @@ AppAsset::register($this);
  ['label' => 'Offers & activities', 'url' => ['/site/about']],
  ['label' => 'Events', 
   'items' => [
-                 ['label' => 'Overview' , 'url' => ['/email/index']],
+                 ['label' => 'Overview' , 'url' => ['/event/index']],
 
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Weddings</li>',
                 
-                 ['label' => 'Pre-Wedding Activities', 'url' => ['/activity/index']],
+                 ['label' => 'Pre-Wedding Activities', 'url' => ['/event/index']],
                  
-                 ['label' => 'Wedding Packages', 'url' => ['/customer/index']],
+                 ['label' => 'Wedding Packages', 'url' => ['/event/index']],
              
-                 ['label' => 'Ceremony Venues', 'url' => ['/customer-history/index']],
+                 ['label' => 'Ceremony Venues', 'url' => ['/event/index']],
 
-                 ['label' => 'Reception Venues', 'url' => ['/customer/index']],
+                 ['label' => 'Reception Venues', 'url' => ['/event/index']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Corporate Meetings</li>',
