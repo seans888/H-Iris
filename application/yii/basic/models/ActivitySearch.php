@@ -65,7 +65,8 @@ class ActivitySearch extends Activity
 
         $query->andFilterWhere(['like', 'activity_status', $this->activity_status])
             ->andFilterWhere(['like', 'activity_description', $this->activity_description])
-            ->andFilterWhere(['like', 'email_status', $this->email_id]);
+            ->andFilterWhere(['like', 'email_status', $this->email_id])
+            ->orFilterWhere(['like', 'email_date', $this->email_id]);
 
         return $dataProvider;
     }

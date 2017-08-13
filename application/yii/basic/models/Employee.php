@@ -29,6 +29,10 @@ class Employee extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+     public function getNameAndPosition()
+    {
+     return $this->employee_fname.' '.$this->employee_lname.', '.$this->employee_type;
+    }
     public function rules()
     {
         return [

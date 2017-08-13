@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
              ],
              [  
             'attribute' => 'recipient_id', 
-            'value'=>'recipient.name' 
+            'value'=>'recipient.emailAddress' 
              ],
 
             ['class' => 'yii\grid\ActionColumn'],

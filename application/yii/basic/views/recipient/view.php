@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'recipient_mname',
             'recipient_lname',
             'recipient_contact_number',
-            'customer_id',
+            'customer.information',
         ],
     ]) ?>
 

@@ -26,6 +26,10 @@ class Recipient extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public function getEmailAddress()
+    {
+     return $this->recipient_email;
+    }
      public function getName()
     {
      return $this->recipient_fname.' '.$this->recipient_lname;
@@ -42,7 +46,7 @@ class Recipient extends \yii\db\ActiveRecord
     {
         return [
             [['recipient_contact_number', 'customer_id'], 'integer'],
-            [['customer_id'], 'required'],
+           [['customer_id'], 'required'],
             [['recipient_type', 'recipient_email', 'recipient_fname', 'recipient_mname', 'recipient_lname'], 'string', 'max' => 45],
             [['customer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['customer_id' => 'id']],
         ];
