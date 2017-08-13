@@ -68,10 +68,10 @@ function showSlides() {
   <h1><?= Html::encode($this->title) ?></h1>
 <div class="sitehead">
 
-<h1> Rooms </h1>
+<h1> ROOMS </h1>
 </br>
 
-<h2>Superior Room</h2>
+<h2>SUPERIOR ROOM</h2>
 
 <ul>
   <li>37 square meters with a 7 square meter balcony</li>

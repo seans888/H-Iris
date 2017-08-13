@@ -86,11 +86,6 @@ AppAsset::register($this);
                   ['label' => 'Promotions', 'url' => ['/activity/index']],
                  ], ],
 
-
-
-              ['label' => 'Dining', 'url' => ['/site/about']],
- ['label' => 'Spa', 'url' => ['/site/about']],
- ['label' => 'Offers & activities', 'url' => ['/site/about']],
  ['label' => 'Events', 
   'items' => [
                  ['label' => 'Overview' , 'url' => ['/email/index']],
