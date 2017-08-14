@@ -17,21 +17,14 @@ body {
 
 }
 
-
-.container1{
-  position: bottom;
-}
-
-
 .footer {
-   height: 30px;
+   height: 60px;
    width: 100%;
     background-color: #2690CE;
     border-top: 1px solid #ddd;
-    padding-top: 10px;
-
-bottom:0;
-
+    padding-top: 20px;
+padding-bottom: 1rem;
+position: absolute;
 
 
 }
@@ -69,12 +62,10 @@ a.asc:after, a.desc:after {
   max-width: 1000px;
   position: relative;
   margin: auto;
-
 }
 
 .mySlides {
     display: none;
-   
 }
 
 /* Next & previous buttons */
@@ -313,10 +304,13 @@ color: #2690CE;
 
 .navbar {
     color:#000000;
-background-color:#0084ff;
+    background-color:#0084ff;
  
 }
 
+.nav{
+    color:#000000;
+}
 
 .nav.navbar-nav li a {
     color:#000000;
@@ -327,11 +321,8 @@ background-color:#0084ff;
 font-size: 17px;
 font-weight:bold;
 color:black;
-
-
 }
 
-.p{
-text-align: 'justify';
-
+.navbar-inverse .navbar-brand {
+  color: #000000;
 }
