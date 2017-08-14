@@ -15,20 +15,18 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%"> 
-    <div class="text">Taal Hotel</div>
+    <img src="uploads/Taalhotel.jpg" style="width:1000px;height:500px"> 
+
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Taalroom.jpg" style="width:100%;height:20%"> 
-    <div class="text">Rooms</div>
+    <img src="uploads/Taalroom.jpg" style="width:1000px;height:500px"> 
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Dining.jpg" style="width:100%;height:20%;"> 
-    <div class="text"> Dining </div>
-  </div>
+    <img src="uploads/Dining.jpg" style="width:1000px;height:500px;"> 
 
+  </div>
  
 </div>
 <br>

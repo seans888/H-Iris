@@ -67,6 +67,7 @@ a.asc:after, a.desc:after {
 
 .mySlides {
     display: none;
+     position: relative;
 }
 
 /* Next & previous buttons */
