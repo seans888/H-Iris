@@ -63,10 +63,11 @@ class CustomerPreferenceSearch extends CustomerPreference
         // grid filtering conditions
         $query->andFilterWhere(['id' => $this->id,]);
 
-        $query->andFilterWhere(['like','customer_fname', $this->customer_id])
+       $query->andFilterWhere(['like','customer_fname', $this->customer_id]) 
          ->orFilterWhere(['like','customer_lname', $this->customer_id])
          ->andFilterWhere(['like','preference_description', $this->preference_id])
         ->orFilterWhere(['like','preference_category', $this->preference_id]);
+       
 
         return $dataProvider;
     }
