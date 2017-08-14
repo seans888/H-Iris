@@ -4,32 +4,26 @@
 
 use yii\helpers\Html;
 
-$this->title = 'superior';
+$this->title = 'ROOMS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
- <div class="main">
- </br>
-        <p>SM Hotels and Convention Corporation</p>
-   
-    </div>
 
      <div class="body-content">
         <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%;"> 
-    <div class="text">Taal Hotel</div>
+    <img src="uploads/Taalhotel.jpg" style="width:100%;height:10%;"> 
+   
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Taalroom.jpg" style="width:100%;height:20%;"> 
-    <div class="text">Rooms</div>
+    <img src="uploads/Taalroom.jpg" style="width:100%;height:10%;"> 
+   
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Dining.jpg" style="width:100%;height:20%;"> 
-    <div class="text"> Dining </div>
+    <img src="uploads/Dining.jpg" style="width:100%;height:10%;"> 
+  
   </div>
 
   
@@ -66,18 +60,16 @@ function showSlides() {
 
 </script>
   <h1><?= Html::encode($this->title) ?></h1>
-<div class="sitehead">
 
-<h1> ROOMS </h1>
-</br>
 
 <h2>SUPERIOR ROOM</h2>
 
+ <img src="uploads/Lsuperior.jpg" style="width:70%;height:20%;"> 
+ <div class="bullet">
 <ul>
   <li>37 square meters with a 7 square meter balcony</li>
-  <li>One king-sized bed that can fit up to two adults
-</li>
+  <li>One king-sized bed that can fit up to two adults</li>
 </ul>
- <img src="uploads/Lsuperior.jpg" style="width:100%;height:20%;"> 
+
 
 </div>

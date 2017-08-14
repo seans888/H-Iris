@@ -61,14 +61,16 @@ class RecipientSearch extends Recipient
         $query->andFilterWhere([
             'id' => $this->id,
             'recipient_contact_number' => $this->recipient_contact_number,
-            'customer_id' => $this->customer_id,
+            //'customer_id' => $this->customer_id,
         ]);
 
         $query->andFilterWhere(['like', 'recipient_type', $this->recipient_type])
             ->andFilterWhere(['like', 'recipient_email', $this->recipient_email])
             ->andFilterWhere(['like', 'recipient_fname', $this->recipient_fname])
             ->andFilterWhere(['like', 'recipient_mname', $this->recipient_mname])
-            ->andFilterWhere(['like', 'recipient_lname', $this->recipient_lname]);
+            ->andFilterWhere(['like', 'recipient_lname', $this->recipient_lname])
+            ->andFilterWhere(['like', 'customer_checkin', $this->customer_id])
+            ->andFilterWhere(['like', 'customer_checkout', $this->customer_id]);
         return $dataProvider;
     }
 }

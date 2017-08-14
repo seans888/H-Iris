@@ -4,29 +4,29 @@
 
 use yii\helpers\Html;
 
-$this->title = 'RoomOffer';
+$this->title = 'ROOMS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-    <div class="body-content">
+     <div class="body-content">
         <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%"> 
+    <img src="uploads/Taalhotel.jpg" style="width:100%;height:10%;"> 
    
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Taalroom.jpg" style="width:100%;height:20%"> 
-
+    <img src="uploads/Taalroom.jpg" style="width:100%;height:10%;"> 
+   
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Dining.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/Dining.jpg" style="width:100%;height:10%;"> 
   
   </div>
 
- 
+  
 </div>
 <br>
 
@@ -59,25 +59,17 @@ function showSlides() {
   
 
 </script>
+  <h1><?= Html::encode($this->title) ?></h1>
+<div class="sitehead">
 
-<h1> OFFERS AND ACTIVITIES </h1>
-<h2>ROOM OFFERS</h2>
+<h2>Premier ROOM</h2>
 
-</br>
-</br>
+ <img src="uploads/premier.jpg" style="width:70%;height:20%;"> 
 
-<h2>Family Package</h2>
- <img src="uploads/roomoffer.jpg" style="width:40%;height:40%;"> 
- <div class="bullet">
-    <p>
-<h3>Family Package </h3>
-    	</br>
-     <strong> Any day is always a great day for a family escapade at Pico Sands Hotel.</strong> </br>  </br>Book now and pay a starting rate of PHP 9,900 a night on our <strong> Premier Mountain View Room</strong>  </br> </br>or </br></br> PHP 10,900 a night on our <strong> Premier Lagoon View Room</strong>  using this special promo!
-</br>
-Promo is applicable for stays until <strong>September 15, 2017 </strong>   	
-    	
-    </p>
+<ul>
+  <li>37 square meters with a 7 square meter balcony</li>
+  <li>Two queen-sized beds that can fit up to four adults or two adults and two children.</li>
+</ul>
+</div>
 
-    <p><a class="btn btn-lg btn-success" href="http://localhost/yii/web/index.php?r=site%2Fabout">Read More</a></p>
 
-   </div>
