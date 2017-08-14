@@ -4,32 +4,26 @@
 
 use yii\helpers\Html;
 
-$this->title = 'randb';
+$this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
- <div class="main">
- </br>
-        <p>SM Hotels and Convention Corporation</p>
-   
-    </div>
-
-     <div class="body-content">
+      <div class="body-content">
         <div class="slideshow-container">
 
   <div class="mySlides">
     <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%;"> 
-    <div class="text">Taal Hotel</div>
+
   </div>
 
   <div class="mySlides">
     <img src="uploads/Taalroom.jpg" style="width:100%;height:20%;"> 
-    <div class="text">Rooms</div>
+  
   </div>
 
   <div class="mySlides">
     <img src="uploads/Dining.jpg" style="width:100%;height:20%;"> 
-    <div class="text"> Dining </div>
+
   </div>
 
   
@@ -66,25 +60,31 @@ function showSlides() {
 
 </script>
   <h1><?= Html::encode($this->title) ?></h1>
-<div class="sitehead">
+<div class="col-md-8">
+<div class="bullet">
 
-<h1> DINING </h1>
 <h2> PICO RESTAURANT AND BAR </h2>
-<p> Pico Restaurant specializes in Mediterranean cuisine and is located at the lobby of Pico Sands Hotel. It is open round the clock and offers a food pick-up service for guests. </br>
+<p style="text-align:justify"> Pico Restaurant specializes in Mediterranean cuisine and is located at the lobby of Pico Sands Hotel. 
+It is open round the clock and offers a food pick-up service for guests. 
 
-The Pico Bar, located across Pico Restaurant, serves a wide range of beverages, including this Nasugbu resort's signature fruit juices and Mojito blends. </br>
-
-Location: Ground Floor, Pico Sands Hotel </br>
-
-Operating Hours: 24 hours </br>
-
+The Pico Bar, located across Pico Restaurant, serves a wide range of beverages, including this Nasugbu resort's signature fruit juices and Mojito blends. 
  </br>
-  </br>
+
+<strong>Location:</strong> Ground Floor, Pico Sands Hotel 
+ </br>
+<strong>Operating Hours:</strong> 24 hours 
+</p>
+</br>
+
+<p style="text-align:justify">
 
 <strong>RENOVATION NOTICE: </strong>
  </br>
 In our continuing effort to better serve our valued guests, we are upgrading the Pico Restaurantal fresco area.
  </br>
-Upgrading work start at 11:00 am until 4:00 pm, daily. We assure you that we will take all measures to minimize disturbance and maintain comfort and convenience. Please bear with us.</p>
+Upgrading work start at 11:00 am until 4:00 pm, daily. We assure you that we will take all measures to
+ </br> minimize disturbance and maintain comfort and convenience. Please bear with us.
+
+ </p>
 
 </div>

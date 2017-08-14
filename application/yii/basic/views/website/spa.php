@@ -8,28 +8,22 @@ $this->title = 'spa';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
- <div class="main">
- </br>
-        <p>SM Hotels and Convention Corporation</p>
-   
-    </div>
-
-     <div class="body-content">
+      <div class="body-content">
         <div class="slideshow-container">
 
   <div class="mySlides">
     <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%;"> 
-    <div class="text">Taal Hotel</div>
+  
   </div>
 
   <div class="mySlides">
     <img src="uploads/Taalroom.jpg" style="width:100%;height:20%;"> 
-    <div class="text">Rooms</div>
+  
   </div>
 
   <div class="mySlides">
     <img src="uploads/Dining.jpg" style="width:100%;height:20%;"> 
-    <div class="text"> Dining </div>
+  
   </div>
 
   
@@ -66,26 +60,16 @@ function showSlides() {
 
 </script>
 
-  <h1><?= Html::encode($this->title) ?></h1>
-<div class="sitehead">
+<h1> Spa </h1>
+<h2> Overview </h2>
+<div class="bullet">
+<p> Fusing traditional and progressive therapeutic practices in health and well-being, the Rain Spa provides a </br>
+tropical sanctuary of relaxation and renewal.
+</br>
+</br>
+A selection of services is offered at the Beach Club and to residents and guests residing in the condos.  
+</p>
 
-<h1> Rooms </h1>
-
-<p> Pico Restaurant specializes in Mediterranean cuisine and is located at the lobby of Pico Sands Hotel. It is open round the clock and offers a food pick-up service for guests. </br>
-
-The Pico Bar, located across Pico Restaurant, serves a wide range of beverages, including this Nasugbu resort's signature fruit juices and Mojito blends. </br>
-
-Location: Ground Floor, Pico Sands Hotel </br>
-
-Operating Hours: 24 hours </br>
-
- </br>
-  </br>
-
-<strong>RENOVATION NOTICE: </strong>
- </br>
-In our continuing effort to better serve our valued guests, we are upgrading the Pico Restaurantal fresco area.
- </br>
-Upgrading work start at 11:00 am until 4:00 pm, daily. We assure you that we will take all measures to minimize disturbance and maintain comfort and convenience. Please bear with us.</p>
-
+<a href="uploads/spa.pdf" type="application/pdf; length=161318" title="spa.pdf">Rain Spa Menu</a>
 </div>
+

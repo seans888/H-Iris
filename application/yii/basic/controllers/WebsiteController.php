@@ -16,6 +16,53 @@ class WebsiteController extends \yii\web\Controller
       
     }
 
+
+    public function actionDeluxe()
+    {
+        return $this->render('deluxe');
+      
+    }
+
+ public function actionPremier()
+    {
+        return $this->render('premier');
+      
+    }
+
+ public function actionCornerdeluxe()
+    {
+        return $this->render('cornerdeluxe');
+      
+    }
+
+public function actionPenthouse()
+    {
+        return $this->render('penthouse');
+      
+    }
+
+
+    public function actionStandard()
+    {
+        return $this->render('standard');
+      
+    }
+
+
+   public function actionMsuperior()
+    {
+        return $this->render('msuperior');
+      
+    }
+
+    public function actionMpremier()
+    {
+        return $this->render('mpremier');
+      
+    }
+
+
+
       public function actionRandb()
     {
         return $this->render('randb');
