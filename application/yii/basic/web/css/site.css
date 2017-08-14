@@ -304,8 +304,16 @@ color: #2690CE;
 
 .navbar {
     color:#000000;
-    background-color:#a6f3fc;
+    background-color:#0084ff;
  
+}
+
+.nav{
+    color:#000000;
+}
+
+.nav.navbar-nav li a {
+    color:#000000;
 }
 
 
