@@ -321,6 +321,8 @@ color: #2690CE;
 font-size: 17px;
 font-weight:bold;
 color:black;
+}
 
-
+.navbar-inverse .navbar-brand {
+  color: #000000;
 }
