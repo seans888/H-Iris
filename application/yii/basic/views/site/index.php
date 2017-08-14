@@ -9,8 +9,9 @@ $this->title = 'SM Hotels and Convention Corporation';
 
 <div class="site-index">
 
-  <div class="pico">
-        <h1>SM Hotels and Convention Corporation</h1>
+  <div class="main">
+ </br>
+        <p>SM Hotels and Convention Corporation</p>
    
     </div>
 
@@ -32,9 +33,7 @@ $this->title = 'SM Hotels and Convention Corporation';
     <div class="text"> Dining </div>
   </div>
 
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
 </div>
 <br>
 
@@ -73,6 +72,7 @@ function showSlides() {
 
 
             <div class="paneSection">
+            <div class="about">
                 <h1 style="text-align:center;">About Us</h1>
 
                         <p style="text-indent:50px, text-align: justify; ">SM Hotels and Conventions Corporation (SMHCC) was established to address the vast potential of tourism 
@@ -87,12 +87,12 @@ function showSlides() {
        
           
         </div>
-
+ </div>
 
  <div class="paneSection">
                 <h1 style="text-align:center;">Rooms </h1>
 <div class="row">
-                <div class= "col-sm-6">
+                <div class= "col-md-6">
              <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/rm1.jpg" style="width:500px;height:320px;"></a>
                 
              <h2 style="text-align:center;"> LAGOON VIEW </h2> 
@@ -101,10 +101,10 @@ function showSlides() {
 
              </div>
 
-               <div class= "col-sm-1">   </div>
+               <div class= "col-md-1">   </div>
 
     
-             <div class= "col-sm-6">
+             <div class= "col-md-6">
 
                <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/rm2.jpg" style="width:500px;height:320px;"></a>
 
@@ -124,13 +124,14 @@ function showSlides() {
 
  <div class="paneSection">
 <div class="row">
-
+</br>
+</br>
    <h1 style="text-align:center;">Dining</h1>
                 <div class= "col-sm-5"> <span class="pull-right">
              <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/dining.jpg" style="width:500px;height:500px;"></a>
 </div>
 
-<div class= "col-sm-5">
+<div class= "col-md-5">
 </br>
 </br>
             <p> Complete the leisure lifestyle at Pico Sands Hotel with the variety of casual dining spots featuring Spanish and Filipino dishes.</p>
@@ -158,13 +159,14 @@ function showSlides() {
  <div class="paneSection">
 
     <div class="row">
-
+</br>
+</br>
    <h1 style="text-align:center;">Spa</h1>
                 <div class= "col-sm-5"> <span class="pull-right">
              <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/spa.jpg" style="width:500px;height:500px;"></a>
 </div>
 
-<div class= "col-sm-5">
+<div class= "col-md-5">
 </br>
 </br>
             <p style="text-align:justify;"> Heal your body, calm your mind and soothe your spirit with our treatments in this Batangas beach resort, using organic and indigenous local products.</p>

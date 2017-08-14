@@ -11,22 +11,13 @@ use Yii;
  * @property string $preference_category
  * @property string $preference_description
  *
- * @property CustomerPreference[] $customerPreferences
- * @property Customer[] $customers
- * @property ProspectPreference[] $prospectPreferences
- * @property Prospect[] $prospects
+ * @property RecipientPreference[] $recipientPreferences
  */
 class Preference extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
-
-    public function getInformation()
-    {
-    return $this->preference_category.' '.$this->preference_description;
-    }
-
     public static function tableName()
     {
         return 'preference';
@@ -49,40 +40,16 @@ class Preference extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'preference_category' => 'Category',
-            'preference_description' => 'Description',
+            'preference_category' => 'Preference Category',
+            'preference_description' => 'Preference Description',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCustomerPreferences()
+    public function getRecipientPreferences()
     {
-        return $this->hasMany(CustomerPreference::className(), ['preference_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCustomers()
-    {
-        return $this->hasMany(Customer::className(), ['id' => 'customer_id'])->viaTable('customer_preference', ['preference_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProspectPreferences()
-    {
-        return $this->hasMany(ProspectPreference::className(), ['preference_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProspects()
-    {
-        return $this->hasMany(Prospect::className(), ['id' => 'prospect_id'])->viaTable('prospect_preference', ['preference_id' => 'id']);
+        return $this->hasMany(RecipientPreference::className(), ['preference_id' => 'id']);
     }
 }

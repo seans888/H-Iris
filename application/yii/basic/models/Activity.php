@@ -10,8 +10,9 @@ use Yii;
  * @property integer $id
  * @property string $activity_status
  * @property string $activity_description
+ * @property integer $email_id
  *
- * @property Email[] $emails
+ * @property Email $email
  */
 class Activity extends \yii\db\ActiveRecord
 {
@@ -26,15 +27,13 @@ class Activity extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function getStatus()
-    {
-        return $this->activity_status; 
-    }
     public function rules()
     {
         return [
-            [['activity_status'], 'string', 'max' => 45],
-            [['activity_description'], 'string', 'max' => 200],
+            [['email_id'], 'required'],
+            [['email_id'], 'integer'],
+            [['activity_status', 'activity_description'], 'string', 'max' => 45],
+            [['email_id'], 'exist', 'skipOnError' => true, 'targetClass' => Email::className(), 'targetAttribute' => ['email_id' => 'id']],
         ];
     }
 
@@ -45,16 +44,17 @@ class Activity extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'activity_status' => 'Status',
+            'activity_status' => 'Activity Status',
             'activity_description' => 'Description',
+            'email_id' => 'Email Information',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getEmails()
+    public function getEmail()
     {
-        return $this->hasMany(Email::className(), ['email_activity_id' => 'id']);
+        return $this->hasOne(Email::className(), ['id' => 'email_id']);
     }
 }

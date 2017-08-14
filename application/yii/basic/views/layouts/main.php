@@ -28,17 +28,111 @@ AppAsset::register($this);
 <div class="wrap">
   <?php
     NavBar::begin([
-        'brandLabel' => 'SM Hotels and Convention Corporation',
+        'brandLabel' =>'SM Hotels and Convention Corporation',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-left'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
+            ['label' => 'About Us', 'url' => ['/site/about']],
+
+
+              ['label' => 'Room',
+              'items' => [
+                 ['label' => 'Overview' , 'url' => ['/email/index']],
+
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Lagoon View</li>',
+                
+                 ['label' => 'Superior Room', 'url' => ['/site/superior']],
+                 ['label' => 'Deluxe Room', 'url' => ['/customer/index']],
+                 ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
+                 ['label' => 'Corner Deluxe Rooms', 'url' => ['/customer/index']],
+                 ['label' => 'Penthouse Loft Rooms', 'url' => ['/customer-history/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Mountain View</li>',
+
+                 ['label' => 'Standard Room', 'url' => ['/customer/index']],
+                 ['label' => 'Superior Room', 'url' => ['/activity/index']],
+                 ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
+            ],],
+
+   ['label' => 'Dining', 
+               'items' => [
+                 ['label' => 'Pico Restaurant and Bar' , 'url' => ['/site/randb']],
+                
+                 ['label' => 'Reef Bar', 'url' => ['/activity/index']],
+                 ['label' => 'B&B', 'url' => ['/customer/index']],
+                 ['label' => 'Lagoa', 'url' => ['/customer-history/index']],
+                 ], ],
+         
+
+
+ ['label' => 'Spa', 
+ 'items' => [
+                 ['label' => 'Overview' , 'url' => ['/email/index']],
+                 ['label' => 'Booking Guidelines', 'url' => ['/activity/index']],
+                 ], ],
+         
+ ['label' => 'Offers & activities',
+'items' => [
+                 ['label' => 'Room Offers' , 'url' => ['/email/index']],
+                 ['label' => 'Club Activities', 'url' => ['/activity/index']],
+                  ['label' => 'Promotions', 'url' => ['/activity/index']],
+                 ], ],
+
+ ['label' => 'Events', 
+  'items' => [
+                 ['label' => 'Overview' , 'url' => ['/email/index']],
+
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Weddings</li>',
+                
+                 ['label' => 'Pre-Wedding Activities', 'url' => ['/activity/index']],
+                 
+                 ['label' => 'Wedding Packages', 'url' => ['/customer/index']],
+             
+                 ['label' => 'Ceremony Venues', 'url' => ['/customer-history/index']],
+
+                 ['label' => 'Reception Venues', 'url' => ['/customer/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Corporate Meetings</li>',
+
+                   ['label' => 'Team building Activities', 'url' => ['/customer/index']],
+                
+],
+],
+
+  ['label' => 'Location', 'url' => ['/site/about']],
+   ['label' => 'Gallery', 
+   'items' => [
+                
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Photos</li>',
+                
+                 ['label' => 'Rooms', 'url' => ['/activity/index']],
+                 
+                 ['label' => 'Dining', 'url' => ['/customer/index']],
+             
+                 ['label' => 'Leisure', 'url' => ['/customer-history/index']],
+
+                 ['label' => 'Events', 'url' => ['/customer/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Videos</li>',
+
+                 
+                
+],
+],
+
+
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Email', 'url' => ['/email/index']],
             
@@ -61,6 +155,8 @@ AppAsset::register($this);
             ],
         ],
         //)
+
+
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
