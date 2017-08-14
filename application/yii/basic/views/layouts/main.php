@@ -48,7 +48,7 @@ AppAsset::register($this);
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Lagoon View</li>',
                 
-                 ['label' => 'Superior Room', 'url' => ['/site/superior']],
+                 ['label' => 'Superior Room', 'url' => ['/website/superior']],
                  ['label' => 'Deluxe Room', 'url' => ['/customer/index']],
                  ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
                  ['label' => 'Corner Deluxe Rooms', 'url' => ['/customer/index']],
@@ -64,7 +64,7 @@ AppAsset::register($this);
 
    ['label' => 'Dining', 
                'items' => [
-                 ['label' => 'Pico Restaurant and Bar' , 'url' => ['/site/randb']],
+                 ['label' => 'Pico Restaurant and Bar' , 'url' => ['/website/randb']],
                 
                  ['label' => 'Reef Bar', 'url' => ['/activity/index']],
                  ['label' => 'B&B', 'url' => ['/customer/index']],
@@ -75,13 +75,13 @@ AppAsset::register($this);
 
  ['label' => 'Spa', 
  'items' => [
-                 ['label' => 'Overview' , 'url' => ['/email/index']],
+                 ['label' => 'Overview' , 'url' => ['/website/spa']],
                  ['label' => 'Booking Guidelines', 'url' => ['/activity/index']],
                  ], ],
          
  ['label' => 'Offers & activities',
 'items' => [
-                 ['label' => 'Room Offers' , 'url' => ['/email/index']],
+                 ['label' => 'Room Offers' , 'url' => ['/website/roomoffer']],
                  ['label' => 'Club Activities', 'url' => ['/activity/index']],
                   ['label' => 'Promotions', 'url' => ['/activity/index']],
                  ], ],

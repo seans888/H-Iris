@@ -4,26 +4,23 @@
 
 use yii\helpers\Html;
 
-$this->title = 'superior';
+$this->title = 'RoomOffer';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
- <div class="main">
- </br>
-        <p>SM Hotels and Convention Corporation</p>
-   
-    </div>
+<div class="site-about">
 
-     <div class="body-content">
+	<img src="uploads/sm.jpg" style="width:100px;height:100px;"> <br> 
+    <div class="body-content">
         <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%"> 
     <div class="text">Taal Hotel</div>
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Taalroom.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/Taalroom.jpg" style="width:100%;height:20%"> 
     <div class="text">Rooms</div>
   </div>
 
@@ -32,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="text"> Dining </div>
   </div>
 
-  
+ 
 </div>
 <br>
 
@@ -65,19 +62,24 @@ function showSlides() {
   
 
 </script>
-  <h1><?= Html::encode($this->title) ?></h1>
-<div class="sitehead">
 
-<h1> ROOMS </h1>
+    <h1><?= Html::encode($this->title) ?></h1>
+<h1> OFFERS AND ACTIVITIES </h1>
 </br>
 
-<h2>SUPERIOR ROOM</h2>
+<h2>ROOM OFFERS</h2>
 
-<ul>
-  <li>37 square meters with a 7 square meter balcony</li>
-  <li>One king-sized bed that can fit up to two adults
-</li>
-</ul>
- <img src="uploads/Lsuperior.jpg" style="width:100%;height:20%;"> 
+<h2>Family Package</h2>
+ <img src="uploads/roomoffer.jpg" style="width:100%;height:20%;"> 
+    <p>
+<strong>Family Package </strong>
+    	<br>
+        Any day is always a great day for a family escapade at Pico Sands Hotel. Book now and pay a starting rate of PHP 9,900 a night on our Premier Mountain View Room or PHP 10,900 a night on our Premier Lagoon View Room using this special promo!
+</br>
+Promo is applicable for stays until September 15, 2017    	
+    	
+    </p>
 
-</div>
+    <p><a class="btn btn-lg btn-success" href="http://localhost/yii/web/index.php?r=site%2Fabout">Read More</a></p>
+
+   </div>
