@@ -93,9 +93,9 @@ AppAsset::register($this);
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Weddings</li>',
                 
-                 ['label' => 'Pre-Wedding Activities', 'url' => ['/activity/index']],
+                 ['label' => 'Pre-Wedding Activities', 'url' => ['/website/prewedding']],
                  
-                 ['label' => 'Wedding Packages', 'url' => ['/customer/index']],
+                 ['label' => 'Wedding Packages', 'url' => ['/website/weddingpackage']],
              
                  ['label' => 'Ceremony Venues', 'url' => ['/customer-history/index']],
 

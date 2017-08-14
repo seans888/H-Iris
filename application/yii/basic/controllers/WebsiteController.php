@@ -34,4 +34,20 @@ class WebsiteController extends \yii\web\Controller
       
     }
 
+    public function actionPrewedding()
+    {
+        return $this->render('prewedding');
+      
+    }
+     public function actionWeddingpackage()
+    {
+        return $this->render('weddingpackage');
+      
+    }
+     public function actionPdf()
+    {
+        return $this->renderPartial('Pico Wedding by the Sea Menu.pdf');
+      
+    }
+
 }
