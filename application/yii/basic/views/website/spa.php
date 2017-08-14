@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'superior';
+$this->title = 'spa';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -65,19 +65,27 @@ function showSlides() {
   
 
 </script>
+
   <h1><?= Html::encode($this->title) ?></h1>
 <div class="sitehead">
 
-<h1> ROOMS </h1>
-</br>
+<h1> Rooms </h1>
 
-<h2>SUPERIOR ROOM</h2>
+<p> Pico Restaurant specializes in Mediterranean cuisine and is located at the lobby of Pico Sands Hotel. It is open round the clock and offers a food pick-up service for guests. </br>
 
-<ul>
-  <li>37 square meters with a 7 square meter balcony</li>
-  <li>One king-sized bed that can fit up to two adults
-</li>
-</ul>
- <img src="uploads/Lsuperior.jpg" style="width:100%;height:20%;"> 
+The Pico Bar, located across Pico Restaurant, serves a wide range of beverages, including this Nasugbu resort's signature fruit juices and Mojito blends. </br>
+
+Location: Ground Floor, Pico Sands Hotel </br>
+
+Operating Hours: 24 hours </br>
+
+ </br>
+  </br>
+
+<strong>RENOVATION NOTICE: </strong>
+ </br>
+In our continuing effort to better serve our valued guests, we are upgrading the Pico Restaurantal fresco area.
+ </br>
+Upgrading work start at 11:00 am until 4:00 pm, daily. We assure you that we will take all measures to minimize disturbance and maintain comfort and convenience. Please bear with us.</p>
 
 </div>
