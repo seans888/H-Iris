@@ -65,7 +65,9 @@ class WebvisitHistoryController extends Controller
     {
         $model = new WebvisitHistory();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->wvh_date = date('y-m-d h:m:s'); 
+            $model->save(); 
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
