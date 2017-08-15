@@ -96,6 +96,12 @@ public function actionPenthouse()
         return $this->render('ceremonyvenue');
       
     }
+     public function actionLeisure()
+    {
+        return $this->render('leisure');
+      
+    }
+    
     
 
 }

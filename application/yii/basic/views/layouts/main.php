@@ -118,9 +118,9 @@ AppAsset::register($this);
                 
                  ['label' => 'Rooms', 'url' => ['/activity/index']],
                  
-                 ['label' => 'Dining', 'url' => ['/customer/index']],
+                 ['label' => 'Dining', 'url' => ['/website/randb']],
              
-                 ['label' => 'Leisure', 'url' => ['/customer-history/index']],
+                 ['label' => 'Leisure', 'url' => ['/website/leisure']],
 
                  ['label' => 'Events', 'url' => ['/customer/index']],
 
