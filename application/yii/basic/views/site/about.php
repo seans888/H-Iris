@@ -16,7 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
   <div class="mySlides">
     <img src="uploads/Taalhotel.jpg" style="width:1000px;height:500px"> 
-
   </div>
 
   <div class="mySlides">
@@ -25,7 +24,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
   <div class="mySlides">
     <img src="uploads/Dining.jpg" style="width:1000px;height:500px;"> 
-
   </div>
  
 </div>
