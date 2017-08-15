@@ -94,6 +94,13 @@ public function actionPenthouse()
       
     }
 
+
+       public function actionSpabookguide()
+    {
+        return $this->render('spabookguide');
+      
+    }
+
      public function actionRoomoffer()
     {
         return $this->render('roomoffer');

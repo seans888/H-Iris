@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'ROOMS';
+$this->title = 'SPA';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -62,14 +62,24 @@ function showSlides() {
   <h1><?= Html::encode($this->title) ?></h1>
 
 
-<h2>SUPERIOR ROOM</h2>
+<h2>BOOKING GUIDELINES</h2>
 
- <img src="uploads/Lsuperior.jpg" style="width:70%;height:20%;"> 
  <div class="bullet">
 <p>
 <ul>
-  <li>37 square meters with a 7 square meter balcony</li>
-  <li>One king-sized bed that can fit up to two adults</li>
+  <li>Once booking is confirmed it is subject to the Rain Spa Cancellation Policy.</li>
+  <li>Rebooking should be advised 4 hours prior to reservation and is subject to availability.</li>
+  <li>Cancellation made 24 hours prior to the reservation will not incur any cancellation charge.</li>
+  <li>Cancellation made less than 24 hours prior to the reservation shall incur a cancellation charge equivalent to the value of the treatment and shall be charged accordingly.</li>
+  <li>No show will incur a cancellation charge equivalent to the value of the treatment and shall be charged according to the mode of payment chosen.</li>
+  <li>Any time lost due to late arrival shall be deducted from the total treatment time, the full rate will still apply.</li>
+  </br>
+   <li><strong>Mode of payment:</strong></li>
 </ul>
+
+<ul style="list-style-type:circle">
+  <li>Cash if booking and payment are done in the condos.</li>
+  <li>Credit card if booking and payment are done in the Rain Spa</li>
+</ul>  
 </p>
 </div>

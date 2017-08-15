@@ -77,7 +77,7 @@ AppAsset::register($this);
  ['label' => 'Spa', 
  'items' => [
                  ['label' => 'Overview' , 'url' => ['/website/spa']],
-                 ['label' => 'Booking Guidelines', 'url' => ['/activity/index']],
+                 ['label' => 'Booking Guidelines', 'url' => ['/website/spabookguide']],
                  ], ],
          
  ['label' => 'Offers & activities',
