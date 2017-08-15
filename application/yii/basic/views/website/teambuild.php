@@ -4,12 +4,12 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Pre-Wedding Activity';
+$this->title = 'Team Building Activities';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
  <div class="main">
- <h1 style="text-align:center">PRE-WEDDING ACTIVITIES</h1>
+ <h1 style="text-align:center">TEAM BUILDING ACTIVITIES</h1>
        
     </div>
 
@@ -17,15 +17,19 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="uploads/pre-wedding.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/teambuild.jpg" style="width:100%;height:20%;"> 
   </div>
 
   <div class="mySlides">
-    <img src="uploads/pre-wedding1.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/teambuild1.jpg" style="width:100%;height:20%;"> 
   </div>
 
   <div class="mySlides">
-    <img src="uploads/pre-wedding2.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/teambuild2.jpg" style="width:100%;height:20%;"> 
+  </div> 
+
+  <div class="mySlides">
+    <img src="uploads/teambuild3.jpg" style="width:100%;height:20%;"> 
   </div> 
 </div>
 <br>
@@ -34,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
 </div>
 
 <script>
@@ -63,19 +68,8 @@ function showSlides() {
  
 <div>
 
-<h3>PRENUP PICTORIAL PACKAGE</h3>
-
-<h5>INCLUSIONS</h5>
-
 <div class = "bullet">
-<ul>
-  <li>Pictorial at Pico de Loro</li>
-  <li>Staff assistance for designated areas</li>
-  <li>Guest fee for four (4) persons</li>
-  <li>An additional guest fee of 1,300 for High Season</li>
-   <p>and 1,200 for Peak and 800 for Lean season will
-   <br>be charged in excess of four (4) persons.</p>
-</ul> 
+<p>The 1.5 km Beach at Pico de Loro Cove is perfect for your organizational development needs. Experience our interactive learning activities and increase team skills and communications towards your colleagues.</p>
 </div>
-
+ <a href ="uploads/Pico Team building.pdf"><p style = "text-align:center">Pico Team Building</p></a>
 </div>

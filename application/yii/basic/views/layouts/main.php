@@ -89,8 +89,7 @@ AppAsset::register($this);
 
  ['label' => 'Events', 
   'items' => [
-                 ['label' => 'Overview' , 'url' => ['/email/index']],
-
+                
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Weddings</li>',
                 
@@ -98,14 +97,14 @@ AppAsset::register($this);
                  
                  ['label' => 'Wedding Packages', 'url' => ['/website/weddingpackage']],
              
-                 ['label' => 'Ceremony Venues', 'url' => ['/customer-history/index']],
+                 ['label' => 'Ceremony Venues', 'url' => ['/website/ceremonyvenue']],
 
-                 ['label' => 'Reception Venues', 'url' => ['/customer/index']],
+                 ['label' => 'Reception Venues', 'url' => ['/website/reception']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Corporate Meetings</li>',
 
-                   ['label' => 'Team building Activities', 'url' => ['/customer/index']],
+                   ['label' => 'Team building Activities', 'url' => ['/website/teambuild']],
                 
 ],
 ],
@@ -117,13 +116,13 @@ AppAsset::register($this);
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Photos</li>',
                 
-                 ['label' => 'Rooms', 'url' => ['/activity/index']],
+                 ['label' => 'Rooms', 'url' => ['/website/room']],
                  
-                 ['label' => 'Dining', 'url' => ['/customer/index']],
+                 ['label' => 'Dining', 'url' => ['/website/dining']],
              
-                 ['label' => 'Leisure', 'url' => ['/customer-history/index']],
+                 ['label' => 'Leisure', 'url' => ['/website/leisure']],
 
-                 ['label' => 'Events', 'url' => ['/customer/index']],
+                 ['label' => 'Events', 'url' => ['/website/event']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Videos</li>',

@@ -4,12 +4,12 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Pre-Wedding Activity';
+$this->title = 'Reception Venue';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
  <div class="main">
- <h1 style="text-align:center">PRE-WEDDING ACTIVITIES</h1>
+ <h1 style="text-align:center">RECEPTION VENUES</h1>
        
     </div>
 
@@ -17,15 +17,15 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="uploads/pre-wedding.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/reception.jpg" style="width:100%;height:20%;"> 
   </div>
 
   <div class="mySlides">
-    <img src="uploads/pre-wedding1.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/reception1.jpg" style="width:100%;height:20%;"> 
   </div>
 
   <div class="mySlides">
-    <img src="uploads/pre-wedding2.jpg" style="width:100%;height:20%;"> 
+    <img src="uploads/reception2.jpg" style="width:100%;height:20%;"> 
   </div> 
 </div>
 <br>
@@ -63,19 +63,23 @@ function showSlides() {
  
 <div>
 
-<h3>PRENUP PICTORIAL PACKAGE</h3>
-
-<h5>INCLUSIONS</h5>
-
 <div class = "bullet">
-<ul>
-  <li>Pictorial at Pico de Loro</li>
-  <li>Staff assistance for designated areas</li>
-  <li>Guest fee for four (4) persons</li>
-  <li>An additional guest fee of 1,300 for High Season</li>
-   <p>and 1,200 for Peak and 800 for Lean season will
-   <br>be charged in excess of four (4) persons.</p>
-</ul> 
+  <h3>BAIA BALLROOM</h3>
+
+<p>An indoor venue for functions and gatherings at the Country Club. It can be divided into smaller rooms for more intimidate functions and is attached to an open foyer that can serve as a receiving area.</p>
+
+<h3>BEACH</h3>
+
+Celebrate your nuptials against the backdrop of shimmering blue waters on this long stretch of fine sand. Set-ups on the beach can fit up to 300 people.
+
+<h3>BRISA BAR</h3>
+
+Striking sea views, colorful sunsets and a canopy of stars are all to be had at this al fresco dining and entertainment venue that is ideal for hosting intimate open-air gatherings. It can fit 120 people for cocktails or 70 for a sit-down dinner.
+
+<h3>GARDEN</h3>
+
+A lush green expanse of lawn shaded by trees with a view of the shore, it can fit up to 300 people got a sit-down dinner. 
+
 </div>
 
 </div>
