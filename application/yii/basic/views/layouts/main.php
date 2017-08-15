@@ -99,12 +99,12 @@ AppAsset::register($this);
              
                  ['label' => 'Ceremony Venues', 'url' => ['/website/ceremonyvenue']],
 
-                 ['label' => 'Reception Venues', 'url' => ['/customer/index']],
+                 ['label' => 'Reception Venues', 'url' => ['/website/reception']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Corporate Meetings</li>',
 
-                   ['label' => 'Team building Activities', 'url' => ['/customer/index']],
+                   ['label' => 'Team building Activities', 'url' => ['/website/teambuild']],
                 
 ],
 ],
