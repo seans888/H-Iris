@@ -96,6 +96,14 @@ public function actionPenthouse()
         return $this->render('ceremonyvenue');
       
     }
-    
-
+    public function actionReception()
+    {
+        return $this->render('reception');
+      
+    }
+    public function actionTeambuild()
+    {
+        return $this->render('teambuild');
+      
+    }
 }
