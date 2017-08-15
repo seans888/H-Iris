@@ -116,13 +116,13 @@ AppAsset::register($this);
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Photos</li>',
                 
-                 ['label' => 'Rooms', 'url' => ['/activity/index']],
+                 ['label' => 'Rooms', 'url' => ['/website/room']],
                  
-                 ['label' => 'Dining', 'url' => ['/website/randb']],
+                 ['label' => 'Dining', 'url' => ['/website/dining']],
              
                  ['label' => 'Leisure', 'url' => ['/website/leisure']],
 
-                 ['label' => 'Events', 'url' => ['/customer/index']],
+                 ['label' => 'Events', 'url' => ['/website/event']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Videos</li>',

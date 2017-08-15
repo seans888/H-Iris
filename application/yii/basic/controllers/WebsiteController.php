@@ -101,7 +101,17 @@ public function actionPenthouse()
         return $this->render('leisure');
       
     }
-    
-    
+    public function actionRoom()
+    {
+        return $this->render('room');
+    }
+    public function actionDining()
+    {
+        return $this->render('dining');
+    }
+    public function actionEvent()
+    {
+        return $this->render('event');
+    }
 
 }
