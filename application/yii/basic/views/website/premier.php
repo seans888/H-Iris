@@ -60,12 +60,12 @@ function showSlides() {
 
 </script>
   <h1><?= Html::encode($this->title) ?></h1>
-<div class="sitehead">
+
 
 <h2>Premier ROOM</h2>
 
  <img src="uploads/premier.jpg" style="width:70%;height:20%;"> 
-
+<div class="bullet">
 <ul>
   <li>37 square meters with a 7 square meter balcony</li>
   <li>Two queen-sized beds that can fit up to four adults or two adults and two children.</li>

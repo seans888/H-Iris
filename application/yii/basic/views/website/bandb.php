@@ -60,32 +60,16 @@ function showSlides() {
 
 </script>
   <h1><?= Html::encode($this->title) ?></h1>
-<div class="col-md-8">
 
 
-<h2> PICO RESTAURANT AND BAR </h2>
-<p style="text-align:justify"> Pico Restaurant specializes in Mediterranean cuisine and is located at the lobby of Pico Sands Hotel. 
-It is open round the clock and offers a food pick-up service for guests. 
 
-The Pico Bar, located across Pico Restaurant, serves a wide range of beverages, including this Nasugbu resort's signature fruit juices and Mojito blends. 
- </br>
+<h2> B&B</h2>
+<p style="text-align:justify"> B&B is a casual bowling and billiards hall that serves all-day snacks, appetizers, and non-alcoholic and alcoholic drinks.   
 </br>
-<strong>Location:</strong> Ground Floor, Pico Sands Hotel 
- </br>
- </br>
-<strong>Operating Hours:</strong> 24 hours 
-</p>
 </br>
+<strong>Location:</strong> Ground Floor, Pico de Loro Country Club
+</br>
+</br>
+<strong>Operating Hours: </strong> 9:00 AM – 10:00 PM (Friday to Saturday), 9:00 AM – 8:00 PM (Sunday to Thursday) </p>
 
-<p style="text-align:justify">
 
-<strong>RENOVATION NOTICE: </strong>
- </br>
-In our continuing effort to better serve our valued guests, we are upgrading the Pico Restaurantal fresco area.
- </br>
-Upgrading work start at 11:00 am until 4:00 pm, daily. We assure you that we will take all measures to
- </br> minimize disturbance and maintain comfort and convenience. Please bear with us.
-
- </p>
-
-</div>

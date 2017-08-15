@@ -69,6 +69,25 @@ public function actionPenthouse()
       
     }
 
+
+    public function actionReefbar()
+    {
+        return $this->render('reefbar');
+      
+    }
+
+    public function actionBandb()
+    {
+        return $this->render('bandb');
+      
+    }
+
+       public function actionLagoa()
+    {
+        return $this->render('lagoa');
+      
+    }
+
      public function actionSpa()
     {
         return $this->render('spa');
