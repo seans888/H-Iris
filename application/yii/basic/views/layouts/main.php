@@ -89,8 +89,7 @@ AppAsset::register($this);
 
  ['label' => 'Events', 
   'items' => [
-                 ['label' => 'Overview' , 'url' => ['/email/index']],
-
+                
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Weddings</li>',
                 
@@ -98,7 +97,7 @@ AppAsset::register($this);
                  
                  ['label' => 'Wedding Packages', 'url' => ['/website/weddingpackage']],
              
-                 ['label' => 'Ceremony Venues', 'url' => ['/customer-history/index']],
+                 ['label' => 'Ceremony Venues', 'url' => ['/website/ceremonyvenue']],
 
                  ['label' => 'Reception Venues', 'url' => ['/customer/index']],
 

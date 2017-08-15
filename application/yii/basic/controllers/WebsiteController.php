@@ -91,10 +91,11 @@ public function actionPenthouse()
         return $this->render('weddingpackage');
       
     }
-     public function actionPdf()
+     public function actionCeremonyvenue()
     {
-        return $this->renderPartial('Pico Wedding by the Sea Menu.pdf');
+        return $this->render('ceremonyvenue');
       
     }
+    
 
 }
