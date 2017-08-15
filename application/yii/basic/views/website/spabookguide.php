@@ -12,19 +12,16 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="uploads/Taalhotel.jpg" style="width:100%;height:10%;"> 
+    <img src="uploads/spa2.jpg" style="width:100%;height:10%;"> 
    
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Taalroom.jpg" style="width:100%;height:10%;"> 
+    <img src="uploads/spa3.jpg" style="width:100%;height:10%;"> 
    
   </div>
 
-  <div class="mySlides">
-    <img src="uploads/Dining.jpg" style="width:100%;height:10%;"> 
   
-  </div>
 
   
 </div>
@@ -33,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
+  
 </div>
 <script>
 
@@ -59,8 +56,7 @@ function showSlides() {
   
 
 </script>
-  <h1><?= Html::encode($this->title) ?></h1>
-
+ <h1 style="text-align:center">SPA</h1>
 
 <h2>BOOKING GUIDELINES</h2>
 

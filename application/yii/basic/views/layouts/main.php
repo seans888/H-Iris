@@ -44,7 +44,7 @@ AppAsset::register($this);
 
               ['label' => 'Room',
               'items' => [
-                 ['label' => 'Overview' , 'url' => ['/email/index']],
+                 ['label' => 'Overview' , 'url' => ['website/roomoverview']],
 
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Lagoon View</li>',

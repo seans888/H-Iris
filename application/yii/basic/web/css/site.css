@@ -23,8 +23,8 @@ body {
     background-color: #4aa3ef;
     border-top: 1px solid #ddd;
     padding-top: 20px;
-padding-bottom: 1rem;
-position: absolute;
+padding-bottom: 0rem;
+position:absolute;
 
 
 }
@@ -59,9 +59,11 @@ a.asc:after, a.desc:after {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width: 1000px;
+
   position: relative;
   margin: auto;
+  text-align: center;
 }
 
 .mySlides {
