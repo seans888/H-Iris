@@ -10,7 +10,6 @@ body {
     padding: 0 0 60px;
     background-color:#ffffff;
 
-
 }
 
 .wrap > .container {
@@ -21,7 +20,7 @@ body {
 .footer {
    height: 60px;
    width: 100%;
-    background-color: #2690CE;
+    background-color: #4aa3ef;
     border-top: 1px solid #ddd;
     padding-top: 20px;
 padding-bottom: 1rem;
@@ -67,7 +66,6 @@ a.asc:after, a.desc:after {
 
 .mySlides {
     display: none;
-     position: relative;
 }
 
 /* Next & previous buttons */
@@ -99,7 +97,7 @@ a.asc:after, a.desc:after {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  background-color: rgba(0, 51, 204);
+  background-color: rgba(0,51,204);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -306,27 +304,25 @@ color: #2690CE;
 
 .navbar {
     color:#000000;
-    background-color:#0084ff;
+    background-color:#4aa3ef;
  
 }
 
 .nav{
-color:#000000;
-
-
+    color:#000000;
 }
+
 .nav.navbar-nav li a {
-   color: #000000;
- }
-
-/*a.navbar-brand {
-   color: #000000;
+    color:#000000;
 }
-*/
+
+
 .dropdown-header{
 font-size: 17px;
 font-weight:bold;
 color:black;
+}
 
-
+.navbar-inverse .navbar-brand {
+  color: #fff;
 }

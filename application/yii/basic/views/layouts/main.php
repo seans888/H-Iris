@@ -1,3 +1,4 @@
+
 <?php
 
 /* @var $this \yii\web\View */
@@ -48,23 +49,23 @@ AppAsset::register($this);
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Lagoon View</li>',
                 
-                 ['label' => 'Superior Room', 'url' => ['/site/superior']],
-                 ['label' => 'Deluxe Room', 'url' => ['/customer/index']],
-                 ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
-                 ['label' => 'Corner Deluxe Rooms', 'url' => ['/customer/index']],
-                 ['label' => 'Penthouse Loft Rooms', 'url' => ['/customer-history/index']],
+                 ['label' => 'Superior Room', 'url' => ['/website/superior']],
+                 ['label' => 'Deluxe Room', 'url' => ['/website/deluxe']],
+                 ['label' => 'Premier Room', 'url' => ['/website/premier']],
+                 ['label' => 'Corner Deluxe Rooms', 'url' => ['/website/cornerdeluxe']],
+                 ['label' => 'Penthouse Loft Rooms', 'url' => ['/website/penthouse']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Mountain View</li>',
 
-                 ['label' => 'Standard Room', 'url' => ['/customer/index']],
-                 ['label' => 'Superior Room', 'url' => ['/activity/index']],
-                 ['label' => 'Premier Room', 'url' => ['/customer-history/index']],
+                 ['label' => 'Standard Room', 'url' => ['/website/standard']],
+                 ['label' => 'Superior Room', 'url' => ['/website/msuperior']],
+                 ['label' => 'Premier Room', 'url' => ['/website/mpremier']],
             ],],
 
    ['label' => 'Dining', 
                'items' => [
-                 ['label' => 'Pico Restaurant and Bar' , 'url' => ['/site/randb']],
+                 ['label' => 'Pico Restaurant and Bar' , 'url' => ['/website/randb']],
                 
                  ['label' => 'Reef Bar', 'url' => ['/activity/index']],
                  ['label' => 'B&B', 'url' => ['/customer/index']],
@@ -75,31 +76,31 @@ AppAsset::register($this);
 
  ['label' => 'Spa', 
  'items' => [
-                 ['label' => 'Overview' , 'url' => ['/email/index']],
+                 ['label' => 'Overview' , 'url' => ['/website/spa']],
                  ['label' => 'Booking Guidelines', 'url' => ['/activity/index']],
                  ], ],
          
  ['label' => 'Offers & activities',
 'items' => [
-                 ['label' => 'Room Offers' , 'url' => ['/email/index']],
+                 ['label' => 'Room Offers' , 'url' => ['/website/roomoffer']],
                  ['label' => 'Club Activities', 'url' => ['/activity/index']],
                   ['label' => 'Promotions', 'url' => ['/activity/index']],
                  ], ],
 
  ['label' => 'Events', 
   'items' => [
-                 ['label' => 'Overview' , 'url' => ['/event/index']],
+                 ['label' => 'Overview' , 'url' => ['/email/index']],
 
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Weddings</li>',
                 
-                 ['label' => 'Pre-Wedding Activities', 'url' => ['/event/index']],
+                 ['label' => 'Pre-Wedding Activities', 'url' => ['/website/prewedding']],
                  
-                 ['label' => 'Wedding Packages', 'url' => ['/event/index']],
+                 ['label' => 'Wedding Packages', 'url' => ['/website/weddingpackage']],
              
-                 ['label' => 'Ceremony Venues', 'url' => ['/event/index']],
+                 ['label' => 'Ceremony Venues', 'url' => ['/customer-history/index']],
 
-                 ['label' => 'Reception Venues', 'url' => ['/event/index']],
+                 ['label' => 'Reception Venues', 'url' => ['/customer/index']],
 
                 '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Corporate Meetings</li>',
@@ -183,7 +184,7 @@ AppAsset::register($this);
 </div>
 
 <footer class="footer">
-    <div class="container">
+    <div class="container1">
         <p class="pull-left">&copy; SM Hotels and Convention Corporation <?= date('Y') ?></p>
 
        

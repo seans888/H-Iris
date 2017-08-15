@@ -78,6 +78,6 @@ function showSlides() {
   <li>One king-sized bed that can fit up to two adults
 </li>
 </ul>
- <img src="uploads/Lsuperiorjpg" style="width:100%;height:20%;"> 
+ <img src="uploads/Lsuperior.jpg" style="width:100%;height:20%;"> 
 
 </div>

@@ -65,7 +65,7 @@ class Recipient extends \yii\db\ActiveRecord
             'recipient_mname' => 'Middle Name',
             'recipient_lname' => 'Last Name',
             'recipient_contact_number' => 'Contact Number',
-            'customer_id' => 'Customer ID',
+            'customer_id' => 'Customer',
         ];
     }
 
