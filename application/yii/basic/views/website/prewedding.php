@@ -77,5 +77,6 @@ function showSlides() {
    <br>be charged in excess of four (4) persons.</p>
 </ul> 
 </div>
-
+<br>
+<a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
 </div>
