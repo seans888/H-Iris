@@ -4,27 +4,21 @@
 
 use yii\helpers\Html;
 
-$this->title = 'ROOMS';
+$this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
-     <div class="body-content">
-        <div class="slideshow-container">
-
-  <div class="mySlides">
-    <img src="uploads/banner1.jpg" style="width:1000px;height:320px;"> 
+<div class="mySlides">
+    <img src="uploads/bb1.jpg" style="width:1100px;height:320px;"> 
    
   </div>
 
   <div class="mySlides">
-    <img src="uploads/banner2.jpg" style="width:1000px;height:320px;"> 
+    <img src="uploads/bb2.jpg" style="width:1100px;height:320px;"> 
    
   </div>
 
   <div class="mySlides">
-    <img src="uploads/banner3.jpg" style="width:1000px;height:320px;"> 
-  
-  </div>
+    <img src="uploads/bb3.jpg" style="width:1100px;height:320px;"> 
 
   
 </div>
@@ -59,18 +53,15 @@ function showSlides() {
   
 
 </script>
-<h1 style="text-align:center">ROOMS</h1>
+ <h1 style="text-align:center">DINING</h1>
 
-<h2>CORNER DELUXE ROOM</h2>
-
-
-<div class="bullet">
-<ul>
-  <li>39 square meters with a 29 square meter balcony</li></br>
-  <li> One king-sized be that can fit up to two adults</li>
-</ul>
-
- <img src="uploads/cornerdeluxe.jpg" style="width:710px;height:430px;"> 
-</div>
-
+<h2> B&B</h2>
+<p style="text-align:justify"> B&B is a casual bowling and billiards hall that serves all-day snacks, appetizers, and non-alcoholic and alcoholic drinks.   
 </br>
+</br>
+<strong>Location:</strong> Ground Floor, Pico de Loro Country Club
+</br>
+</br>
+<strong>Operating Hours: </strong> 9:00 AM – 10:00 PM (Friday to Saturday), 9:00 AM – 8:00 PM (Sunday to Thursday) </p>
+
+

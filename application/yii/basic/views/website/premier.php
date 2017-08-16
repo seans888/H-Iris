@@ -12,17 +12,17 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="slideshow-container">
 
   <div class="mySlides">
-    <img src="uploads/Taalhotel.jpg" style="width:100%;height:10%;"> 
+    <img src="uploads/banner1.jpg" style="width:1000px;height:320px;"> 
    
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Taalroom.jpg" style="width:100%;height:10%;"> 
+    <img src="uploads/banner2.jpg" style="width:1000px;height:320px;"> 
    
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Dining.jpg" style="width:100%;height:10%;"> 
+    <img src="uploads/banner3.jpg" style="width:1000px;height:320px;"> 
   
   </div>
 
@@ -59,17 +59,17 @@ function showSlides() {
   
 
 </script>
-  <h1><?= Html::encode($this->title) ?></h1>
-<div class="sitehead">
+<h1 style="text-align:center">ROOMS</h1>
 
 <h2>Premier ROOM</h2>
-
- <img src="uploads/premier.jpg" style="width:70%;height:20%;"> 
-
+ 
+<div class="bullet">
 <ul>
-  <li>37 square meters with a 7 square meter balcony</li>
+  <li>37 square meters with a 7 square meter balcony</li></br>
   <li>Two queen-sized beds that can fit up to four adults or two adults and two children.</li>
 </ul>
+
+ <img src="uploads/premier.jpg" style="width:710px;height:430px;">
 </div>
 
 
