@@ -7,24 +7,18 @@ use yii\helpers\Html;
 $this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
-      <div class="body-content">
-        <div class="slideshow-container">
-
-  <div class="mySlides">
-    <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%;"> 
-
+<div class="mySlides">
+    <img src="uploads/bb1.jpg" style="width:1100px;height:320px;"> 
+   
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Taalroom.jpg" style="width:100%;height:20%;"> 
-  
+    <img src="uploads/bb2.jpg" style="width:1100px;height:320px;"> 
+   
   </div>
 
   <div class="mySlides">
-    <img src="uploads/Dining.jpg" style="width:100%;height:20%;"> 
-
-  </div>
+    <img src="uploads/bb3.jpg" style="width:1100px;height:320px;"> 
 
   
 </div>
@@ -59,9 +53,7 @@ function showSlides() {
   
 
 </script>
-  <h1><?= Html::encode($this->title) ?></h1>
-
-
+ <h1 style="text-align:center">DINING</h1>
 
 <h2> B&B</h2>
 <p style="text-align:justify"> B&B is a casual bowling and billiards hall that serves all-day snacks, appetizers, and non-alcoholic and alcoholic drinks.   

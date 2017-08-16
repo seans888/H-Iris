@@ -81,5 +81,7 @@ Striking sea views, colorful sunsets and a canopy of stars are all to be had at 
 A lush green expanse of lawn shaded by trees with a view of the shore, it can fit up to 300 people got a sit-down dinner. 
 
 </div>
+<br>
+<a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
 
 </div>

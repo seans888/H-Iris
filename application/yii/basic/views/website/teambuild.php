@@ -72,4 +72,8 @@ function showSlides() {
 <p>The 1.5 km Beach at Pico de Loro Cove is perfect for your organizational development needs. Experience our interactive learning activities and increase team skills and communications towards your colleagues.</p>
 </div>
  <a href ="uploads/Pico Team building.pdf"><p style = "text-align:center">Pico Team Building</p></a>
+ <div style="text-align: center;">
+ <br>
+ <a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
+ </div>
 </div>

@@ -9,6 +9,11 @@ class WebsiteController extends \yii\web\Controller
         return $this->render('index');
     }
 
+public function actionRoomoverview()
+    {
+        return $this->render('roomoverview');
+      
+    }
     
     public function actionSuperior()
     {
@@ -122,6 +127,14 @@ public function actionPenthouse()
         return $this->render('ceremonyvenue');
       
     }
+    public function actionReception()
+    {
+        return $this->render('reception');
+    }
+    public function actionTeambuild()
+    {
+        return $this->render('teambuild');
+    }
      public function actionLeisure()
     {
         return $this->render('leisure');
@@ -139,5 +152,6 @@ public function actionPenthouse()
     {
         return $this->render('event');
     }
+    
 
 }

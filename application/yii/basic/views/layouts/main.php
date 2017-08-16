@@ -25,7 +25,6 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <div class="wrap">
   <?php
     NavBar::begin([
@@ -44,7 +43,7 @@ AppAsset::register($this);
 
               ['label' => 'Room',
               'items' => [
-                 ['label' => 'Overview' , 'url' => ['/email/index']],
+                 ['label' => 'Overview' , 'url' => ['website/roomoverview']],
 
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Lagoon View</li>',

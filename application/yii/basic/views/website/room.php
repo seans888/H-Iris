@@ -68,12 +68,18 @@ function showSlides() {
 
 <h2 > GALLERY
 </h2>
-<div class="gallery-hover"><a href="http://localhost/yii/web/index.php?r=website%2Fsuperior">Superior Room (Lagoon View)</a></div>
-
+<div class="gallery-hover"><a href="http://localhost/yii/web/index.php?r=website%2Fsuperior"><img src="uploads/Lsuperior.jpg" style="width:300px;height:300px;">
+<p>
+Superior Room (Lagoon View)</a></div>
+</p>
 <div class="gallery-hover"><a href="http://localhost/yii/web/index.php?r=website%2Fdeluxe
-" data-fancybox-group="gallery" class="fancybox fancy-gallery">Deluxe Room (Lagoon View)</a></div>
-
-<div class="gallery-hover"><a href="http://localhost/yii/web/index.php?r=website%2Fpremier" data-fancybox-group="gallery" class="fancybox fancy-gallery">Premier Room (Lagoon View)</a></div>
-
+" data-fancybox-group="gallery" class="fancybox fancy-gallery"><img src="uploads/deluxe.jpg" style="width:300px;height:300px;">
+<p>
+Deluxe Room (Lagoon View)</a></div>
+</p>
+<div class="gallery-hover"><a href="http://localhost/yii/web/index.php?r=website%2Fpremier" data-fancybox-group="gallery" class="fancybox fancy-gallery"><img src="uploads/premier.jpg" style="width:300px;height:300px;">
+<p>
+Premier Room (Lagoon View)</a></div>
+</p>
 
 </div>
