@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\WebvisitHistory;
-use app\models\WebvisitHistorySearch;
+use app\models\CustomerHistory;
+use app\models\CustomerHistorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * WebvisitHistoryController implements the CRUD actions for WebvisitHistory model.
+ * CustomerHistoryController implements the CRUD actions for CustomerHistory model.
  */
-class WebvisitHistoryController extends Controller
+class CustomerHistoryController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Lists all WebvisitHistory models.
+     * Lists all CustomerHistory models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new WebvisitHistorySearch();
+        $searchModel = new CustomerHistorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Displays a single WebvisitHistory model.
+     * Displays a single CustomerHistory model.
      * @param integer $id
      * @return mixed
      */
@@ -57,17 +57,15 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Creates a new WebvisitHistory model.
+     * Creates a new CustomerHistory model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new WebvisitHistory();
+        $model = new CustomerHistory();
 
-         if ($model->load(Yii::$app->request->post())) { 
-        $model->wvh_date = date('y-m-d h:m:s');  
-        $model->save(); 
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -77,7 +75,7 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Updates an existing WebvisitHistory model.
+     * Updates an existing CustomerHistory model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +94,7 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Deletes an existing WebvisitHistory model.
+     * Deletes an existing CustomerHistory model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -109,15 +107,15 @@ class WebvisitHistoryController extends Controller
     }
 
     /**
-     * Finds the WebvisitHistory model based on its primary key value.
+     * Finds the CustomerHistory model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return WebvisitHistory the loaded model
+     * @return CustomerHistory the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = WebvisitHistory::findOne($id)) !== null) {
+        if (($model = CustomerHistory::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

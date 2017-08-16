@@ -7,12 +7,6 @@ use yii\helpers\Html;
 $this->title = 'Reception Venue';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
- <div class="main">
- <h1 style="text-align:center">RECEPTION VENUES</h1>
-       
-    </div>
-
      <div class="body-content">
         <div class="slideshow-container">
 
@@ -62,7 +56,10 @@ function showSlides() {
 </script>
  
 <div>
-
+<h1> WEDDINGS</h1>
+<hr>
+ <h2>RECEPTION VENUES</h2>
+ <hr>
 <div class = "bullet">
   <h3>BAIA BALLROOM</h3>
 

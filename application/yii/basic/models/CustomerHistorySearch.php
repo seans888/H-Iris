@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\WebvisitHistory;
+use app\models\CustomerHistory;
 
 /**
- * WebvisitHistorySearch represents the model behind the search form about `app\models\WebvisitHistory`.
+ * CustomerHistorySearch represents the model behind the search form about `app\models\CustomerHistory`.
  */
-class WebvisitHistorySearch extends WebvisitHistory
+class CustomerHistorySearch extends CustomerHistory
 {
     /**
      * @inheritdoc
@@ -18,9 +18,8 @@ class WebvisitHistorySearch extends WebvisitHistory
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['wvh_date', 'wvh_ip_address', 'wvh_url', 'wvh_cookie_information',
-             'customer_id'], 'safe'],
+            [['id', 'customer_id'], 'integer'],
+            [['customer_history_checkin', 'customer_history_checkout', 'customer_history_numberdays'], 'safe'],
         ];
     }
 
@@ -42,7 +41,7 @@ class WebvisitHistorySearch extends WebvisitHistory
      */
     public function search($params)
     {
-        $query = WebvisitHistory::find();
+        $query = CustomerHistory::find();
 
         // add conditions that should always apply here
 
@@ -57,20 +56,16 @@ class WebvisitHistorySearch extends WebvisitHistory
             // $query->where('0=1');
             return $dataProvider;
         }
-        $query->joinWith('customer');
+
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'wvh_date' => $this->wvh_date,
-            //'wvh_time' => $this->wvh_time,
-           // 'customer_id' => $this->customer_id,
+            'customer_id' => $this->customer_id,
         ]);
 
-        $query->andFilterWhere(['like', 'wvh_ip_address', $this->wvh_ip_address])
-            ->andFilterWhere(['like', 'wvh_url', $this->wvh_url])
-            ->andFilterWhere(['like', 'wvh_cookie_information', $this->wvh_cookie_information])
-            ->andFilterWhere(['like', 'customer_fname', $this->customer_id])
-            ->andFilterWhere(['like', 'customer_lname', $this->customer_id]);
+        $query->andFilterWhere(['like', 'customer_history_checkin', $this->customer_history_checkin])
+            ->andFilterWhere(['like', 'customer_history_checkout', $this->customer_history_checkout])
+            ->andFilterWhere(['like', 'customer_history_numberdays', $this->customer_history_numberdays]);
 
         return $dataProvider;
     }

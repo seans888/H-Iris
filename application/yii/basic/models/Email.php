@@ -9,14 +9,12 @@ use Yii;
  *
  * @property integer $id
  * @property string $email_date
- * @property string $email_recipient
- * @property string $email_template
  * @property string $email_status
  * @property integer $template_id
- * @property integer $recipient_id
+ * @property integer $customer_id
  *
  * @property Activity[] $activities
- * @property Recipient $recipient
+ * @property Customer $customer
  * @property Template $template
  * @property EmailEvent[] $emailEvents
  */
@@ -37,10 +35,10 @@ class Email extends \yii\db\ActiveRecord
     {
         return [
             [['email_date'], 'safe'],
-            [['template_id', 'recipient_id'], 'required'],
-            [['template_id', 'recipient_id'], 'integer'],
+            [['template_id', 'customer_id'], 'required'],
+            [['template_id', 'customer_id'], 'integer'],
             [['email_status'], 'string', 'max' => 45],
-            [['recipient_id'], 'exist', 'skipOnError' => true, 'targetClass' => Recipient::className(), 'targetAttribute' => ['recipient_id' => 'id']],
+            [['customer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['customer_id' => 'id']],
             [['template_id'], 'exist', 'skipOnError' => true, 'targetClass' => Template::className(), 'targetAttribute' => ['template_id' => 'id']],
         ];
     }
@@ -52,21 +50,19 @@ class Email extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'email_date' => 'Date',
-           // 'email_recipient' => 'Recipient',
-           // 'email_template' => 'Template',
-            'email_status' => 'Status',
+            'email_date' => 'Date Sent',
+            'email_status' => 'Email Status',
             'template_id' => 'Template',
-            'recipient_id' => 'Recipient',
+            'customer_id' => 'Customer',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-     public function getInformation()
+    public function getInformation()
     {
-        return 'Date Sent: '.$this->email_date.' Status: '.$this->email_status;
+     return $this->email_date.' '.$this->email_status;
     }
     public function getActivities()
     {
@@ -76,9 +72,9 @@ class Email extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getRecipient()
+    public function getCustomer()
     {
-        return $this->hasOne(Recipient::className(), ['id' => 'recipient_id']);
+        return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
     }
 
     /**
