@@ -82,8 +82,8 @@ AppAsset::register($this);
  ['label' => 'Offers & activities',
 'items' => [
                  ['label' => 'Room Offers' , 'url' => ['/website/roomoffer']],
-                 ['label' => 'Club Activities', 'url' => ['/activity/index']],
-                  ['label' => 'Promotions', 'url' => ['/activity/index']],
+                 ['label' => 'Club Activities', 'url' => ['/website/clubactivity']],
+                  ['label' => 'Promotions', 'url' => ['/website/promotions']],
                  ], ],
 
  ['label' => 'Events', 

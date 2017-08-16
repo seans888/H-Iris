@@ -156,5 +156,13 @@ public function actionPenthouse()
     {
         return $this->render('location');
     }
+    public function actionClubactivity()
+    {
+        return $this->render('clubactivity');
+    }
+    public function actionPromotions()
+    {
+        return $this->render('promotions');
+    }
 
 }
