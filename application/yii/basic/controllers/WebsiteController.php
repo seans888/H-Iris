@@ -160,5 +160,9 @@ public function actionPenthouse()
     {
         return $this->render('clubactivity');
     }
+    public function actionPromotions()
+    {
+        return $this->render('promotions');
+    }
 
 }
