@@ -26,14 +26,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'wvh_date',
-            'wvh_time',
+           // 'wvh_time',
             'wvh_ip_address',
             'wvh_url:url',
             'wvh_cookie_information',
- [  
-            'attribute' => 'recipient_id', 
-            'value'=>'recipient.name' 
+            [  
+            'attribute' => 'customer_id', 
+            'value'=>'customer.name' 
              ],
+
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

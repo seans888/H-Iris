@@ -19,15 +19,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email_date') ?>
 
-    <?= $form->field($model, 'email_recipient') ?>
-
-    <?= $form->field($model, 'email_template') ?>
-
     <?= $form->field($model, 'email_status') ?>
 
-    <?php // echo $form->field($model, 'template_id') ?>
+    <?= $form->field($model, 'template_id') ?>
 
-    <?php // echo $form->field($model, 'recipient_id') ?>
+    <?= $form->field($model, 'customer_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

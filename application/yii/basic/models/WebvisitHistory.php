@@ -13,9 +13,9 @@ use Yii;
  * @property string $wvh_ip_address
  * @property string $wvh_url
  * @property string $wvh_cookie_information
- * @property integer $recipient_id
+ * @property integer $customer_id
  *
- * @property Recipient $recipient
+ * @property Customer $customer
  */
 class WebvisitHistory extends \yii\db\ActiveRecord
 {
@@ -33,13 +33,13 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['wvh_date', 'wvh_time'], 'safe'],
-            [['recipient_id'], 'required'],
-            [['recipient_id'], 'integer'],
+            [['wvh_date'], 'safe'],
+            [['customer_id'], 'required'],
+            [['customer_id'], 'integer'],
             [['wvh_ip_address'], 'string', 'max' => 20],
             [['wvh_url'], 'string', 'max' => 100],
             [['wvh_cookie_information'], 'string', 'max' => 45],
-            [['recipient_id'], 'exist', 'skipOnError' => true, 'targetClass' => Recipient::className(), 'targetAttribute' => ['recipient_id' => 'id']],
+            [['customer_id'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['customer_id' => 'id']],
         ];
     }
 
@@ -51,19 +51,18 @@ class WebvisitHistory extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'wvh_date' => 'Date',
-            'wvh_time' => 'Time',
             'wvh_ip_address' => 'Ip Address',
-            'wvh_url' => 'Url',
+            'wvh_url' => 'URL',
             'wvh_cookie_information' => 'Cookie Information',
-            'recipient_id' => 'Visitor',
+            'customer_id' => 'Customer',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getRecipient()
+    public function getCustomer()
     {
-        return $this->hasOne(Recipient::className(), ['id' => 'recipient_id']);
+        return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
     }
 }

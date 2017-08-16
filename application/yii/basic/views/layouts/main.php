@@ -28,14 +28,15 @@ AppAsset::register($this);
 <div class="wrap">
   <?php
     NavBar::begin([
-        'brandLabel' =>'SM Hotels and Convention Corporation',
+    
+      'brandLabel' => '<img src="uploads/head.png" class="pull-left"/>SM Hotels and Convention',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-left'],
+        'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About Us', 'url' => ['/site/about']],
@@ -45,9 +46,10 @@ AppAsset::register($this);
               'items' => [
                  ['label' => 'Overview' , 'url' => ['website/roomoverview']],
 
+                 '<li class="dropdown-header"><a href="http://localhost/yii/web/index.php?r=website%2Flagoon">Lagoon View</a> </li>',
                  '<li class="dropdown-header"> </li>',
-                 '<li class="dropdown-header">Lagoon View</li>',
-                
+                 '<li class="dropdown-header"> </li>',
+      
                  ['label' => 'Superior Room', 'url' => ['/website/superior']],
                  ['label' => 'Deluxe Room', 'url' => ['/website/deluxe']],
                  ['label' => 'Premier Room', 'url' => ['/website/premier']],
@@ -55,7 +57,7 @@ AppAsset::register($this);
                  ['label' => 'Penthouse Loft Rooms', 'url' => ['/website/penthouse']],
 
                 '<li class="dropdown-header"> </li>',
-                 '<li class="dropdown-header">Mountain View</li>',
+                  '<li class="dropdown-header"><a href="http://localhost/yii/web/index.php?r=website%2Fmountain">Mountain View</a> </li>',
 
                  ['label' => 'Standard Room', 'url' => ['/website/standard']],
                  ['label' => 'Superior Room', 'url' => ['/website/msuperior']],
@@ -82,8 +84,8 @@ AppAsset::register($this);
  ['label' => 'Offers & activities',
 'items' => [
                  ['label' => 'Room Offers' , 'url' => ['/website/roomoffer']],
-                 ['label' => 'Club Activities', 'url' => ['/activity/index']],
-                  ['label' => 'Promotions', 'url' => ['/activity/index']],
+                 ['label' => 'Club Activities', 'url' => ['/website/clubactivity']],
+                  ['label' => 'Promotions', 'url' => ['/website/promotions']],
                  ], ],
 
  ['label' => 'Events', 
@@ -108,28 +110,8 @@ AppAsset::register($this);
 ],
 ],
 
-  ['label' => 'Location', 'url' => ['/site/about']],
-   ['label' => 'Gallery', 
-   'items' => [
-                
-                 '<li class="dropdown-header"> </li>',
-                 '<li class="dropdown-header">Photos</li>',
-                
-                 ['label' => 'Rooms', 'url' => ['/website/room']],
-                 
-                 ['label' => 'Dining', 'url' => ['/website/dining']],
-             
-                 ['label' => 'Leisure', 'url' => ['/website/leisure']],
-
-                 ['label' => 'Events', 'url' => ['/website/event']],
-
-                '<li class="dropdown-header"> </li>',
-                 '<li class="dropdown-header">Videos</li>',
-
-                 
-                
-],
-],
+  ['label' => 'Location', 'url' => ['/website/location']],
+  
 
 
             ['label' => 'Contact', 'url' => ['/site/contact']],

@@ -25,9 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'customer_checkin',
-            'customer_checkout',
-            'customer_numberdays',
+            'customer_type',
+            'customer_email:email',
+            'customer_fname',
+            'customer_mname',
+            'customer_lname',
+            'customer_contact_number',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
