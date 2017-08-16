@@ -65,19 +65,17 @@ function showSlides() {
   <li>Take the road from Petron gas station going to the town of Tanza pass by the town of Naic, until you reach Ternate.</li>
   <li>Follow the main road leading to Puerto Azul, and then turn left to access the Kaybiang tunnel.</li>
   <li>Enjoy the scenic view of Patungan Cove to your right until you reach the Hamilo Coast main gate.</li>
-
-</ol> 
+</ol>
 </div>
 
-<h5>Route Option 2: Manila-Tagaytay-Nasugbu (Travel Time 2.5 – 3 hours)</h5>
 
+<h5>Route Option 2: Manila-Tagaytay-Nasugbu (Travel Time 2.5 – 3 hours)</h5>
 
 <div class = "bullet">
 
 <ol>
   <li>Take SLEX (Southbound) headed toward Laguna.</li>
   <li>Take the SANTA ROSA EXIT and turn right after the toll gate. Follow the Santa Rosa-Tagaytay road all the way to Tagaytay City.</li>
-  </ol>
 
 <ol>
   <li>Alternatively, you may choose to take the ETON EXIT (after SANTA ROSA EXIT).</li>
@@ -89,23 +87,32 @@ function showSlides() {
 <ol>
   <li>Southern Luzon Hospital and Medical Center</li>
   <li>Paseo de Santa Rosa</li>
-</ol></ol>
+</ol>
+
 <li>Make a right at the corner of Paseo de Santa Rosa and the Santa Rosa Market</li>
 <li>Go straight until you reach the Santa Rosa-Tagaytay Road. Make a left on this road, you will pass by a branch of King Bee Restaurant.</li>
 <li>Continue along the Santa Rosa-Tagaytay Road until you reach Tagaytay City.</li>
+</ol>
+
 <li>Once you're along Aguinaldo Highway in Tagaytay City, you will pass:</li>
+
+<ol>
 <li>Josephine’s Restaurant</li>
 <li>Taal Vista Hotel</li>
+</ol>
 <li>When you reach the Junction of Balayan (Caltex Station at the right), turn right again to go to Nasugbu. You will pass Central Azucarera de Don Pedro on your left side.</li>
 <li>When you reach the Shell Gas Station (left side), turn right to go to the Nasugbu Town Proper.</li>
 <li>Go straight until you reach the road that will take you uphill. You will pass by the “Barangay Wawa” arch and the following developments:</li>
-<li>Canyon Cove</li>
-<li>Kawayan Cove</li>
-<li>Terazzas de Punta Fuego</li>
-<li>Tali Beach Club</li>
-<li>Peninsula de Punta Fuego</li>
+<ul>
+  <li>Canyon Cove</li>
+  <li>Kawayan Cove</li>
+  <li>Terazzas de Punta Fuego</li>
+  <li>Tali Beach Club</li>
+  <li>Peninsula de Punta Fuego</li>
+</ul>
 <li>Go further uphill until you reach Pico de Loro by following the yellow signages of “Hamilo Coast/ Pico de Loro Cove.”</li>
-
+</ol> 
+</ol>
 <h4>Google Map</h4>
 
 
