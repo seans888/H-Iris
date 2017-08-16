@@ -277,12 +277,12 @@ text-align: center;
 font-size: 50px;
 }
 
-.col-sm-5
+.col-md-5
 {
 font-size: 20px;
 }
 
-.col-sm-6
+.col-md-6
 {
 font-size: 20px;
 }
@@ -307,6 +307,7 @@ color: #2690CE;
 .navbar {
     color:#000000;
     background-color:#ffffff;
+
  
 }
 
@@ -333,4 +334,15 @@ color:black;
 font-size: 18px;
 
 }
+
+
+
+.navbar-brand > img {
+
+   width:70px;
+   height:60px;
+
+}
+
+
 
