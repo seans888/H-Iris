@@ -66,20 +66,31 @@ function showSlides() {
 
 </script>
 
-<h2 > GALLERY
+<h2 style="text-align:center;"> GALLERY
 </h2>
-<div class="gallery-hover"><a href="http://localhost/yii/web/index.php?r=website%2Fsuperior"><img src="uploads/Lsuperior.jpg" style="width:300px;height:300px;">
+<div class ="row">
+
+<div class="col-md-6"><a href="http://localhost/yii/web/index.php?r=website%2Fsuperior"><img src="uploads/Lsuperior.jpg" style="width:300px;height:300px;">
+
 <p>
 Superior Room (Lagoon View)</a></div>
 </p>
-<div class="gallery-hover"><a href="http://localhost/yii/web/index.php?r=website%2Fdeluxe
-" data-fancybox-group="gallery" class="fancybox fancy-gallery"><img src="uploads/deluxe.jpg" style="width:300px;height:300px;">
+</div>
+
+<div class="col-md-6"></div>
+
+<div class="col-md-6"><a href="http://localhost/yii/web/index.php?r=website%2Fdeluxe" ><img src="uploads/deluxe.jpg" style="width:300px;height:300px;">
+
 <p>
 Deluxe Room (Lagoon View)</a></div>
 </p>
-<div class="gallery-hover"><a href="http://localhost/yii/web/index.php?r=website%2Fpremier" data-fancybox-group="gallery" class="fancybox fancy-gallery"><img src="uploads/premier.jpg" style="width:300px;height:300px;">
+
+<a href="http://localhost/yii/web/index.php?r=website%2Fpremier"><img src="uploads/premier.jpg" style="width:300px;height:300px;">
+
 <p>
 Premier Room (Lagoon View)</a></div>
 </p>
 
+
+</div>
 </div>
