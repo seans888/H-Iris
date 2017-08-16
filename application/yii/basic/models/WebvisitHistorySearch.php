@@ -18,8 +18,8 @@ class WebvisitHistorySearch extends WebvisitHistory
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['wvh_date', 'wvh_time', 'wvh_ip_address', 'wvh_url', 'wvh_cookie_information', 'recipient_id'], 'safe'],
+            [['id', 'customer_id'], 'integer'],
+            [['wvh_date', 'wvh_time', 'wvh_ip_address', 'wvh_url', 'wvh_cookie_information'], 'safe'],
         ];
     }
 
@@ -56,21 +56,18 @@ class WebvisitHistorySearch extends WebvisitHistory
             // $query->where('0=1');
             return $dataProvider;
         }
-        $query->joinWith('recipient');
 
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'wvh_date' => $this->wvh_date,
             'wvh_time' => $this->wvh_time,
-            //'recipient_id' => $this->recipient_id,
+            'customer_id' => $this->customer_id,
         ]);
 
         $query->andFilterWhere(['like', 'wvh_ip_address', $this->wvh_ip_address])
             ->andFilterWhere(['like', 'wvh_url', $this->wvh_url])
-            ->andFilterWhere(['like', 'wvh_cookie_information', $this->wvh_cookie_information])
-            ->andFilterWhere(['like', 'recipient_fname', $this->recipient_id]);
-;
+            ->andFilterWhere(['like', 'wvh_cookie_information', $this->wvh_cookie_information]);
 
         return $dataProvider;
     }
