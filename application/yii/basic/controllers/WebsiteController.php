@@ -14,6 +14,12 @@ public function actionRoomoverview()
         return $this->render('roomoverview');
       
     }
+
+    public function actionLagoon()
+    {
+        return $this->render('lagoon');
+      
+    }
     
     public function actionSuperior()
     {
@@ -50,6 +56,12 @@ public function actionPenthouse()
     public function actionStandard()
     {
         return $this->render('standard');
+      
+    }
+
+     public function actionMountain()
+    {
+        return $this->render('mountain');
       
     }
 

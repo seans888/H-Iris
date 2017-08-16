@@ -93,7 +93,7 @@ function showSlides() {
                 <h1 style="text-align:center;">Rooms </h1>
 <div class="row">
                 <div class= "col-md-6">
-             <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/rm1.jpg" style="width:500px;height:320px;"></a>
+             <a href=http://localhost/yii/web/index.php?r=website%2Flagoon><img src="uploads/rm1.jpg" style="width:500px;height:320px;"></a>
                 
              <h2 style="text-align:center;"> LAGOON VIEW </h2> 
 </br>

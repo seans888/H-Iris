@@ -7,10 +7,10 @@ use yii\helpers\Html;
 $this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<h1 style="text-align:center">DINING</h1>
  <img src="uploads/rnb1.jpg" style="width:1130px;height:320px;"> 
 
- <h1 style="text-align:center">DINING</h1>
+ 
 
 <div class="col-md-8">
 
