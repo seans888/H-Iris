@@ -1,4 +1,4 @@
-html,
+
 body {
     height: 100%;
 }
@@ -8,22 +8,31 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+    background-color:#ECF3F3;
+
 }
 
 .wrap > .container {
     padding: 70px 15px 20px;
+
 }
 
 .footer {
-    height: 60px;
-    background-color: #141465;
+   height: 60px;
+   width: 100%;
+    background-color: #4aa3ef;
     border-top: 1px solid #ddd;
     padding-top: 20px;
+padding-bottom: 0rem;
+position:absolute;
+
+
 }
 
 .jumbotron {
     text-align: center;
     background-color: transparent;
+
 }
 
 .jumbotron .btn {
@@ -47,6 +56,104 @@ a.asc:after, a.desc:after {
     line-height: 1;
     padding-left: 5px;
 }
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1000px;
+
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+/*.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}*/
+
+/* Position the "next button" to the right */
+/*.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}*/
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  background-color: rgba(0,51,204);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+/*.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}*/
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
 
 a.asc:after {
     content: /*"\e113"*/ "\e151";
@@ -94,6 +201,7 @@ a.desc:after {
 .nav li > form > button.logout {
     padding: 15px;
     border: none;
+
 }
 
 @media(max-width:767px) {
@@ -160,3 +268,69 @@ a.desc:after {
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
 }
+
+
+.main
+{
+color: #0E89D5;
+text-align: center;
+font-size: 50px;
+}
+
+.col-sm-5
+{
+font-size: 20px;
+}
+
+.col-sm-6
+{
+font-size: 20px;
+}
+
+
+.about
+{
+font-size: 20px;
+}
+
+.text{
+font-size: 20px;
+}
+
+h1
+{
+
+color: #2690CE;
+}
+
+
+.navbar {
+    color:#000000;
+    background-color:#ffffff;
+ 
+}
+
+.nav{
+    color:#000000;
+}
+
+.nav.navbar-nav li a {
+    color:#000000;
+}
+
+
+.dropdown-header{
+font-size: 17px;
+font-weight:bold;
+color:black;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #000000;
+}
+
+.bullet{
+font-size: 18px;
+
+}
+

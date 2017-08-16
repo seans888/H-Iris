@@ -6,7 +6,6 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Email;
-use yii\models\Marketeer;
 
 /**
  * EmailSearch represents the model behind the search form about `app\models\Email`.
@@ -20,7 +19,7 @@ class EmailSearch extends Email
     {
         return [
             [['id'], 'integer'],
-            [['email_date', 'email_activity_id', 'email_recipient', 'email_content', 'email_template','email_status'], 'safe'],
+            [['email_date', 'email_recipient', 'email_template', 'email_status', 'template_id', 'recipient_id'], 'safe'],
         ];
     }
 
@@ -57,19 +56,20 @@ class EmailSearch extends Email
             // $query->where('0=1');
             return $dataProvider;
         }
-        $query->joinWith('activity'); 
 
+        $query->joinWith('template')
+            ->joinWith('recipient');
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'email_date' => $this->email_date,
+           // 'template_id' => $this->template_id,
+          //  'recipient_id' => $this->recipient_id,
         ]);
 
-        $query->andFilterWhere(['like', 'email_recipient', $this->email_recipient])
-            ->andFilterWhere(['like', 'email_content', $this->email_content])
-            ->andFilterWhere(['like', 'email_template', $this->email_template])
-            ->andFilterWhere(['like', 'email_status', $this->email_status])
-            ->andFilterWhere(['like', 'activity_status', $this->email_activity_id]);
+        $query->andFilterWhere(['like', 'email_status', $this->email_status])
+            ->andFilterWhere(['like', 'template_type', $this->template_id])
+            ->andFilterWhere(['like', 'recipient_fname', $this->recipient_id]);
         return $dataProvider;
     }
 }

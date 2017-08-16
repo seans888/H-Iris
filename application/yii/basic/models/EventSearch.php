@@ -19,7 +19,7 @@ class EventSearch extends Event
     {
         return [
             [['id'], 'integer'],
-            [['event_date_created', 'event_description', 'event_start_date', 'event_end_date', 'marketeer_id'], 'safe'],
+            [['event_date_created', 'event_description', 'event_start_date', 'event_end_date', 'employee_id'], 'safe'],
         ];
     }
 
@@ -56,21 +56,22 @@ class EventSearch extends Event
             // $query->where('0=1');
             return $dataProvider;
         }
-
-        $query->joinWith('marketeer');
+        $query->joinWith('employee');
 
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-         
+            'event_date_created' => $this->event_date_created,
+            'event_start_date' => $this->event_start_date,
+            'event_end_date' => $this->event_end_date,
+           // 'employee_id' => $this->employee_id,
         ]);
 
         $query->andFilterWhere(['like', 'event_description', $this->event_description])
-          ->andFilterWhere(['like',  'event_date_created', $this->event_date_created])
-          ->andFilterWhere(['like',  'event_start_date', $this->event_start_date])
-          ->andFilterWhere(['like',  'event_end_date' , $this->event_end_date])
-          ->andFilterWhere(['like',  'marketeer_fname', $this->marketeer_id])
-          ->orFilterWhere(['like',  'marketeer_lname', $this->marketeer_id]);
+        ->andFilterWhere(['like', 'employee_fname', $this->employee_id])
+        ->orFilterWhere(['like', 'employee_lname', $this->employee_id])
+        ->orFilterWhere(['like', 'employee_type', $this->employee_id]);
+
         return $dataProvider;
     }
 }

@@ -61,12 +61,12 @@ class EmailController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+   public function actionCreate()
     {
         $model = new Email();
 
         if ($model->load(Yii::$app->request->post())) {
-            $model->email_date = date('Y-m-d h:m:s'); 
+            $model->email_date = date('y-m-d h:m:s'); 
             $model->save(); 
             return $this->redirect(['view', 'id' => $model->id]);
         } else {

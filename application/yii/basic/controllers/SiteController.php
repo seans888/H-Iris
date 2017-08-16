@@ -82,6 +82,10 @@ class SiteController extends Controller
         return $this->render('login', [
             'model' => $model,
         ]);
+
+        if (!Yii::$app->user->isAdmin) {
+            return $this->goHome();
+        }
     }
 
     /**

@@ -21,12 +21,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email_recipient') ?>
 
-    <?= $form->field($model, 'email_content') ?>
-
     <?= $form->field($model, 'email_template') ?>
+
     <?= $form->field($model, 'email_status') ?>
 
-    <?php // echo $form->field($model, 'email_activity_id') ?>
+    <?php // echo $form->field($model, 'template_id') ?>
+
+    <?php // echo $form->field($model, 'recipient_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

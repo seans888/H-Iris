@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use app\models\Activity;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EmailSearch */
@@ -27,14 +26,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'email_date:email',
-            'email_recipient:email',
-            'email_content:email',
-            'email_template:email',
+            //'email_recipient:email',
+           //'email_template:email',
             'email_status:email',
+            // 'template_id',
+            // 'recipient_id',
+            [  
+            'attribute' => 'template_id', 
+            'value'=>'template.information' 
+             ],
              [  
-            'attribute' => 'email_activity_id', 
-            'value'=>'activity.status' 
-             ], 
+            'attribute' => 'recipient_id', 
+            'value'=>'recipient.emailAddress' 
+             ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

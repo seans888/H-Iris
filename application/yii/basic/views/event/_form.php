@@ -2,9 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper; 
-use app\models\Marketeer; 
-
+use yii\helpers\ArrayHelper;
+use app\models\Employee;
 /* @var $this yii\web\View */
 /* @var $model app\models\Event */
 /* @var $form yii\widgets\ActiveForm */
@@ -14,7 +13,6 @@ use app\models\Marketeer;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'event_date_created')->textInput() ?>
 
     <?= $form->field($model, 'event_description')->textInput(['maxlength' => true]) ?>
 
@@ -22,10 +20,10 @@ use app\models\Marketeer;
 
     <?= $form->field($model, 'event_end_date')->textInput() ?>
 
-  <?= $form->field($model, 'marketeer_id')->dropDownList(
-    ArrayHelper::map(Marketeer::find()->all(),'id','fullName'),
-    ['prompt'=>'Select Marketeer'])?>
-
+<?= $form->field($model, 'employee_id')->dropDownList(  
+    ArrayHelper::map(Employee::find()->all(),'id','nameAndPosition'), 
+    ['prompt'=>'Select Employee'] 
+    ) ?>  
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
