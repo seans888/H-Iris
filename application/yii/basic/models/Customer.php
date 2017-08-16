@@ -44,15 +44,11 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function getName()
-    {
-     return $this->customer_fname.' '.$this->customer_lname;
-    }
     public function attributeLabels()
     {
         return [
             'id' => 'ID',
-            'customer_type' => 'Customer Type',
+            'customer_type' => 'Type',
             'customer_email' => 'Email',
             'customer_fname' => 'First Name',
             'customer_mname' => 'Middle Name',
@@ -64,6 +60,10 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+     public function getName() 
+    { 
+    return $this->customer_fname.' '.$this->customer_lname; 
+    }    
     public function getCustomerHistories()
     {
         return $this->hasMany(CustomerHistory::className(), ['customer_id' => 'id']);
