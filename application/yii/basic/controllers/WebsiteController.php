@@ -152,6 +152,9 @@ public function actionPenthouse()
     {
         return $this->render('event');
     }
-    
+    public function actionLocation()
+    {
+        return $this->render('location');
+    }
 
 }
