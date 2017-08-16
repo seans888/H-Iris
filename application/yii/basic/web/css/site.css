@@ -326,10 +326,11 @@ color:black;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #fff;
+  color: #000000;
 }
 
 .bullet{
 font-size: 18px;
 
-}s
+}
+
