@@ -82,7 +82,7 @@ AppAsset::register($this);
  ['label' => 'Offers & activities',
 'items' => [
                  ['label' => 'Room Offers' , 'url' => ['/website/roomoffer']],
-                 ['label' => 'Club Activities', 'url' => ['/activity/index']],
+                 ['label' => 'Club Activities', 'url' => ['/website/clubactivity']],
                   ['label' => 'Promotions', 'url' => ['/activity/index']],
                  ], ],
 
@@ -108,28 +108,8 @@ AppAsset::register($this);
 ],
 ],
 
-  ['label' => 'Location', 'url' => ['/site/about']],
-   ['label' => 'Gallery', 
-   'items' => [
-                
-                 '<li class="dropdown-header"> </li>',
-                 '<li class="dropdown-header">Photos</li>',
-                
-                 ['label' => 'Rooms', 'url' => ['/website/room']],
-                 
-                 ['label' => 'Dining', 'url' => ['/website/dining']],
-             
-                 ['label' => 'Leisure', 'url' => ['/website/leisure']],
-
-                 ['label' => 'Events', 'url' => ['/website/event']],
-
-                '<li class="dropdown-header"> </li>',
-                 '<li class="dropdown-header">Videos</li>',
-
-                 
-                
-],
-],
+  ['label' => 'Location', 'url' => ['/website/location']],
+  
 
 
             ['label' => 'Contact', 'url' => ['/site/contact']],
