@@ -7,12 +7,6 @@ use yii\helpers\Html;
 $this->title = 'Wedding Package';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
- <div class="main">
- <h1 style="text-align:center">WEDDING PACKAGES</h1>
-       
-    </div>
-
      <div class="body-content">
         <div class="slideshow-container">
 
@@ -62,10 +56,18 @@ function showSlides() {
 </script>
  
  <div>
+ <h1> WEDDINGS</h1>
+<hr>
+ <h2>WEDDING PACKAGES</h2>
+<hr>
  <br>
  <a href ="uploads/Pico Wedding by the Sea Menu.pdf"><p style = "text-align:center">Pico Wedding by the Sea Menu</p></a>
  <a href ="uploads/Pico Wedding Packages 2018.pdf"><p style = "text-align:center">Pico Wedding Packages 2018</p></a>
  <a href ="uploads/Pico_Wedding_Menu_FA.pdf"><p style = "text-align:center">Pico Wedding Menu</p></a>
+ <div style="text-align: center;">
+ <br>
+ <a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
+</div>
  </div>
 
  

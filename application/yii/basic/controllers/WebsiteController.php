@@ -139,6 +139,14 @@ public function actionPenthouse()
         return $this->render('ceremonyvenue');
       
     }
+    public function actionReception()
+    {
+        return $this->render('reception');
+    }
+    public function actionTeambuild()
+    {
+        return $this->render('teambuild');
+    }
      public function actionLeisure()
     {
         return $this->render('leisure');
@@ -155,6 +163,18 @@ public function actionPenthouse()
     public function actionEvent()
     {
         return $this->render('event');
+    }
+    public function actionLocation()
+    {
+        return $this->render('location');
+    }
+    public function actionClubactivity()
+    {
+        return $this->render('clubactivity');
+    }
+    public function actionPromotions()
+    {
+        return $this->render('promotions');
     }
 
 }

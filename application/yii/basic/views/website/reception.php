@@ -7,12 +7,6 @@ use yii\helpers\Html;
 $this->title = 'Reception Venue';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
- <div class="main">
- <h1 style="text-align:center">RECEPTION VENUES</h1>
-       
-    </div>
-
      <div class="body-content">
         <div class="slideshow-container">
 
@@ -62,7 +56,10 @@ function showSlides() {
 </script>
  
 <div>
-
+<h1> WEDDINGS</h1>
+<hr>
+ <h2>RECEPTION VENUES</h2>
+ <hr>
 <div class = "bullet">
   <h3>BAIA BALLROOM</h3>
 
@@ -81,5 +78,7 @@ Striking sea views, colorful sunsets and a canopy of stars are all to be had at 
 A lush green expanse of lawn shaded by trees with a view of the shore, it can fit up to 300 people got a sit-down dinner. 
 
 </div>
+<br>
+<a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
 
 </div>
