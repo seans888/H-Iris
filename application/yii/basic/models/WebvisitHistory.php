@@ -33,7 +33,7 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['wvh_date', 'wvh_time'], 'safe'],
+            [['wvh_date'], 'safe'],
             [['customer_id'], 'required'],
             [['customer_id'], 'integer'],
             [['wvh_ip_address'], 'string', 'max' => 20],
@@ -50,12 +50,11 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'wvh_date' => 'Wvh Date',
-            'wvh_time' => 'Wvh Time',
-            'wvh_ip_address' => 'Wvh Ip Address',
-            'wvh_url' => 'Wvh Url',
-            'wvh_cookie_information' => 'Wvh Cookie Information',
-            'customer_id' => 'Customer ID',
+            'wvh_date' => 'Date',
+            'wvh_ip_address' => 'Ip Address',
+            'wvh_url' => 'URL',
+            'wvh_cookie_information' => 'Cookie Information',
+            'customer_id' => 'Customer',
         ];
     }
 
