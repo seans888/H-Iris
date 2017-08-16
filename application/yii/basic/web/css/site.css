@@ -285,6 +285,7 @@ font-size: 20px;
 .col-sm-6
 {
 font-size: 20px;
+display: inline-block;
 }
 
 
@@ -333,4 +334,3 @@ color:black;
 font-size: 18px;
 
 }
-
