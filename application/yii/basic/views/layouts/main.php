@@ -44,7 +44,7 @@ AppAsset::register($this);
 
               ['label' => 'Room',
               'items' => [
-                 ['label' => 'Overview' , 'url' => ['/email/index']],
+                 ['label' => 'Overview' , 'url' => ['website/roomoverview']],
 
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header">Lagoon View</li>',
@@ -67,9 +67,9 @@ AppAsset::register($this);
                'items' => [
                  ['label' => 'Pico Restaurant and Bar' , 'url' => ['/website/randb']],
                 
-                 ['label' => 'Reef Bar', 'url' => ['/activity/index']],
-                 ['label' => 'B&B', 'url' => ['/customer/index']],
-                 ['label' => 'Lagoa', 'url' => ['/customer-history/index']],
+                 ['label' => 'Reef Bar', 'url' => ['/website/reefbar']],
+                 ['label' => 'B&B', 'url' => ['/website/bandb']],
+                 ['label' => 'Lagoa', 'url' => ['/website/lagoa']],
                  ], ],
          
 
@@ -77,7 +77,7 @@ AppAsset::register($this);
  ['label' => 'Spa', 
  'items' => [
                  ['label' => 'Overview' , 'url' => ['/website/spa']],
-                 ['label' => 'Booking Guidelines', 'url' => ['/activity/index']],
+                 ['label' => 'Booking Guidelines', 'url' => ['/website/spabookguide']],
                  ], ],
          
  ['label' => 'Offers & activities',

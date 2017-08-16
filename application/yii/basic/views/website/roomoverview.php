@@ -61,16 +61,16 @@ function showSlides() {
 </script>
 <h1 style="text-align:center">ROOMS</h1>
 
-<h2>CORNER DELUXE ROOM</h2>
+<h2>PICO SANDS HOTEL – RATES AND ACCOMMODATION</h2>
 
-
-<div class="bullet">
-<ul>
-  <li>39 square meters with a 29 square meter balcony</li></br>
-  <li> One king-sized be that can fit up to two adults</li>
-</ul>
-
- <img src="uploads/cornerdeluxe.jpg" style="width:710px;height:430px;"> 
+ 
+<p style="text-align:justify; ">
+ <strong>Slumber in Tranquility </strong></br>
+Furnished with natural materials in a soothing palette of seashell whites and sandy creams, the rooms offer a relaxing retreat from the hustle and bustle of city life with views that overlook the lush mountains or a calming lagoon. The average room size is 37 square meters and room types offered are Standard, Superior, Deluxe, Premier, Corner Deluxe and Penthouse Lofts. For Pico Sands Hotel room rates, click on the “Book a Room” button above.
+</br>
+</br>
+</br>
+</br>
 </div>
 
-</br>
+

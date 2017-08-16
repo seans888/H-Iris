@@ -9,6 +9,11 @@ class WebsiteController extends \yii\web\Controller
         return $this->render('index');
     }
 
+public function actionRoomoverview()
+    {
+        return $this->render('roomoverview');
+      
+    }
     
     public function actionSuperior()
     {
@@ -69,9 +74,35 @@ public function actionPenthouse()
       
     }
 
+
+    public function actionReefbar()
+    {
+        return $this->render('reefbar');
+      
+    }
+
+    public function actionBandb()
+    {
+        return $this->render('bandb');
+      
+    }
+
+       public function actionLagoa()
+    {
+        return $this->render('lagoa');
+      
+    }
+
      public function actionSpa()
     {
         return $this->render('spa');
+      
+    }
+
+
+       public function actionSpabookguide()
+    {
+        return $this->render('spabookguide');
       
     }
 

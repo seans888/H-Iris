@@ -8,60 +8,12 @@ $this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-      <div class="body-content">
-        <div class="slideshow-container">
+ <img src="uploads/rnb1.jpg" style="width:1130px;height:320px;"> 
 
-  <div class="mySlides">
-    <img src="uploads/Taalhotel.jpg" style="width:100%;height:20%;"> 
+ <h1 style="text-align:center">DINING</h1>
 
-  </div>
-
-  <div class="mySlides">
-    <img src="uploads/Taalroom.jpg" style="width:100%;height:20%;"> 
-  
-  </div>
-
-  <div class="mySlides">
-    <img src="uploads/Dining.jpg" style="width:100%;height:20%;"> 
-
-  </div>
-
-  
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-<script>
-
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-  
-
-</script>
-  <h1><?= Html::encode($this->title) ?></h1>
 <div class="col-md-8">
-<div class="bullet">
+
 
 <h2> PICO RESTAURANT AND BAR </h2>
 <p style="text-align:justify"> Pico Restaurant specializes in Mediterranean cuisine and is located at the lobby of Pico Sands Hotel. 
@@ -69,8 +21,9 @@ It is open round the clock and offers a food pick-up service for guests.
 
 The Pico Bar, located across Pico Restaurant, serves a wide range of beverages, including this Nasugbu resort's signature fruit juices and Mojito blends. 
  </br>
-
+</br>
 <strong>Location:</strong> Ground Floor, Pico Sands Hotel 
+ </br>
  </br>
 <strong>Operating Hours:</strong> 24 hours 
 </p>
