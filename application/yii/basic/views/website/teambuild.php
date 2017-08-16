@@ -8,11 +8,6 @@ $this->title = 'Team Building Activities';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
- <div class="main">
- <h1 style="text-align:center">TEAM BUILDING ACTIVITIES</h1>
-       
-    </div>
-
      <div class="body-content">
         <div class="slideshow-container">
 
@@ -67,7 +62,10 @@ function showSlides() {
 </script>
  
 <div>
-
+<h1>CORPORATE MEETINGS</h1>
+<hr>
+<h2>TEAM BUILDING ACTIVITIES</h2>
+<hr>
 <div class = "bullet">
 <p>The 1.5 km Beach at Pico de Loro Cove is perfect for your organizational development needs. Experience our interactive learning activities and increase team skills and communications towards your colleagues.</p>
 </div>
