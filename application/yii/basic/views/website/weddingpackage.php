@@ -66,6 +66,10 @@ function showSlides() {
  <a href ="uploads/Pico Wedding by the Sea Menu.pdf"><p style = "text-align:center">Pico Wedding by the Sea Menu</p></a>
  <a href ="uploads/Pico Wedding Packages 2018.pdf"><p style = "text-align:center">Pico Wedding Packages 2018</p></a>
  <a href ="uploads/Pico_Wedding_Menu_FA.pdf"><p style = "text-align:center">Pico Wedding Menu</p></a>
+ <div style="text-align: center;">
+ <br>
+ <a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
+</div>
  </div>
 
  

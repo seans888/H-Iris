@@ -100,5 +100,6 @@ function showSlides() {
   <li>Burlap carpet</li>
 </ul>
 </div>
-
+<br>
+<a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
 </div>
