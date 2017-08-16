@@ -17,11 +17,17 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'customer_checkin') ?>
+    <?= $form->field($model, 'customer_type') ?>
 
-    <?= $form->field($model, 'customer_checkout') ?>
+    <?= $form->field($model, 'customer_email') ?>
 
-    <?= $form->field($model, 'customer_numberdays') ?>
+    <?= $form->field($model, 'customer_fname') ?>
+
+    <?= $form->field($model, 'customer_mname') ?>
+
+    <?php // echo $form->field($model, 'customer_lname') ?>
+
+    <?php // echo $form->field($model, 'customer_contact_number') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

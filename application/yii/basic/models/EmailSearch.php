@@ -18,8 +18,8 @@ class EmailSearch extends Email
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['email_date', 'email_recipient', 'email_template', 'email_status', 'template_id', 'recipient_id'], 'safe'],
+            [['id', 'template_id', 'customer_id'], 'integer'],
+            [['email_date', 'email_status'], 'safe'],
         ];
     }
 
@@ -57,19 +57,16 @@ class EmailSearch extends Email
             return $dataProvider;
         }
 
-        $query->joinWith('template')
-            ->joinWith('recipient');
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'email_date' => $this->email_date,
-           // 'template_id' => $this->template_id,
-          //  'recipient_id' => $this->recipient_id,
+            'template_id' => $this->template_id,
+            'customer_id' => $this->customer_id,
         ]);
 
-        $query->andFilterWhere(['like', 'email_status', $this->email_status])
-            ->andFilterWhere(['like', 'template_type', $this->template_id])
-            ->andFilterWhere(['like', 'recipient_fname', $this->recipient_id]);
+        $query->andFilterWhere(['like', 'email_status', $this->email_status]);
+
         return $dataProvider;
     }
 }

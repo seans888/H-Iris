@@ -29,9 +29,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'customer_checkin',
-            'customer_checkout',
-            'customer_numberdays',
+            'customer_type',
+            'customer_email:email',
+            'customer_fname',
+            'customer_mname',
+            'customer_lname',
+            'customer_contact_number',
         ],
     ]) ?>
 

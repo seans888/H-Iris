@@ -31,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'email_date:email',
             'email_status:email',
-            'template.information',
-            'recipient.emailAddress',
+            'template_id',
+            'customer_id',
         ],
     ]) ?>
 
