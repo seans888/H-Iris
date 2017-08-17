@@ -7,7 +7,7 @@ use yii\helpers\Html;
 $this->title = 'ROOMS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 style="text-align:center">ROOMS</h1>
+
      <div class="body-content">
         <div class="slideshow-container">
 
@@ -60,16 +60,26 @@ function showSlides() {
 
 </script>
 
-
+<h1>ROOMS</h1>
+<hr class = "hrColor">
 <h2>PENTHOUSE LOFT ROOM</h2>
- 
+ <hr class = "hrColor">
  <div class="bullet">
+ <div class="body-content">
+        <div class="slideshow-container">
+        <br>
+        <img src="uploads/penthouse.jpg" style="width:1000px;height:320px;"> 
+        </div>
+</div>
+<p>
+ <br>
 <ul>
   <li>65 square meters with a 7 square meter balcony</li></br>
   <li> One king-sized bed that can fit up to 2 adults.</li></br>
    <li>Exclusive in-room complimentary amenities include </br>Nespresso coffee machine, TWG teas and selection </br> of non-alcoholic beverage.</li>
 </ul>
-
-<img src="uploads/penthouse.jpg" style="width:710px;height:430px;"> 
+</p>
 </div>
+</div>
+
 
