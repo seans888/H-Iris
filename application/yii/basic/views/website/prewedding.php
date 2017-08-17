@@ -57,10 +57,10 @@ function showSlides() {
  
 <div>
 <h1> WEDDINGS</h1>
-<hr>
+<hr style="border-color:#4aa3ef">
 
  <h2>PRE-WEDDING ACTIVITIES</h2>
- <hr>
+ <hr style="border-color:#4aa3ef;">
 <h3>PRENUP PICTORIAL PACKAGE</h3>
 
 <h5>INCLUSIONS:</h5>
