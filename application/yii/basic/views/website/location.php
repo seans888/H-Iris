@@ -143,6 +143,8 @@ function showSlides() {
 <strong>Google Map</strong>
 <br>
 
+  <input id="pac-input" class="controls" type="text" placeholder="Search">
+    <div  id="map-canvas"></div>
 
 <div id="map" style="width:100%;height:500px"></div>
 
