@@ -8,11 +8,10 @@ $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<br>
 <div class="site-about">
-    <div class="body-content">
-    <br>
 
+	<img src="uploads/sm.jpg" style="width:100px;height:100px;"> <br> 
+    <div class="body-content">
         <div class="slideshow-container">
 
   <div class="mySlides">
