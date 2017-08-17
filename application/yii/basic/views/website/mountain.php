@@ -7,7 +7,6 @@ use yii\helpers\Html;
 $this->title = 'ROOMS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 style="text-align:center">ROOMS</h1>
      <div class="body-content">
         <div class="slideshow-container">
 
@@ -57,9 +56,10 @@ function showSlides() {
 </script>
 
 
-
-<h2>Mountain View</h2>
-
+<h1>ROOMS</h1>
+<hr class = "hrColor">
+<h2>MOUNTAIN VIEW</h2>
+<hr class = "hrColor">
 <p>Bask in the verdant backdrop of green hills and the stunning Mt. Pico de Loro.</p>
 </div>
 

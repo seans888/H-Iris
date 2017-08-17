@@ -85,10 +85,10 @@ function showSlides() {
 </div>
  <div class= "col-md-1">   </div>
  <br>
-<div class="col-md-6"><img src="uploads/pizza.jpg" style="width:300px;height:300px;">
+<div class="col-md-6"><img src="uploads/Frisbee.jpg" style="width:300px;height:300px;">
 </div>
 <br>
-<div class="col-md-6"><img src="uploads/BB.jpg" style="width:300px;height:300px;">
+<div class="col-md-6"><img src="uploads/Jetski.jpg" style="width:300px;height:300px;">
 </div>
 <br>
 <div class= "col-md-1">   

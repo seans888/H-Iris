@@ -7,7 +7,7 @@ use yii\helpers\Html;
 $this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
- <h1 style="text-align:center">DINING</h1>
+ 
       <div class="body-content">
         <div class="slideshow-container">
 
@@ -70,8 +70,8 @@ function showSlides() {
 </script>
 
 
-
-
+<h1>DINING</h1>
+<hr class = "hrColor">
 <h2> REEF BAR </h2>
 <p style="text-align:justify"> Reef Bar is a beachside bar that serves refreshing drinks and delightful meals daily. Here you can savor
 </br>

@@ -16,9 +16,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div>
 <h1>OFFERS AND ACTIVITIES</h1>
-<hr style="color:blue">
+<hr class = "hrColor">
 <h2>CLUB ACTIVITIES</h2>
-<hr>
+<hr class = "hrColor">
 <p>Make your stay more worthwhile with our various indoor and outdoor activities.</p>
 
 <p>Please call, (02) 464-7825 for inquiries.</p>
