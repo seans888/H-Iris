@@ -61,9 +61,9 @@ function showSlides() {
  
 <div>
 <h1> WEDDINGS</h1>
-<hr>
+<hr class = "hrColor">
 <h2>CEREMONY VENUES</h2>
-<hr>
+<hr class = "hrColor">
 <h3>CHAPEL</h3>
 
 <h4>ST. THERESE CHAPEL</h4>
