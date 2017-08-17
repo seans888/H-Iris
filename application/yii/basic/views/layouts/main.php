@@ -29,7 +29,7 @@ AppAsset::register($this);
   <?php
     NavBar::begin([
     
-      'brandLabel' => '<img src="uploads/head.png" class="pull-left"/>SM Hotels and Convention',
+      'brandLabel' => '<img src="uploads/sm.jpg" class="pull-left"/>SM Hotels and Convention',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
