@@ -11,11 +11,37 @@ $this->params['breadcrumbs'][] = $this->title;
  
 
      <div class="body-content">
-        <div class="slideshow-container">
 
-  <div>
-    <img src="uploads/location.jpg" style="width: 1000px;height: 400px;"> 
-  </div>
+
+ <strong>Google Map</strong>
+<br>
+
+  <input id="pac-input" class="controls" type="text" placeholder="Search">
+    <div  id="map-canvas"></div>
+
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(14.1923,120.6020);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter,  animation: google.maps.Animation.BOUNCE
+  });
+
+  marker.setMap(map);
+   var infowindow = new google.maps.InfoWindow({
+    content: "PICO SANDS HOTEL"
+  });
+    infowindow.open(map,marker);
+}
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ID6qXBH1UmbqGcqGH6JnQSIu9NCi9fc&callback=myMap"></script>
+</div>
+<br>
 
  
 </div>
@@ -140,35 +166,7 @@ function showSlides() {
 </ol> 
 
 <br>
-<strong>Google Map</strong>
-<br>
 
-  <input id="pac-input" class="controls" type="text" placeholder="Search">
-    <div  id="map-canvas"></div>
-
-<div id="map" style="width:100%;height:500px"></div>
-
-<script>
-function myMap() {
-  var myCenter = new google.maps.LatLng(14.1923,120.6020);
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {center: myCenter, zoom: 15};
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({position:myCenter,  animation: google.maps.Animation.BOUNCE
-  });
-
-  marker.setMap(map);
-   var infowindow = new google.maps.InfoWindow({
-    content: "PICO SANDS HOTEL"
-  });
-    infowindow.open(map,marker);
-}
-
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ID6qXBH1UmbqGcqGH6JnQSIu9NCi9fc&callback=myMap"></script>
-</div>
-<br>
 
 
 </div>

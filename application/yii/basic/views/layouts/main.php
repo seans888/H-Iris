@@ -211,11 +211,15 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container1">
         <p class="pull-left">&copy; SM Hotels and Convention Corporation <?= date('Y') ?></p>
- <a href="https://www.facebook.com/"><img src="uploads/fb.png" style="width: 45px; height: 45px;"></a>
 
+ <a href="https://www.facebook.com/">
+ <img src="uploads/fb.png" style="width: 45px; height: 45px;"></a>
+
+ <a href="https://twitter.com/">
  <img src="uploads/twitter.png" style="width: 45px; height: 45px;">
+
+<a href="https://www.instagram.com/">
  <img src="uploads/insta.png" style="width: 45px; height: 45px;">
- <a href="">
        
     </div>
 </footer>
