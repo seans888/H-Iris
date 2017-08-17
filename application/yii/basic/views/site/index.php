@@ -11,7 +11,6 @@ $this->title = 'SM Hotels and Convention Corporation';
 
   <div class="main">
  </br>
-        <p>SM Hotels and Convention Corporation</p>
    
     </div>
 
