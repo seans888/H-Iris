@@ -11,7 +11,9 @@ $this->params['breadcrumbs'][] = $this->title;
  
 
      <div class="body-content">
-
+<div class="main">
+ <h1 style="text-align:center">Pico Sands Hotel Location</h1>
+    </div>
 
  <strong>Google Map</strong>
 <br>
@@ -47,39 +49,12 @@ function myMap() {
 </div>
 <br>
 
-<script>
-
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-  
-
-</script>
-
- <div class="main">
- <h1 style="text-align:center">LOCATION</h1>
-    </div>
+ 
     <br>
 
 <div>
 <h2>PICO SANDS HOTEL – NASUGBU BATANGAS BEACH RESORT</h2>
-<hr style="color:; background-color:blue; height:1px; border:none;">
+<hr class="hrColor">
 <br>
 <h4>Directions from Manila to this Nasugbu, Batangas beach resort:</h4>
 <br>
@@ -164,7 +139,9 @@ function showSlides() {
 <br>
 <li>Go further uphill until you reach Pico de Loro by following the yellow signages of “Hamilo Coast/ Pico de Loro Cove.”</li>
 </ol> 
-
+<hr>
+<br>
+<h5> Other Hotels of SM</h5>
 <br>
 
 

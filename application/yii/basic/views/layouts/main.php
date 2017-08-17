@@ -221,6 +221,7 @@ AppAsset::register($this);
 <a href="https://www.instagram.com/">
  <img src="uploads/insta.png" style="width: 45px; height: 45px;">
        
+
     </div>
 </footer>
 
