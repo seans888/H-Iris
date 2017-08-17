@@ -63,9 +63,9 @@ function showSlides() {
  
 <div>
 <h1>CORPORATE MEETINGS</h1>
-<hr>
+<hr class = "hrColor">
 <h2>TEAM BUILDING ACTIVITIES</h2>
-<hr>
+<hr class = "hrColor">
 <div class = "bullet">
 <p>The 1.5 km Beach at Pico de Loro Cove is perfect for your organizational development needs. Experience our interactive learning activities and increase team skills and communications towards your colleagues.</p>
 </div>
