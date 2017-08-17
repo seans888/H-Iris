@@ -81,5 +81,19 @@ function showSlides() {
 
 <h1 > GALLERY
 </h1>
+<div class="col-md-6"><img src="uploads/clubactivity1.jpg" style="width:300px;height:300px;">
+</div>
+ <div class= "col-md-1">   </div>
+ <br>
+<div class="col-md-6"><img src="uploads/pizza.jpg" style="width:300px;height:300px;">
+</div>
+<br>
+<div class="col-md-6"><img src="uploads/BB.jpg" style="width:300px;height:300px;">
+</div>
+<br>
+<div class= "col-md-1">   
+</div>
+<div class="col-md-6"><img src="uploads/reefbar1.jpg" style="width:300px;height:300px;">
+</div>
 
 </div>
