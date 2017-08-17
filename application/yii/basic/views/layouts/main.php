@@ -135,7 +135,28 @@ AppAsset::register($this);
 ],
 ],
 
-  ['label' => 'Location', 'url' => ['/website/location']],
+['label' => 'Location', 'url' => ['/site/about']],
+   ['label' => 'Gallery', 
+    'items' => [
+                 
+                  '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Photos</li>',
+               
+                 ['label' => 'Rooms', 'url' => ['/website/room']],
+                 
+                  ['label' => 'Dining', 'url' => ['/website/dining']],
+              
+                  ['label' => 'Leisure', 'url' => ['/website/leisure']],
+ 
+                 ['label' => 'Events', 'url' => ['/website/event']],
+ 
+                 '<li class="dropdown-header"> </li>',
+                  '<li class="dropdown-header">Videos</li>',     
+                 
+ ],
+ ],
+   ['label' => 'Location', 'url' => ['/website/location']],
+
   
 
 
