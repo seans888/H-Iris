@@ -8,7 +8,6 @@ $this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
- <h1 style="text-align:center">DINING</h1>
 <div class="mySlides">
     <img src="uploads/bb1.jpg" style="width:1100px;height:320px;"> 
    
@@ -56,7 +55,8 @@ function showSlides() {
 
 </script>
 
-
+ <h1>DINING</h1>
+ <hr class = "hrColor">
 <h2> B&B</h2>
 <p style="text-align:justify"> B&B is a casual bowling and billiards hall that serves all-day snacks, appetizers, and non-alcoholic and alcoholic drinks.   
 </br>
