@@ -29,7 +29,7 @@ AppAsset::register($this);
   <?php
     NavBar::begin([
     
-      'brandLabel' => '<img src="uploads/sm.jpg" class="pull-left"/>SM Hotels and Convention',
+      'brandLabel' => '<img src="uploads/sm.jpg" class="pull-left"/>SM Hotels and Conventions',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -81,7 +81,7 @@ AppAsset::register($this);
                  ['label' => 'Booking Guidelines', 'url' => ['/website/spabookguide']],
                  ], ],
          
- ['label' => 'Offers & activities',
+ ['label' => 'Offers & Activities',
 'items' => [
                  ['label' => 'Room Offers' , 'url' => ['/website/roomoffer']],
                  ['label' => 'Club Activities', 'url' => ['/website/clubactivity']],
