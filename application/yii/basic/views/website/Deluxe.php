@@ -8,7 +8,6 @@ $this->title = 'ROOMS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<h1 style="text-align:center">ROOMS</h1>
 
      <div class="body-content">
         <div class="slideshow-container">
@@ -62,17 +61,25 @@ function showSlides() {
 
 </script>
 
-
+<h1>ROOMS</h1>
+<hr class = "hrColor">
 <h2>DELUXE ROOM</h2>
-
- 
+<hr class = "hrColor">
 <div class="bullet">
+<div class="body-content">
+        <div class="slideshow-container">
+        <br>
+        <img src="uploads/deluxe.jpg" style="width:1000px;height:320px;"> 
+</div>
+</div>
+<p>
+ <br>
 <ul>
   <li>37 square meters with a 7 square meter balcony</li></br>
   <li>Two double beds that can fit up to two adults</li>
 </ul>
-<img src="uploads/deluxe.jpg" style="width:710px;height:430px;"> 
-
+</p>
+</div>
 </div>
 
 
