@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="site-about">
 
-	<img src="uploads/sm.jpg" style="width:100px;height:100px;"> <br> 
+ <br> 
     <div class="body-content">
     <h1 style="text-align:center"> DINING
 </h1>

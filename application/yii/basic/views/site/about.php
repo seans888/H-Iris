@@ -60,10 +60,10 @@ function showSlides() {
 
 </script>
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 style="text-align:center"><?= Html::encode($this->title) ?></h1>
 
 
-    <p>
+    <p style="text-align:center">
 
     	<br>
         SM Hotels and Conventions Corporation (SMHCC) was established to address the vast potential of tourism in the country. 
@@ -81,14 +81,14 @@ function showSlides() {
  
     </p>
 
-    <p>
+    <p style="text-align:center">
     	<br>
     	All these allow guests to experience luxury and the world-renowned Filipino hospitality, made more memorable by the
     	</br>
     	natural beauty of their surrounding landscapes.
     </p>
 
-    <p>
+    <p style="text-align:center">
     	<br>
     	SMHCC operates convention centers and trade halls through SMX Convention Center (SMX), which has become a popular 
     	</br>
@@ -98,7 +98,7 @@ function showSlides() {
    		</br>
     </p>
 
-    <p>
+    <p style="text-align:center">
     	<br>
     	Consequently, SMX has branch out to Taguig, Davao and Bacolod. SMHCC also operates trade halls in SM Megamall and 
     	</br>
@@ -107,7 +107,7 @@ function showSlides() {
     	privately run exhibition and conventions business in the Philippines.
     </p>
   
-
+<p style="text-align:center" >
 		<br> 
         SM Hotels and Conventions Corporation (SMHCC) was established to address the vast potential of tourism in the country.  
 		</br> 
@@ -122,13 +122,13 @@ function showSlides() {
 		Conrad Manila, located in the Mall of Asia Complex. 
 		</br> 
     </p>
-    <p> 
+    <p style="text-align:center"> 
 		<br> 
 		All these allow guests to experience luxury and the world-renowned Filipino hospitality, made more memorable by the 
 		</br> 
 		natural beauty of their surrounding landscapes. 
 	</p> 
-	<p> 
+	<p style="text-align:center"> 
 		<br> 
 		SMHCC operates convention centers and trade halls through SMX Convention Center (SMX), which has become a popular  
 		</br> 
@@ -137,7 +137,7 @@ function showSlides() {
 		for large-scale institutional events, townhall meetings, weddings, exhibits, and concerts in many cities across the country. 
 		</br> 
 	</p> 
-	<p> 
+	<p style="text-align:center"> 
 		<br> 
 		Consequently, SMX has branch out to Taguig, Davao and Bacolod. SMHCC also operates trade halls in SM Megamall and  
 		</br> 
