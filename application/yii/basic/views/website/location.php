@@ -152,9 +152,16 @@ function myMap() {
   var mapCanvas = document.getElementById("map");
   var mapOptions = {center: myCenter, zoom: 15};
   var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({position:myCenter});
+  var marker = new google.maps.Marker({position:myCenter,  animation: google.maps.Animation.BOUNCE
+  });
+
   marker.setMap(map);
+   var infowindow = new google.maps.InfoWindow({
+    content: "PICO SANDS HOTEL"
+  });
+    infowindow.open(map,marker);
 }
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ID6qXBH1UmbqGcqGH6JnQSIu9NCi9fc&callback=myMap"></script>
