@@ -69,7 +69,7 @@ function showSlides() {
 <div class = "bullet">
 <p>The 1.5 km Beach at Pico de Loro Cove is perfect for your organizational development needs. Experience our interactive learning activities and increase team skills and communications towards your colleagues.</p>
 </div>
- <a href ="uploads/Pico Team building.pdf">Pico Team Building</a>
+ <img src="uploads/application-pdf.png" style="width:1.3%;height:1.3%;"><a href ="uploads/Pico Team building.pdf">Pico Team Building</a>
  <div>
  <br>
  <a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
