@@ -57,9 +57,9 @@ function showSlides() {
  
  <div>
  <h1> WEDDINGS</h1>
-<hr>
+<hr class = "hrColor">
  <h2>WEDDING PACKAGES</h2>
-<hr>
+<hr class = "hrColor">
  <br>
  <p><img src="uploads/application-pdf.png" style="width:1.3%;height:1.3%;"><a href ="uploads/Pico Wedding by the Sea Menu.pdf">Pico Wedding by the Sea Menu</a></p>
  <p><img src="uploads/application-pdf.png" style="width:1.3%;height:1.3%;"><a href ="uploads/Pico Wedding Packages 2018.pdf">Pico Wedding Packages 2018</a></p>

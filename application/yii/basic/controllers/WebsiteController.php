@@ -176,5 +176,9 @@ public function actionPenthouse()
     {
         return $this->render('promotions');
     }
+    public function actionForms()
+    {
+        return $this->render('form');
+    }
 
 }

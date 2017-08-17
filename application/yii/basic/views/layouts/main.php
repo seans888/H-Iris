@@ -109,8 +109,54 @@ AppAsset::register($this);
                 
 ],
 ],
+ ['label' => 'Forms', 
+  'items' => [
+                ['label' => 'Employees', 'url' => ['/employee/index']],
 
-  ['label' => 'Location', 'url' => ['/website/location']],
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Email</li>',
+                
+                 ['label' => 'Email', 'url' => ['/email/index']],
+                 
+                 ['label' => 'Event', 'url' => ['/event/index']],
+             
+                 ['label' => 'Template', 'url' => ['/template/index']],
+
+                 ['label' => 'Activity', 'url' => ['/activity/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Customers</li>',
+
+                   ['label' => 'Customer', 'url' => ['customer/index']],
+                   ['label' => 'Customer History', 'url' => ['/customer-history/index']],
+                    ['label' => 'Preference', 'url' => ['/preference/index']],
+
+                
+],
+],
+
+['label' => 'Location', 'url' => ['/site/about']],
+   ['label' => 'Gallery', 
+    'items' => [
+                 
+                  '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Photos</li>',
+               
+                 ['label' => 'Rooms', 'url' => ['/website/room']],
+                 
+                  ['label' => 'Dining', 'url' => ['/website/dining']],
+              
+                  ['label' => 'Leisure', 'url' => ['/website/leisure']],
+ 
+                 ['label' => 'Events', 'url' => ['/website/event']],
+ 
+                 '<li class="dropdown-header"> </li>',
+                  '<li class="dropdown-header">Videos</li>',     
+                 
+ ],
+ ],
+   ['label' => 'Location', 'url' => ['/website/location']],
+
   
 
 
@@ -118,7 +164,7 @@ AppAsset::register($this);
           //  ['label' => 'Email', 'url' => ['/email/index']],
             
             // Yii::$app->user->isAdmin ? (
-            [
+           /** [
             'label' => 'Forms',
             'items' => [
                  ['label' => 'Email', 'url' => ['/email/index']],
@@ -134,7 +180,7 @@ AppAsset::register($this);
 
                  
             ],
-        ],
+        ], **/
         //)
 
 

@@ -341,3 +341,7 @@ font-size: 18px;
     width: 80px;
     float:left;
 }
+
+.hrColor{
+	border-color:#0B30A3;
+}

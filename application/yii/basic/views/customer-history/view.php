@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'customer_history_checkin',
             'customer_history_checkout',
             'customer_history_numberdays',
-            'customer_id',
+            'customer.name',
         ],
     ]) ?>
 
