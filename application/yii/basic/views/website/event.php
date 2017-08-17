@@ -78,5 +78,6 @@ Whether it's a grand family celebration or a successful business event, we have 
  
 <h1 > GALLERY
 </h1>
-
+<div class="col-md-6"><img src="uploads/WeddingB.jpg" style="width:300px;height:300px;">
+</div>
 </div>
