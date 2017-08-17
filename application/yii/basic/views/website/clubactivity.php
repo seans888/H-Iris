@@ -23,5 +23,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <p>Please call, (02) 464-7825 for inquiries.</p>
 <br>
-<a href ="uploads/Pico Guide map for website.pdf">Guide Map</a>
+<img src="uploads/application-pdf.png" style="width:1.3%;height:1.3%;"><a href ="uploads/Pico Guide map for website.pdf">Guide Map</a>
 </div>
