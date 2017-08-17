@@ -41,6 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span>  
 </div>
+
 <script>
 
 var slideIndex = 0;
@@ -88,5 +89,18 @@ Your one stop shop for ready to eat food and drinks.
 
 <h1 > GALLERY
 </h1>
-
+<div class="col-md-6"><img src="uploads/picobar.jpg" style="width:300px;height:300px;">
+</div>
+ <div class= "col-md-1">   </div>
+ <br>
+<div class="col-md-6"><img src="uploads/pizza.jpg" style="width:300px;height:300px;">
+</div>
+<br>
+<div class="col-md-6"><img src="uploads/BB.jpg" style="width:300px;height:300px;">
+</div>
+<br>
+<div class= "col-md-1">   
+</div>
+<div class="col-md-6"><img src="uploads/reefbar1.jpg" style="width:300px;height:300px;">
+</div>
 </div>
