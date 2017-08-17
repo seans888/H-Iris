@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
      <div class="body-content">
         <div class="slideshow-container">
 
-  <div class="mySlides">
+  <div>
     <img src="uploads/location.jpg" style="width: 1000px;height: 400px;"> 
   </div>
 
