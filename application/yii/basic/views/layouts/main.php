@@ -136,7 +136,7 @@ AppAsset::register($this);
 
 
             ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'Email', 'url' => ['/email/index']],
+          //  ['label' => 'Email', 'url' => ['/email/index']],
             
             // Yii::$app->user->isAdmin ? (
             [
