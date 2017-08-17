@@ -61,10 +61,10 @@ function showSlides() {
  <h2>WEDDING PACKAGES</h2>
 <hr>
  <br>
- <a href ="uploads/Pico Wedding by the Sea Menu.pdf"><p style = "text-align:center">Pico Wedding by the Sea Menu</p></a>
- <a href ="uploads/Pico Wedding Packages 2018.pdf"><p style = "text-align:center">Pico Wedding Packages 2018</p></a>
- <a href ="uploads/Pico_Wedding_Menu_FA.pdf"><p style = "text-align:center">Pico Wedding Menu</p></a>
- <div style="text-align: center;">
+ <p><img src="uploads/application-pdf.png" style="width:1.3%;height:1.3%;"><a href ="uploads/Pico Wedding by the Sea Menu.pdf">Pico Wedding by the Sea Menu</a></p>
+ <p><img src="uploads/application-pdf.png" style="width:1.3%;height:1.3%;"><a href ="uploads/Pico Wedding Packages 2018.pdf">Pico Wedding Packages 2018</a></p>
+ <p><img src="uploads/application-pdf.png" style="width:1.3%;height:1.3%;"><a href ="uploads/Pico_Wedding_Menu_FA.pdf">Pico Wedding Menu</a></p>
+ <div>
  <br>
  <a class="btn btn-lg btn-success" href="mailto:sales@smhotelsandconventions.com">Request for proposal</a>
 </div>
