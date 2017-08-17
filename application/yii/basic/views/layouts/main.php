@@ -109,7 +109,33 @@ AppAsset::register($this);
                 
 ],
 ],
- ['label' => 'Location', 'url' => ['/site/about']],
+ ['label' => 'Forms', 
+  'items' => [
+                ['label' => 'Employees', 'url' => ['/employee/index']],
+
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Email</li>',
+                
+                 ['label' => 'Email', 'url' => ['/email/index']],
+                 
+                 ['label' => 'Event', 'url' => ['/event/index']],
+             
+                 ['label' => 'Template', 'url' => ['/template/index']],
+
+                 ['label' => 'Activity', 'url' => ['/activity/index']],
+
+                '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Customers</li>',
+
+                   ['label' => 'Customer', 'url' => ['customer/index']],
+                   ['label' => 'Customer History', 'url' => ['/customer-history/index']],
+                    ['label' => 'Preference', 'url' => ['/preference/index']],
+
+                
+],
+],
+
+['label' => 'Location', 'url' => ['/site/about']],
    ['label' => 'Gallery', 
     'items' => [
                  
@@ -131,7 +157,6 @@ AppAsset::register($this);
  ],
    ['label' => 'Location', 'url' => ['/website/location']],
 
-  ['label' => 'Location', 'url' => ['/website/location']],
   
 
 
@@ -139,7 +164,7 @@ AppAsset::register($this);
           //  ['label' => 'Email', 'url' => ['/email/index']],
             
             // Yii::$app->user->isAdmin ? (
-            [
+           /** [
             'label' => 'Forms',
             'items' => [
                  ['label' => 'Email', 'url' => ['/email/index']],
@@ -155,7 +180,7 @@ AppAsset::register($this);
 
                  
             ],
-        ],
+        ], **/
         //)
 
 

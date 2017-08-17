@@ -45,10 +45,10 @@ class CustomerHistory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_history_checkin' => 'Customer History Checkin',
-            'customer_history_checkout' => 'Customer History Checkout',
-            'customer_history_numberdays' => 'Customer History Numberdays',
-            'customer_id' => 'Customer ID',
+            'customer_history_checkin' => 'Check-in Date',
+            'customer_history_checkout' => 'Check-out Date',
+            'customer_history_numberdays' => 'Number of days',
+            'customer_id' => 'Customer',
         ];
     }
 

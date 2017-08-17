@@ -18,8 +18,9 @@ class CustomerHistorySearch extends CustomerHistory
     public function rules()
     {
         return [
-            [['id', 'customer_id'], 'integer'],
-            [['customer_history_checkin', 'customer_history_checkout', 'customer_history_numberdays'], 'safe'],
+            [['id'], 'integer'],
+            [['customer_history_checkin', 'customer_history_checkout', 'customer_history_numberdays'
+            , 'customer_id'], 'safe'],
         ];
     }
 
@@ -56,16 +57,19 @@ class CustomerHistorySearch extends CustomerHistory
             // $query->where('0=1');
             return $dataProvider;
         }
-
+        $query->joinWith('customer');
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'customer_id' => $this->customer_id,
+           // 'customer_id' => $this->customer_id,
         ]);
 
         $query->andFilterWhere(['like', 'customer_history_checkin', $this->customer_history_checkin])
             ->andFilterWhere(['like', 'customer_history_checkout', $this->customer_history_checkout])
-            ->andFilterWhere(['like', 'customer_history_numberdays', $this->customer_history_numberdays]);
+            ->andFilterWhere(['like', 'customer_history_numberdays', $this->customer_history_numberdays])
+            ->andFilterWhere(['like', 'customer_fname', $this->customer_id])
+            ->orFilterWhere(['like', 'customer_lname', $this->customer_id]);
+;
 
         return $dataProvider;
     }
