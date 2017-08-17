@@ -135,7 +135,6 @@ AppAsset::register($this);
 ],
 ],
 
-['label' => 'Location', 'url' => ['/site/about']],
    ['label' => 'Gallery', 
     'items' => [
                  
