@@ -328,6 +328,7 @@ color:black;
 
 .navbar-inverse .navbar-brand {
   color: #000000;
+  font-size: 30px;
 }
 
 .bullet{
@@ -338,4 +339,5 @@ font-size: 18px;
     display: block;
     height: 80px;
     width: 80px;
+    float:left;
 }
