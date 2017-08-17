@@ -334,3 +334,8 @@ color:black;
 font-size: 18px;
 
 }
+.navbar-brand > img {
+    display: block;
+    height: 80px;
+    width: 80px;
+}
