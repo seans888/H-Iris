@@ -60,7 +60,7 @@ function showSlides() {
 </script>
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+<hr class = "hrColor">
 
     <p>
 
