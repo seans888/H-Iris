@@ -7,14 +7,15 @@ use yii\helpers\Html;
 $this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 style="text-align:center">DINING</h1>
+
  <img src="uploads/rnb1.jpg" style="width:1130px;height:320px;"> 
 
  
 
 <div class="col-md-8">
 
-
+<h1>DINING</h1>
+<hr class = "hrColor">
 <h2> PICO RESTAURANT AND BAR </h2>
 <p style="text-align:justify"> Pico Restaurant specializes in Mediterranean cuisine and is located at the lobby of Pico Sands Hotel. 
 It is open round the clock and offers a food pick-up service for guests. 

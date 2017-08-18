@@ -15,9 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <br>
 <div>
 <h1>OFFERS AND ACTIVITIES</h1>
-<hr>
+<hr class = "hrColor">
 <h2>PROMOTIONS</h2>
-<hr>
+<br>
 <p>Avail of our exclusive hotel deals!</p> 
 <p>Please call, (02) 464-7888 for inquiries and reservations.</p>
 </div>

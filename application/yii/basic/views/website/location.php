@@ -11,49 +11,50 @@ $this->params['breadcrumbs'][] = $this->title;
  
 
      <div class="body-content">
-        <div class="slideshow-container">
+<div class="main">
+ <h1 style="text-align:center">Pico Sands Hotel Location</h1>
+    </div>
 
-  <div>
-    <img src="uploads/location.jpg" style="width: 1000px;height: 400px;"> 
-  </div>
+ <strong>Google Map</strong>
+<br>
+
+  <input id="pac-input" class="controls" type="text" placeholder="Search">
+    <div  id="map-canvas"></div>
+
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(14.1923,120.6020);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter,  animation: google.maps.Animation.BOUNCE
+  });
+
+  marker.setMap(map);
+   var infowindow = new google.maps.InfoWindow({
+    content: "PICO SANDS HOTEL"
+  });
+    infowindow.open(map,marker);
+}
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ID6qXBH1UmbqGcqGH6JnQSIu9NCi9fc&callback=myMap"></script>
+</div>
+<br>
 
  
 </div>
 <br>
 
-<script>
-
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-  
-
-</script>
-
- <div class="main">
- <h1 style="text-align:center">LOCATION</h1>
-    </div>
+ 
     <br>
 
 <div>
 <h2>PICO SANDS HOTEL – NASUGBU BATANGAS BEACH RESORT</h2>
-<hr style="color:; background-color:blue; height:1px; border:none;">
+<hr class="hrColor">
 <br>
 <h4>Directions from Manila to this Nasugbu, Batangas beach resort:</h4>
 <br>
@@ -138,35 +139,11 @@ function showSlides() {
 <br>
 <li>Go further uphill until you reach Pico de Loro by following the yellow signages of “Hamilo Coast/ Pico de Loro Cove.”</li>
 </ol> 
-
+<hr>
 <br>
-<strong>Google Map</strong>
+<h5> Other Hotels of SM</h5>
 <br>
 
-
-<div id="map" style="width:100%;height:500px"></div>
-
-<script>
-function myMap() {
-  var myCenter = new google.maps.LatLng(14.1923,120.6020);
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {center: myCenter, zoom: 15};
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({position:myCenter,  animation: google.maps.Animation.BOUNCE
-  });
-
-  marker.setMap(map);
-   var infowindow = new google.maps.InfoWindow({
-    content: "PICO SANDS HOTEL"
-  });
-    infowindow.open(map,marker);
-}
-
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ID6qXBH1UmbqGcqGH6JnQSIu9NCi9fc&callback=myMap"></script>
-</div>
-<br>
 
 
 </div>
