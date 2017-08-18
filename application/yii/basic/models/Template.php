@@ -20,7 +20,7 @@ class Template extends \yii\db\ActiveRecord
      */
     public function getInformation()
     {
-        return 'Type: '.$this->template_type.' Description: '.$this->template_description;
+        return 'Type: '.$this->template_type.', Description: '.$this->template_description;
     }
     public static function tableName()
     {

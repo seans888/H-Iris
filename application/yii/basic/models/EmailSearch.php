@@ -69,6 +69,8 @@ class EmailSearch extends Email
         $query->andFilterWhere(['like', 'email_status', $this->email_status])
         ->andFilterWhere(['like', 'customer_fname', $this->customer_id])
         ->orFilterWhere(['like', 'customer_lname', $this->customer_id])
+        ->orFilterWhere(['like', 'customer_type', $this->customer_id])
+
       //  ->orFilterWhere(['like','customer_fname'||'customer_lname',$this->customer_id])
         ->andFilterWhere(['like', 'template_type', $this->template_id])
         ->orFilterWhere(['like', 'template_description', $this->template_id]);
