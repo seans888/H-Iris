@@ -62,7 +62,7 @@ class Customer extends \yii\db\ActiveRecord
      */
      public function getName() 
     { 
-    return $this->customer_fname.' '.$this->customer_lname; 
+    return $this->customer_fname.' '.$this->customer_lname.', '.$this->customer_type; 
     }    
     public function getCustomerHistories()
     {

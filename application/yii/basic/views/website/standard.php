@@ -7,7 +7,6 @@ use yii\helpers\Html;
 $this->title = 'ROOMS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 style="text-align:center">ROOMS</h1>
 
      <div class="body-content">
         <div class="slideshow-container">
@@ -60,15 +59,14 @@ function showSlides() {
   
 
 </script>
-
-
+<h1>ROOMS</h1>
+<hr class = "hrColor">
 <h2>STANDARD ROOM</h2>
-
+<hr class = "hrColor">
 <div class="bullet">
-
 <ul>
-  <li>35 square meters</li></br>
-  <li> One king-sized bed that can fit up to 2 adults.</li></br>
+  <li>35 square meters</li>
+  <li> One king-sized bed that can fit up to 2 adults.</li>
    <li> One queen-size bed that can fit up to two adults.</li>
 </ul>
 

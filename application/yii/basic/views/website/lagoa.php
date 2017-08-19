@@ -7,13 +7,11 @@ use yii\helpers\Html;
 $this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
- <h1 style="text-align:center">DINING</h1>
+ 
 <img src="uploads/lagoa-banner.jpg" style="width:1130px;height:320px;"> 
 
-
-
-
-
+<h1>DINING</h1>
+<hr class = "hrColor">
 <h2> LAGOA </h2>
 <p style="text-align:justify">A restaurant serving All Asian diner inspired meals, located at the Country Club.
 
@@ -26,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </br>
 </br>
+<hr class = "hrColor">
 <h2>LAGOA POOL BAR</h2>
 The pool bar serves pizza, burgers, and other snacks that complement its selection of refreshing smoothies and cocktails.
 
