@@ -67,7 +67,8 @@ class EmailController extends Controller
 
         if ($model->load(Yii::$app->request->post())) { 
         $model->email_date = date('y-m-d h:m:s');  
-        $model->save();  
+        $model->save(); 
+             return $this->redirect(['view', 'id' => $model->id]); 
         } else {
             return $this->render('create', [
                 'model' => $model,
