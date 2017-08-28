@@ -20,13 +20,11 @@ body {
 .footer {
    height: 60px;
    width: 100%;
-    background-color: #4aa3ef;
+    background-color:#ffffff;
     border-top: 1px solid #ddd;
     padding-top: 20px;
 padding-bottom: 0rem;
 position:absolute;
-
-
 }
 
 .jumbotron {
@@ -344,5 +342,11 @@ font-size: 18px;
 
 .hrColor{
 	border-color:#0B30A3;
+}
+
+.socialLinks{
+  width:10px;
+  height: 10px;
+  float:center;
 }
 

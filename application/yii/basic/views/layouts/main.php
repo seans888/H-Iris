@@ -196,8 +196,10 @@ AppAsset::register($this);
                 . '</li>'
             )
         ],
+
     ]);
-    NavBar::end();
+
+    NavBar::end()
     ?> 
 
     <div class="container">
@@ -211,17 +213,13 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container1">
         <p class="pull-left">&copy; SM Hotels and Convention Corporation <?= date('Y') ?></p>
-
- <a href="https://www.facebook.com/">
- <img src="uploads/fb.png" style="width: 45px; height: 45px;"></a>
-
- <a href="https://twitter.com/">
- <img src="uploads/twitter.png" style="width: 45px; height: 45px;">
-
+        <div class="socialLinks"
 <a href="https://www.instagram.com/">
- <img src="uploads/insta.png" style="width: 45px; height: 45px;">
-       
+ <img src="uploads/insta.png" style="width: 3%; height: 3%;"></a>
 
+  <a href="https://www.facebook.com/">
+ <img src="uploads/fb.png" style="width: 3%; height: 3%;"></a>
+ </div>
     </div>
 </footer>
 
