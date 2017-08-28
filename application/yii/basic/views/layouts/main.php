@@ -213,12 +213,19 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container1">
         <p class="pull-left">&copy; SM Hotels and Convention Corporation <?= date('Y') ?></p>
-        <div class="socialLinks"
-<a href="https://www.instagram.com/">
- <img src="uploads/insta.png" style="width: 3%; height: 3%;"></a>
+        <div class="socialLinks">
+        <p class="pull-left"> Follow Us On</p>
+        <p style="text-indent:10px">
+            <a href="https://www.facebook.com/picosandshotel/">
+            <img src="uploads/fb.png" style="width: 15%; height: 15%;"></a>
+            <a href="https://twitter.com/TaalVistaHotel">
+            <img src="uploads/twitter.png" style="width: 15%; height: 15%;"></a>
+            <a href="https://www.instagram.com/picosandshotel/">
+            <img src="uploads/insta.png" style="width: 15%; height: 15%;"></a>
+            </p>
 
-  <a href="https://www.facebook.com/">
- <img src="uploads/fb.png" style="width: 3%; height: 3%;"></a>
+ 
+
  </div>
     </div>
 </footer>

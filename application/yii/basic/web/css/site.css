@@ -345,8 +345,10 @@ font-size: 18px;
 }
 
 .socialLinks{
-  width:10px;
-  height: 10px;
+  margin-top:-5px;
+  margin-bottom: 5px;
+  margin-left:580px;
+  margin-right: 580px;
   float:center;
 }
 
