@@ -119,6 +119,8 @@ AppAsset::register($this);
                  ['label' => 'Email', 'url' => ['/email/index']],
                  
                  ['label' => 'Event', 'url' => ['/event/index']],
+
+                 ['label' => 'Email Event', 'url' => ['/email-event/index']],
              
                  ['label' => 'Template', 'url' => ['/template/index']],
 
@@ -129,7 +131,9 @@ AppAsset::register($this);
 
                    ['label' => 'Customer', 'url' => ['customer/index']],
                    ['label' => 'Customer History', 'url' => ['/customer-history/index']],
+                    ['label' => 'Web-visit History', 'url' => ['/webvisit-history/index']],
                     ['label' => 'Preference', 'url' => ['/preference/index']],
+                    ['label' => 'Customer Preference', 'url' => ['/customer-preference/index']],
 
                 
 ],
