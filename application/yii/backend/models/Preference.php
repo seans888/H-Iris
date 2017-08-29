@@ -44,6 +44,10 @@ class Preference extends \yii\db\ActiveRecord
             'preference_description' => 'Preference Description',
         ];
     }
+    public function getPreference() 
+    { 
+    return $this->preference_category.', '.$this->preference_description; 
+    }  
 
     /**
      * @return \yii\db\ActiveQuery

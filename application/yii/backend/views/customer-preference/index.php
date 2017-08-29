@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\EmailSearch */
+/* @var $searchModel app\models\CustomerPreferenceSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Emails';
+$this->title = 'Customer Preferences';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="email-index">
+<div class="customer-preference-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Email', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Customer Preference', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,15 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
            // 'id',
-            'email_date:email',
-            'email_status:email',
-            [  
-            'attribute' => 'template_id', 
-            'value'=>'template.information' 
-             ],
             [  
             'attribute' => 'customer_id', 
-            'value'=>'customer.email' 
+            'value'=>'customer.name' 
+             ],
+            [  
+            'attribute' => 'preference_id', 
+            'value'=>'preference.preference' 
              ],
 
             ['class' => 'yii\grid\ActionColumn'],

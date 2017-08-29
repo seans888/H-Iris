@@ -61,6 +61,11 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getEmail() 
+    { 
+    return $this->customer_fname.' '.$this->customer_lname.', '.$this->customer_type
+    .', '.$this->customer_email; 
+    }  
      public function getName() 
     { 
     return $this->customer_fname.' '.$this->customer_lname.', '.$this->customer_type; 
