@@ -47,9 +47,9 @@ class ContactForm extends Model
      * @param string $email the target email address
      * @return bool whether the model passes validation
      */
-    public function contact($email)
+    public function sendEmail($email)
     {
-        if ($this->validate()) {
+        /*if ($this->validate()) {
             Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
@@ -59,6 +59,12 @@ class ContactForm extends Model
 
             return true;
         }
-        return false;
+        return false;*/
+        return Yii::$app->mailer->compose()
+        ->setTo($email)
+        ->setFrom([$this->email => $this->name])
+        ->setSubject($this->subject)
+        ->setTextBody($this->body)
+        ->send();
     }
 }
