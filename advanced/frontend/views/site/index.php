@@ -6,7 +6,18 @@ $this->title = 'SM Hotels and Convention Corporation';
 ?>
 
 <link rel="stylesheet" type="text/css" href="site.css">
+<head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107946197-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-107946197-1');
+</script>
+
+
+</head>
 <div class="site-index">
 
   <div class="main">
