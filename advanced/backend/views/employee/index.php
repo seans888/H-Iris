@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\EmployeeSearch */
+/* @var $searchModel app\models\EmployeeSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Employees';
@@ -24,12 +24,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+         //   'id',
             'employee_type',
             'employee_fname',
             'employee_mname',
             'employee_lname',
-            // 'employee_contact_number',
+            'employee_contact_number',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

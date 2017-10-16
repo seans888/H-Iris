@@ -30,10 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'wvh_date',
+            //'wvh_time',
             'wvh_ip_address',
             'wvh_url:url',
             'wvh_cookie_information',
-            'customer_id',
+            'customer.name',
         ],
     ]) ?>
 

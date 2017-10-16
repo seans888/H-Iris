@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\EmailEventSearch */
+/* @var $searchModel app\models\EmailEventSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Email Events';
@@ -24,10 +24,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'event_id',
-            'email_id:email',
-
+          //  'id',
+            [  
+            'attribute' => 'email_id', 
+            'value'=>'email.information' 
+             ],
+             [
+             'attribute'=>'event_id',
+            'value' => 'event.information',
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

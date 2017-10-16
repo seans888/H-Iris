@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\CustomerPreferenceSearch */
+/* @var $searchModel app\models\CustomerPreferenceSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Customer Preferences';
@@ -24,9 +24,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'customer_id',
-            'preference_id',
+           // 'id',
+            [  
+            'attribute' => 'customer_id', 
+            'value'=>'customer.name' 
+             ],
+            [  
+            'attribute' => 'preference_id', 
+            'value'=>'preference.preference' 
+             ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

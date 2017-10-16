@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\WebvisitHistorySearch */
+/* @var $model app\models\WebvisitHistorySearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -19,11 +19,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'wvh_date') ?>
 
+    <?= $form->field($model, 'wvh_time') ?>
+
     <?= $form->field($model, 'wvh_ip_address') ?>
 
     <?= $form->field($model, 'wvh_url') ?>
 
-    <?= $form->field($model, 'wvh_cookie_information') ?>
+    <?php // echo $form->field($model, 'wvh_cookie_information') ?>
 
     <?php // echo $form->field($model, 'customer_id') ?>
 

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\WebvisitHistorySearch */
+/* @var $searchModel app\models\WebvisitHistorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Webvisit Histories';
@@ -26,10 +26,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'wvh_date',
+           // 'wvh_time',
             'wvh_ip_address',
             'wvh_url:url',
             'wvh_cookie_information',
-            // 'customer_id',
+            [  
+            'attribute' => 'customer_id', 
+            'value'=>'customer.name' 
+             ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

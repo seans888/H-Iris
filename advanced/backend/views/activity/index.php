@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\ActivitySearch */
+/* @var $searchModel app\models\ActivitySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Activities';
@@ -24,11 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'activity_status',
             'activity_description',
-            'email_id:email',
-
+            [  
+            'attribute' => 'email_id', 
+            'value'=>'email.information' 
+             ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

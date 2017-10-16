@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\CustomerHistorySearch */
+/* @var $searchModel app\models\CustomerHistorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Customer Histories';
@@ -24,11 +24,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+           // 'id',
             'customer_history_checkin',
             'customer_history_checkout',
             'customer_history_numberdays',
-            'customer_id',
+             [  
+            'attribute' => 'customer_id', 
+            'value'=>'customer.name' 
+             ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
