@@ -17,9 +17,12 @@ use Yii;
  */
 class CustomerHistory extends \yii\db\ActiveRecord
 {
+    
     /**
      * @inheritdoc
      */
+    public $fullName;
+    
     public static function tableName()
     {
         return 'customer_history';
@@ -45,10 +48,11 @@ class CustomerHistory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_history_checkin' => 'Customer History Checkin',
-            'customer_history_checkout' => 'Customer History Checkout',
-            'customer_history_numberdays' => 'Customer History Numberdays',
-            'customer_id' => 'Customer ID',
+            'customer_history_checkin' => 'Check-in Date',
+            'customer_history_checkout' => 'Check-out Date',
+            'customer_history_numberdays' => 'Number of days',
+            'customer_id' => 'Customer',
+
         ];
     }
 
@@ -59,4 +63,13 @@ class CustomerHistory extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
     }
+    public function getFname()
+    {
+        return $this->hasOne(Customer::className(), ['customer_fname' => 'customer_fname']);
+    }
+    public function getLname()
+    {
+        return $this->hasOne(Customer::className(), ['customer_lname' => 'customer_lname']);
+    }
+
 }

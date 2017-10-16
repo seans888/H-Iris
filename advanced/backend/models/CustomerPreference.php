@@ -44,8 +44,8 @@ class CustomerPreference extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_id' => 'Customer ID',
-            'preference_id' => 'Preference ID',
+            'customer_id' => 'Customer',
+            'preference_id' => 'Preference',
         ];
     }
 

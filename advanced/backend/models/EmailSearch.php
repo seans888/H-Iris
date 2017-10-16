@@ -18,8 +18,8 @@ class EmailSearch extends Email
     public function rules()
     {
         return [
-            [['id', 'template_id', 'customer_id'], 'integer'],
-            [['email_date', 'email_template', 'email_status'], 'safe'],
+            [['id'], 'integer'],
+            [['email_date', 'email_status', 'template_id', 'customer_id'], 'safe'],
         ];
     }
 
@@ -56,17 +56,24 @@ class EmailSearch extends Email
             // $query->where('0=1');
             return $dataProvider;
         }
-
+        $query->joinWith('template')
+        ->joinWith('customer');
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'email_date' => $this->email_date,
-            'template_id' => $this->template_id,
-            'customer_id' => $this->customer_id,
+           // 'template_id' => $this->template_id,
+            //'customer_id' => $this->customer_id,
         ]);
 
-        $query->andFilterWhere(['like', 'email_template', $this->email_template])
-            ->andFilterWhere(['like', 'email_status', $this->email_status]);
+        $query->andFilterWhere(['like', 'email_status', $this->email_status])
+        ->andFilterWhere(['like', 'customer_fname', $this->customer_id])
+        ->orFilterWhere(['like', 'customer_lname', $this->customer_id])
+        ->orFilterWhere(['like', 'customer_type', $this->customer_id])
+
+      //  ->orFilterWhere(['like','customer_fname'||'customer_lname',$this->customer_id])
+        ->andFilterWhere(['like', 'template_type', $this->template_id])
+        ->orFilterWhere(['like', 'template_description', $this->template_id]);
 
         return $dataProvider;
     }

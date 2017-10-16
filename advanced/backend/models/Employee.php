@@ -29,6 +29,10 @@ class Employee extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+     public function getNameAndPosition()
+    {
+     return $this->employee_fname.' '.$this->employee_lname.', '.$this->employee_type;
+    }
     public function rules()
     {
         return [
@@ -44,11 +48,11 @@ class Employee extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'employee_type' => 'Employee Type',
-            'employee_fname' => 'Employee Fname',
-            'employee_mname' => 'Employee Mname',
-            'employee_lname' => 'Employee Lname',
-            'employee_contact_number' => 'Employee Contact Number',
+            'employee_type' => 'Type',
+            'employee_fname' => 'First Name',
+            'employee_mname' => 'Middle Name',
+            'employee_lname' => 'Last Name',
+            'employee_contact_number' => 'Contact Number',
         ];
     }
 

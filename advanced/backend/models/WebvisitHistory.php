@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $wvh_date
+ * @property string $wvh_time
  * @property string $wvh_ip_address
  * @property string $wvh_url
  * @property string $wvh_cookie_information
@@ -49,11 +50,11 @@ class WebvisitHistory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'wvh_date' => 'Wvh Date',
-            'wvh_ip_address' => 'Wvh Ip Address',
-            'wvh_url' => 'Wvh Url',
-            'wvh_cookie_information' => 'Wvh Cookie Information',
-            'customer_id' => 'Customer ID',
+            'wvh_date' => 'Date',
+            'wvh_ip_address' => 'Ip Address',
+            'wvh_url' => 'URL',
+            'wvh_cookie_information' => 'Cookie Information',
+            'customer_id' => 'Customer',
         ];
     }
 

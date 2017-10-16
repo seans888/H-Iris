@@ -25,6 +25,7 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $fullName;
     public static function tableName()
     {
         return 'customer';
@@ -36,7 +37,7 @@ class Customer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['customer_type'], 'string'],
+             [['customer_type'], 'string'],
             [['customer_contact_number'], 'integer'],
             [['customer_email', 'customer_fname', 'customer_mname', 'customer_lname'], 'string', 'max' => 45],
         ];
@@ -49,18 +50,27 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_type' => 'Customer Type',
-            'customer_email' => 'Customer Email',
-            'customer_fname' => 'Customer Fname',
-            'customer_mname' => 'Customer Mname',
-            'customer_lname' => 'Customer Lname',
-            'customer_contact_number' => 'Customer Contact Number',
+            'customer_type' => 'Type',
+            'customer_email' => 'Email',
+            'customer_fname' => 'First Name',
+            'customer_mname' => 'Middle Name',
+            'customer_lname' => 'Last Name',
+            'customer_contact_number' => 'Contact Number',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getEmail() 
+    { 
+    return $this->customer_fname.' '.$this->customer_lname.', '.$this->customer_type
+    .', '.$this->customer_email; 
+    }  
+     public function getName() 
+    { 
+    return $this->customer_fname.' '.$this->customer_lname.', '.$this->customer_type; 
+    }    
     public function getCustomerHistories()
     {
         return $this->hasMany(CustomerHistory::className(), ['customer_id' => 'id']);

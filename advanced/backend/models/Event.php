@@ -30,6 +30,10 @@ class Event extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+     public function getInformation()
+    {
+        return 'Description: '.$this->event_description;
+    }
     public function rules()
     {
         return [
@@ -52,7 +56,7 @@ class Event extends \yii\db\ActiveRecord
             'event_description' => 'Event Description',
             'event_start_date' => 'Event Start Date',
             'event_end_date' => 'Event End Date',
-            'employee_id' => 'Employee ID',
+            'employee_id' => 'Employee',
         ];
     }
 

@@ -18,8 +18,8 @@ class EventSearch extends Event
     public function rules()
     {
         return [
-            [['id', 'employee_id'], 'integer'],
-            [['event_date_created', 'event_description', 'event_start_date', 'event_end_date'], 'safe'],
+            [['id'], 'integer'],
+            [['event_date_created', 'event_description', 'event_start_date', 'event_end_date', 'employee_id'], 'safe'],
         ];
     }
 
@@ -56,6 +56,7 @@ class EventSearch extends Event
             // $query->where('0=1');
             return $dataProvider;
         }
+        $query->joinWith('employee');
 
         // grid filtering conditions
         $query->andFilterWhere([
@@ -63,10 +64,13 @@ class EventSearch extends Event
             'event_date_created' => $this->event_date_created,
             'event_start_date' => $this->event_start_date,
             'event_end_date' => $this->event_end_date,
-            'employee_id' => $this->employee_id,
+           // 'employee_id' => $this->employee_id,
         ]);
 
-        $query->andFilterWhere(['like', 'event_description', $this->event_description]);
+        $query->andFilterWhere(['like', 'event_description', $this->event_description])
+        ->andFilterWhere(['like', 'employee_fname', $this->employee_id])
+        ->orFilterWhere(['like', 'employee_lname', $this->employee_id])
+        ->orFilterWhere(['like', 'employee_type', $this->employee_id]);
 
         return $dataProvider;
     }

@@ -11,7 +11,7 @@ use Yii;
  * @property string $preference_category
  * @property string $preference_description
  *
- * @property CustomerPreference[] $customerPreferences
+ * @property RecipientPreference[] $recipientPreferences
  */
 class Preference extends \yii\db\ActiveRecord
 {
@@ -44,12 +44,16 @@ class Preference extends \yii\db\ActiveRecord
             'preference_description' => 'Preference Description',
         ];
     }
+    public function getPreference() 
+    { 
+    return $this->preference_category.', '.$this->preference_description; 
+    }  
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCustomerPreferences()
+    public function getRecipientPreferences()
     {
-        return $this->hasMany(CustomerPreference::className(), ['preference_id' => 'id']);
+        return $this->hasMany(RecipientPreference::className(), ['preference_id' => 'id']);
     }
 }

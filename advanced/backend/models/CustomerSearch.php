@@ -15,11 +15,14 @@ class CustomerSearch extends Customer
     /**
      * @inheritdoc
      */
+    public $fullName;
+
     public function rules()
     {
         return [
             [['id', 'customer_contact_number'], 'integer'],
-            [['customer_type', 'customer_email', 'customer_fname', 'customer_mname', 'customer_lname'], 'safe'],
+            [['customer_type', 'customer_email', 'customer_fname', 'customer_mname', 'customer_lname',
+            'fullName'], 'safe'],
         ];
     }
 
@@ -44,6 +47,10 @@ class CustomerSearch extends Customer
         $query = Customer::find();
 
         // add conditions that should always apply here
+        //$query = Blog::find()->select('b.*,'
+               // . 'concat(c.customer_fname," ",c.customer_lname) as fullName')->from('CustomerHistory b')
+                //leftJoin('Customer c', 'c.Id=b.id');
+
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
