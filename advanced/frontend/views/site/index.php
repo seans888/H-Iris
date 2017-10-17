@@ -103,7 +103,7 @@ function showSlides() {
                         in Clark in Pampanga; and the 347-guest room deluxe 5-star hotel, Conrad Manila, located in the Mall of 
                         Asia Complex.</p> </h4>
 
-             <p><a class="btn btn-default" href="http://localhost/yii2/frontend/web/index.php?r=site%2Fabout">About Us &raquo;</a></p>
+             <p><a class="btn btn-default" href="http://localhost/ems/frontend/web/index.php?r=site%2Fabout">About Us &raquo;</a></p>
        
           
         </div>
@@ -113,7 +113,7 @@ function showSlides() {
                 <h1 style="text-align:center;">Rooms </h1>
 <div class="row">
                 <div class= "col-md-6">
-             <a href=http://localhost/yii/web/index.php?r=website%2Flagoon><img src="uploads/rm1.jpg" style="width:500px;height:320px;"></a>
+             <a href=http://localhost/ems/frontend/web/index.php?r=website%2Flagoon><img src="uploads/rm1.jpg" style="width:500px;height:320px;"></a>
                 
              <h2 style="text-align:center;"> LAGOON VIEW </h2> 
 </br>
@@ -126,7 +126,7 @@ function showSlides() {
     
              <div class= "col-md-6">
 
-               <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/rm2.jpg" style="width:500px;height:320px;"></a>
+               <a href=http://localhost/ems/frontend/web/index.php?r=website%2Fmountain><img src="uploads/rm2.jpg" style="width:500px;height:320px;"></a>
 
             <h2 style="text-align:center;"> MOUNTAIN VIEW </h2> 
 </br>
@@ -148,7 +148,7 @@ function showSlides() {
 </br>
    <h1 style="text-align:center;">Dining</h1>
                 <div class= "col-sm-5"> <span class="pull-right">
-             <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/dining.jpg" style="width:500px;height:500px;"></a>
+             <a href="http://localhost/ems/frontend/web/index.php?r=website%2Frandb"><img src="uploads/dining.jpg" style="width:500px;height:500px;"></a>
 </div>
 
 <div class= "col-md-5">
@@ -164,7 +164,7 @@ function showSlides() {
         Upgrading work start at 11:00 am until 4:00 pm, daily. We assure you that we will take all measures to minimize disturbance and maintain comfort and convenience. Please bear with us.
  </p></h4>
 
-<p><a class="btn btn-lg btn-success" href="http://localhost/yii/web/index.php?r=site%2Fabout">More</a></p>
+<p><a class="btn btn-lg btn-success" href="http://localhost/ems/frontend/web/index.php?r=website%2Frandb">More</a></p>
     </div>
 
  </div>
@@ -183,7 +183,7 @@ function showSlides() {
 </br>
    <h1 style="text-align:center;">Spa</h1>
                 <div class= "col-sm-5"> <span class="pull-right">
-             <a href="http://localhost/yii/web/index.php?r=site%2Fabout"><img src="uploads/spa.jpg" style="width:500px;height:500px;"></a>
+             <a href="http://localhost/ems/frontend/web/index.php?r=website%2Fspa"><img src="uploads/spa.jpg" style="width:500px;height:500px;"></a>
 </div>
 
 <div class= "col-md-5">
@@ -192,7 +192,7 @@ function showSlides() {
          <h4>   <p style="text-align:justify;"> Heal your body, calm your mind and soothe your spirit with our treatments in this Batangas beach resort, using organic and indigenous local products.</p></h4>
 
 
-<p><a class="btn btn-lg btn-success" href="http://localhost/yii/web/index.php?r=site%2Fabout">More</a></p>
+<p><a class="btn btn-lg btn-success" href="http://localhost/ems/frontend/web/index.php?r=website%2Fspa">More</a></p>
     </div>
 
 

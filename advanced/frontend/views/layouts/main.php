@@ -43,7 +43,7 @@ AppAsset::register($this);
  'items' => [
                  ['label' => 'Overview' , 'url' => ['website/roomoverview']],
 
-                 '<li class="dropdown-header"><a href="http://localhost/yii/web/index.php?r=website%2Flagoon">Lagoon View</a> </li>',
+                 '<li class="dropdown-header"><a href="http://localhost/ems/frontend/web/index.php?r=website%2Flagoon">Lagoon View</a> </li>',
                  '<li class="dropdown-header"> </li>',
                  '<li class="dropdown-header"> </li>',
                  ['label' => 'Superior Room', 'url' => ['/website/superior']],
@@ -52,7 +52,7 @@ AppAsset::register($this);
                  ['label' => 'Corner Deluxe Rooms', 'url' => ['/website/cornerdeluxe']],
                  ['label' => 'Penthouse Loft Rooms', 'url' => ['/website/penthouse']],
                 '<li class="dropdown-header"> </li>',
-                  '<li class="dropdown-header"><a href="http://localhost/yii/web/index.php?r=website%2Fmountain">Mountain View</a> </li>',
+                  '<li class="dropdown-header"><a href="http://localhost/ems/frontend/web/index.php?r=website%2Fmountain">Mountain View</a> </li>',
                  ['label' => 'Standard Room', 'url' => ['/website/standard']],
                  ['label' => 'Superior Room', 'url' => ['/website/msuperior']],
                  ['label' => 'Premier Room', 'url' => ['/website/mpremier']],
@@ -149,15 +149,19 @@ AppAsset::register($this);
                         </div>
                 </div>
 
-                <footer class="footer">
-                    <div class="container">
-                        <p class="pull-left">&copy; My Company
-                            <?= date('Y') ?>
-                        </p>
-
-                        <p class="pull-right">
-                            <?= Yii::powered() ?>
-                        </p>
+               <footer class="footer">
+    <div class="container1">
+        <p class="pull-left">&copy; SM Hotels and Convention Corporation <?= date('Y') ?></p>
+        <div class="socialLinks">
+        <p class="pull-left"> Follow Us On</p>
+        <p style="text-indent:10px">
+            <a href="https://www.facebook.com/picosandshotel/">
+            <img src="uploads/fb.png" style="width: 15%; height: 15%;"></a>
+            <a href="https://twitter.com/TaalVistaHotel">
+            <img src="uploads/twitter.png" style="width: 15%; height: 15%;"></a>
+            <a href="https://www.instagram.com/picosandshotel/">
+            <img src="uploads/insta.png" style="width: 15%; height: 15%;"></a>
+            </p>
                     </div>
                 </footer>
 
