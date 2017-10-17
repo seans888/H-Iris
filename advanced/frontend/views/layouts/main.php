@@ -109,35 +109,7 @@ AppAsset::register($this);
                 
 ],
 ],
- ['label' => 'Forms', 
-  'items' => [
-                ['label' => 'Employees', 'url' => ['/employee/index']],
-
-                 '<li class="dropdown-header"> </li>',
-                 '<li class="dropdown-header">Email</li>',
-                
-                 ['label' => 'Email', 'url' => ['/email/index']],
-                 
-                 ['label' => 'Event', 'url' => ['/event/index']],
-
-                 ['label' => 'Email Event', 'url' => ['/email-event/index']],
-             
-                 ['label' => 'Template', 'url' => ['/template/index']],
-
-                 ['label' => 'Activity', 'url' => ['/activity/index']],
-
-                '<li class="dropdown-header"> </li>',
-                 '<li class="dropdown-header">Customers</li>',
-
-                   ['label' => 'Customer', 'url' => ['customer/index']],
-                   ['label' => 'Customer History', 'url' => ['/customer-history/index']],
-                    ['label' => 'Web-visit History', 'url' => ['/webvisit-history/index']],
-                    ['label' => 'Preference', 'url' => ['/preference/index']],
-                    ['label' => 'Customer Preference', 'url' => ['/customer-preference/index']],
-
-                
-],
-],
+ 
 
    ['label' => 'Gallery', 
     'items' => [
