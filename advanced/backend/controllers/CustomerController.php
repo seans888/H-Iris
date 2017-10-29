@@ -65,8 +65,19 @@ class CustomerController extends Controller
     {
         $model = new Customer();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+                        /*$exists = ModelName::find()->where( [ 'id' => 1 ] )->exists();
+
+            if($exists) {
+              //it exists
+
+            } else {
+              //doesn't exist so create record
+
+            }*/
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
+            
         } else {
             return $this->render('create', [
                 'model' => $model,
