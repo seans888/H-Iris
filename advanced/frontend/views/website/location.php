@@ -144,6 +144,27 @@ function myMap() {
 <h5> Other Hotels of SM</h5>
 <br>
 
+<br>
+<br>
 
+<!--Reports-->
+
+<!--for Last Month and This Month Sessions-->
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQrccS7v8Jq63cSL5W_FnDnAPyNfIVw22ck_rCB4CPQM68cMcWiXssshdWwpd_RsHG6sjTV5ny0Qyt/pubchart?oid=203812847&amp;format=interactive"></iframe>
+
+<!--for Users-->
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQrccS7v8Jq63cSL5W_FnDnAPyNfIVw22ck_rCB4CPQM68cMcWiXssshdWwpd_RsHG6sjTV5ny0Qyt/pubchart?oid=490008769&amp;format=interactive"></iframe>
+
+<!--Location-->
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQrccS7v8Jq63cSL5W_FnDnAPyNfIVw22ck_rCB4CPQM68cMcWiXssshdWwpd_RsHG6sjTV5ny0Qyt/pubchart?oid=1745203371&amp;format=interactive"></iframe>
+
+<!--for Top Browsers-->
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQrccS7v8Jq63cSL5W_FnDnAPyNfIVw22ck_rCB4CPQM68cMcWiXssshdWwpd_RsHG6sjTV5ny0Qyt/pubchart?oid=457399618&amp;format=interactive"></iframe>
+
+<!--for Page Views Last Month-->
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQrccS7v8Jq63cSL5W_FnDnAPyNfIVw22ck_rCB4CPQM68cMcWiXssshdWwpd_RsHG6sjTV5ny0Qyt/pubchart?oid=875275833&amp;format=interactive"></iframe>
+
+<!--for Page Views This Month-->
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQrccS7v8Jq63cSL5W_FnDnAPyNfIVw22ck_rCB4CPQM68cMcWiXssshdWwpd_RsHG6sjTV5ny0Qyt/pubchart?oid=157271260&amp;format=interactive"></iframe>
 
 </div>
