@@ -38,8 +38,11 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
              [['customer_type'], 'string'],
-            [['customer_contact_number'], 'integer'],
-            [['customer_email', 'customer_fname', 'customer_mname', 'customer_lname'], 'string', 'max' => 45],
+             [['customer_email'], 'unique'],
+             [['customer_email'], 'required'],
+
+             [['customer_contact_number'], 'integer'],
+             [['customer_email', 'customer_fname', 'customer_mname', 'customer_lname'], 'string', 'max' => 45],
         ];
     }
 
