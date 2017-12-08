@@ -24,9 +24,9 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
+                    <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+      'brandLabel' => 'SM Hotels and Conventions',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -34,7 +34,47 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-    ];
+        ['label' => 'Reports', 'url' => ['/site/reports']],
+        ['label' => 'Report', 'url' => ['/edm/frontend/web/index.php']],
+
+
+
+    [
+
+             'label' => 'Forms', 
+                'items' => [
+                ['label' => 'Employees', 'url' => ['/employee/index']],
+
+                 '<li class="dropdown-header"> </li>',
+                 '<li class="dropdown-header">Email</li>',
+                
+                 ['label' => 'Email', 'url' => ['/email/index']],
+                 
+                 ['label' => 'Event', 'url' => ['/event/index']],
+
+                 ['label' => 'Email Event', 'url' => ['/email-event/index']],
+             
+                 ['label' => 'Template', 'url' => ['/template/index']],
+
+                 ['label' => 'Activity', 'url' => ['/activity/index']],
+
+                '<li class="dropdown-header"> </li>',
+                '<li class="dropdown-header">Customers</li>',
+
+                 ['label' => 'Customer', 'url' => ['customer/index']],
+
+                 ['label' => 'Customer History', 'url' => ['/customer-history/index']],
+
+                 ['label' => 'Web-visit History', 'url' => ['/webvisit-history/index']],
+
+                 ['label' => 'Preference', 'url' => ['/preference/index']],
+
+                 ['label' => 'Customer Preference', 'url' => ['/customer-preference/index']],
+
+                
+],
+],
+        ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
@@ -65,9 +105,8 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; SM Hotels and Convention Corporation <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
 
