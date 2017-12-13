@@ -35,7 +35,7 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Reports', 'url' => ['/site/reports']],
-        ['label' => 'Report', 'url' => ['/edm/frontend/web/index.php']],
+        ['label' => 'Mailer', 'url' => ['/edm/frontend/web/index.php']],
 
 
 
