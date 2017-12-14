@@ -15,7 +15,7 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function behaviors()
+    /*public function behaviors()
     {
         return [
             'access' => [
@@ -24,6 +24,7 @@ class SiteController extends Controller
                     [
                         'actions' => ['login', 'error'],
                         'allow' => true,
+
                     ],
                     [
                         'actions' => ['logout', 'index'],
@@ -39,7 +40,24 @@ class SiteController extends Controller
                 ],
             ],
         ];
-    }
+    }*/
+    public function behaviors()
+{
+    return [
+        'access' => [
+            'class' => \yii\filters\AccessControl::className(),
+            'only' => ['create', 'update'],
+            'rules' => [                
+                // allow authenticated users
+                [
+                    'allow' => true,
+                    'roles' => ['@'],
+                ],
+                // everything else is denied
+            ],
+        ],
+    ];
+}
 
     /**
      * @inheritdoc
@@ -61,6 +79,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+    public function actionReports()
+    {
+        return $this->render('reports');
     }
 
     /**

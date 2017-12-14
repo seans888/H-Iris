@@ -67,7 +67,8 @@ class CustomerController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
                         /*$exists = ModelName::find()->where( [ 'id' => 1 ] )->exists();
-
+            if the email provided is existing in the database and type is "Guest", type="Guest"
+            otherwise, prospective.
             if($exists) {
               //it exists
 
