@@ -7,7 +7,26 @@ use yii\helpers\Html;
 $this->title = 'Dining';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
- 
+ <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107946197-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-107946197-1');
+        </script>-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108264025-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-108264025-1');
+    </script>
+</head>
 <img src="uploads/lagoa-banner.jpg" style="width:1130px;height:320px;"> 
 
 <h1>DINING</h1>
